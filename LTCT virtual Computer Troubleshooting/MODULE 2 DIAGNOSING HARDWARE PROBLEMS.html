@@ -1,0 +1,892 @@
+<h1 id="module-2-diagnosing-hardware-problems-part-1">MODULE 2: DIAGNOSING HARDWARE PROBLEMS - Part 1</h1>
+<p><strong>Duration:</strong> 60 minutes (Part 1 of 3)
+<strong>Format:</strong> Asynchronous self-paced learning</p>
+<hr>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this module, you will be able to:</p>
+<ul>
+<li>Distinguish between hardware and software problems</li>
+<li>Use a systematic diagnostic process</li>
+<li>Recognize common hardware failure patterns</li>
+<li>Guide users through diagnostic steps remotely</li>
+<li>Apply diagnostic thinking to realistic scenarios</li>
+</ul>
+<hr>
+<h2 id="section-2-1-hardware-vs-software-making-the-distinction">Section 2.1: Hardware vs. Software - Making the Distinction</h2>
+<p><strong>Time:</strong> 10 minutes</p>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>As a consultant, one of your most important skills is quickly determining: &quot;Is this a hardware problem or a software problem?&quot; This determines:</p>
+<ul>
+<li>Whether you can help remotely or need to escalate</li>
+<li>Whether the issue can be fixed or requires replacement</li>
+<li>How urgent the situation is</li>
+</ul>
+<h3 id="the-challenge">The Challenge</h3>
+<p>Many symptoms can be caused by EITHER hardware OR software:</p>
+<ul>
+<li>Slowness</li>
+<li>Crashes</li>
+<li>Display problems</li>
+<li>File corruption</li>
+<li>Startup issues</li>
+</ul>
+<p>So how do you tell the difference?</p>
+<h3 id="key-distinguishing-questions">Key Distinguishing Questions</h3>
+<h4 id="1-when-does-it-happen-">1. When does it happen?</h4>
+<p><strong>Hardware issues:</strong></p>
+<ul>
+<li>Occur at specific times (when hot, when cold, when moved)</li>
+<li>Happen before OS fully loads (during BIOS/startup)</li>
+<li>Correlate with environmental conditions</li>
+<li>Progressive (get worse over time)</li>
+</ul>
+<p><strong>Software issues:</strong></p>
+<ul>
+<li>Happen with specific programs or tasks</li>
+<li>Occur after OS has loaded</li>
+<li>May start after software installation/update</li>
+<li>May be intermittent but not environmentally linked</li>
+</ul>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Computer crashes when running specific software = likely software</li>
+<li>Computer crashes more often on hot afternoons = likely hardware (cooling)</li>
+</ul>
+<h4 id="2-is-it-consistent-or-variable-">2. Is it consistent or variable?</h4>
+<p><strong>Hardware issues:</strong></p>
+<ul>
+<li>Usually consistent once triggered</li>
+<li>Follow patterns (always when hot, always after 20 minutes, etc.)</li>
+<li>Physical symptoms (beeps, clicking sounds, smell, heat)</li>
+</ul>
+<p><strong>Software issues:</strong></p>
+<ul>
+<li>May be inconsistent or random</li>
+<li>Sometimes fixed by restart</li>
+<li>No physical symptoms</li>
+</ul>
+<h4 id="3-does-it-respond-to-software-fixes-">3. Does it respond to software fixes?</h4>
+<p><strong>Hardware issues:</strong></p>
+<ul>
+<li>Don&#39;t improve with software troubleshooting</li>
+<li>Reinstalling programs doesn&#39;t help</li>
+<li>System restore doesn&#39;t fix it</li>
+<li>Safe Mode doesn&#39;t change behavior</li>
+</ul>
+<p><strong>Software issues:</strong></p>
+<ul>
+<li>May improve with updates, reinstalls, or restarts</li>
+<li>Safe Mode often behaves differently</li>
+<li>Specific to certain programs or functions</li>
+</ul>
+<h3 id="activity-2-1-hardware-or-software-">Activity 2.1: Hardware or Software?</h3>
+<p><strong>Time:</strong> 5 minutes</p>
+<p>For each scenario, determine if it&#39;s more likely hardware or software, and write down your reasoning:</p>
+<p><strong>A.</strong> Computer freezes only when using video conferencing software. Other programs work fine. Started after recent Windows update.</p>
+<p><strong>B.</strong> Computer makes three beeps when you press power button, screen stays black. Happened suddenly after transporting laptop in backpack.</p>
+<p><strong>C.</strong> Files keep getting corrupted. Multiple programs crash. Computer sometimes makes clicking sounds. Gets worse over time.</p>
+<p><strong>D.</strong> Specific application won&#39;t launch - gives error message. All other programs work normally. Computer otherwise functions well.</p>
+<p><strong>E.</strong> Computer shuts down without warning, especially when running multiple programs. Bottom of laptop feels very hot. Fan is very loud. Been getting worse over 3 months.</p>
+<h4 id="answers">Answers</h4>
+<p><strong>A. Software</strong> - Specific to one program, started after update, other programs fine</p>
+<p><strong>B. Hardware</strong> - Beep codes indicate hardware problem, occurred after physical shock (likely unseated RAM)</p>
+<p><strong>C. Hardware</strong> - Physical sounds (clicking = failing hard drive), progressive deterioration, affects multiple areas</p>
+<p><strong>D. Software</strong> - Single application issue, other functions normal, error message (software reporting problem)</p>
+<p><strong>E. Hardware</strong> - Thermal symptoms (hot, loud fan, shutdowns), progressive, correlates with system load (heat generation)</p>
+<p><strong>Key Principle:</strong> When in doubt, look for physical symptoms, environmental correlations, and whether the problem crosses multiple programs/functions. Hardware problems usually affect the whole system; software problems are often more specific.</p>
+<hr>
+<h2 id="section-2-2-the-systematic-diagnostic-process">Section 2.2: The Systematic Diagnostic Process</h2>
+<p><strong>Time:</strong> 15 minutes</p>
+<h3 id="the-four-step-framework">The Four-Step Framework</h3>
+<p>Good consultants don&#39;t guess - they follow a systematic process. Here&#39;s the framework you&#39;ll use for every hardware issue:</p>
+<ol>
+<li>OBSERVE → 2. ISOLATE → 3. TEST → 4. DECIDE</li>
+</ol>
+<p>Let&#39;s break down each step:</p>
+<h3 id="step-1-observe-gather-information-">STEP 1: OBSERVE (Gather Information)</h3>
+<p><strong>What you&#39;re doing:</strong> Collecting detailed information about the problem</p>
+<h4 id="key-questions-to-ask-">Key questions to ask:</h4>
+<p><strong>About the symptom:</strong></p>
+<ul>
+<li>What exactly happens? (Be specific - &quot;slow&quot; means different things)</li>
+<li>When did it start?</li>
+<li>Does it happen every time or intermittently?</li>
+<li>What were you doing when it happened?</li>
+</ul>
+<p><strong>About patterns:</strong></p>
+<ul>
+<li>When does it happen? (time of day, specific activities, after certain duration)</li>
+<li>When does it NOT happen?</li>
+<li>Is it getting worse, better, or staying the same?</li>
+</ul>
+<p><strong>About context:</strong></p>
+<ul>
+<li>Any recent changes? (new software, updates, physical incidents)</li>
+<li>Any environmental factors? (heat, storm, transport, etc.)</li>
+<li>What&#39;s the work environment like?</li>
+</ul>
+<p><strong>About the computer:</strong></p>
+<ul>
+<li>How old is it?</li>
+<li>Any previous problems?</li>
+<li>When was it last cleaned/maintained?</li>
+</ul>
+<p><strong>Physical symptoms:</strong></p>
+<ul>
+<li>Any sounds? (beeps, clicking, grinding, fan noise)</li>
+<li>Any smells? (burning, electrical)</li>
+<li>Any heat? (where specifically)</li>
+<li>Any visible damage?</li>
+</ul>
+<p><strong>Why this matters:</strong> Good observation often points directly to the cause. &quot;Slow computer&quot; could be anything, but &quot;slow startup, normal after, clicking sound from left side, started after power outage&quot; strongly suggests failing hard drive damaged by power surge.</p>
+<h3 id="step-2-isolate-narrow-down-possibilities-">STEP 2: ISOLATE (Narrow Down Possibilities)</h3>
+<p><strong>What you&#39;re doing:</strong> Determining which component or system is involved</p>
+<h4 id="strategies-">Strategies:</h4>
+<p><strong>Use the symptoms to eliminate possibilities:</strong></p>
+<ul>
+<li>No display but computer powers on → NOT power system, likely display or graphics</li>
+<li>Slow but no crashes → NOT likely RAM, probably storage or cooling</li>
+<li>Happens only on battery → battery or charging system</li>
+</ul>
+<p><strong>Use timing clues:</strong></p>
+<ul>
+<li>During startup → storage or RAM</li>
+<li>After 20 minutes of use → cooling system</li>
+<li>Immediately after transport → unseated component</li>
+<li>Gradually worsening → component degradation</li>
+</ul>
+<p><strong>Use environmental clues:</strong></p>
+<ul>
+<li>More problems in heat → cooling or battery</li>
+<li>More problems in morning (cold/humid) → condensation, connections</li>
+<li>After power outage → power system, possibly storage corruption</li>
+</ul>
+<p><strong>Consider interactions:</strong></p>
+<ul>
+<li>Multiple symptoms → might be one failing component affecting others</li>
+<li>Example: Failing cooling → CPU overheats → throttles → appears slow → crashes</li>
+</ul>
+<h3 id="step-3-test-confirm-your-hypothesis-">STEP 3: TEST (Confirm Your Hypothesis)</h3>
+<p><strong>What you&#39;re doing:</strong> Designing tests to confirm or rule out your hypothesis</p>
+<h4 id="types-of-tests-">Types of tests:</h4>
+<p><strong>Observation tests</strong> (no intervention):</p>
+<ul>
+<li>Monitor temperatures during use</li>
+<li>Listen for specific sounds</li>
+<li>Note when problems occur vs. don&#39;t occur</li>
+<li>Watch startup sequence carefully</li>
+</ul>
+<p><strong>Software tests</strong> (information gathering):</p>
+<ul>
+<li>Run built-in diagnostics (Battery Report, CHKDSK, Memory Diagnostic)</li>
+<li>Check system temperatures with monitoring software</li>
+<li>Review event logs for error patterns</li>
+<li>Test with external monitor (isolates display vs. graphics)</li>
+</ul>
+<p><strong>Simple hardware tests</strong> (user can perform):</p>
+<ul>
+<li>Disable touchpad, use external mouse (isolates touchpad)</li>
+<li>Try different power outlet (isolates power supply issues)</li>
+<li>Boot in Safe Mode (software vs. hardware)</li>
+<li>Remove peripherals (isolates external device issues)</li>
+</ul>
+<p><strong>Guided hardware tests</strong> (you walk user through):</p>
+<ul>
+<li>Reseat RAM</li>
+<li>Clean vents</li>
+<li>Check cable connections</li>
+<li>Let system cool and retry</li>
+</ul>
+<p><strong>The key:</strong> Choose tests that will clearly distinguish between your top hypotheses. &quot;If it&#39;s X, this test will show Y. If it&#39;s Z, this test will show W.&quot;</p>
+<h3 id="step-4-decide-recommend-action-">STEP 4: DECIDE (Recommend Action)</h3>
+<p><strong>What you&#39;re doing:</strong> Determining the appropriate next step based on findings</p>
+<h4 id="decision-tree-">Decision tree:</h4>
+<p><strong>IF problem is clearly diagnosable and fixable:</strong></p>
+<ul>
+<li>Guide user through fix (cleaning, reseating, settings change)</li>
+<li>Provide preventive advice</li>
+</ul>
+<p><strong>IF problem requires part replacement:</strong></p>
+<ul>
+<li>Assess: Can user continue working? How urgent?</li>
+<li>Recommend: Specific part needed, where to source it</li>
+<li>Consider: Workarounds while waiting for part</li>
+</ul>
+<p><strong>IF problem is complex or diagnosis uncertain:</strong></p>
+<ul>
+<li>Escalate to IT support with documentation</li>
+<li>Explain what you&#39;ve ruled out (saves them time)</li>
+</ul>
+<p><strong>IF problem indicates imminent failure:</strong></p>
+<ul>
+<li>Immediate data backup</li>
+<li>Minimize use</li>
+<li>Request replacement</li>
+</ul>
+<p><strong>IF repair isn&#39;t practical:</strong></p>
+<ul>
+<li>Cost/benefit analysis</li>
+<li>Replacement recommendation</li>
+<li>Short-term alternatives</li>
+</ul>
+<p><strong>Context matters in decisions:</strong></p>
+<ul>
+<li>Remote location with no parts = different decision than city with tech support nearby</li>
+<li>Critical deadline next
+week = different urgency than routine maintenance</li>
+<li>Expensive repair on old computer = maybe better to replace</li>
+</ul>
+<h3 id="activity-2-2-apply-the-framework">Activity 2.2: Apply the Framework</h3>
+<p><strong>Time:</strong> 10 minutes</p>
+<p>Remember Miguel from Module 1? Let&#39;s apply the systematic process to his situation.</p>
+<h4 id="miguel-s-scenario-recap-">Miguel&#39;s Scenario (recap):</h4>
+<p>&quot;My computer is running really slowly now. It used to start up in less than a minute, but now it takes 5-7 minutes. Once it&#39;s running, programs work mostly okay, but they take a while to open.&quot;</p>
+<p>Context: 18 months in location, frequent power outages, no surge protector.</p>
+<h4 id="your-turn-work-through-each-step-">Your turn - work through each step:</h4>
+<p><strong>STEP 1 - OBSERVE:</strong> What additional questions would you ask Miguel? Write at least 4 specific questions.</p>
+<p><strong>STEP 2 - ISOLATE:</strong> Based on &quot;slow startup, normal operation after,&quot; which component is most likely involved? What are you ruling out?</p>
+<p><strong>STEP 3 - TEST:</strong> What tests would you have Miguel perform to confirm your hypothesis? List at least 2 tests.</p>
+<p><strong>STEP 4 - DECIDE:</strong> If your hypothesis is correct, what would you recommend? Consider both immediate action and prevention.</p>
+<h4 id="sample-answers-">Sample Answers:</h4>
+<p><strong>OBSERVE questions:</strong></p>
+<ul>
+<li>Does the computer have an HDD or SSD? (HDDs more likely to fail this way)</li>
+<li>Do you hear any clicking or grinding sounds during startup?</li>
+<li>How full is your hard drive?</li>
+<li>Have you seen any error messages about disk problems?</li>
+<li>Does the slowness happen equally every time, or vary?</li>
+</ul>
+<p><strong>ISOLATE:</strong></p>
+<p>Most likely: Storage drive (HDD) failing or severely full</p>
+<p>Why: Slow startup suggests loading OS from storage is the bottleneck. Normal operation after suggests CPU and RAM are fine - if they were the problem, slowness would continue during use.</p>
+<p>Power outages without surge protection could have damaged drive over time.</p>
+<p><strong>TEST:</strong></p>
+<ul>
+<li>Check drive health: Run CHKDSK or manufacturer diagnostic tool</li>
+<li>Check free space: How full is the drive?</li>
+<li>Listen carefully during startup: Clicking sound confirms failing drive</li>
+<li>Check event logs: Look for disk errors</li>
+</ul>
+<p><strong>DECIDE:</strong></p>
+<p>If drive is failing:</p>
+<ul>
+<li><strong>IMMEDIATE:</strong> Back up all data NOW (drive could fail completely)</li>
+<li><strong>SHORT TERM:</strong> Prepare for drive replacement (or computer replacement if old)</li>
+<li><strong>PREVENTION:</strong> Get surge protector immediately (protect new drive)</li>
+</ul>
+<p>If drive is just very full:</p>
+<ul>
+<li><strong>IMMEDIATE:</strong> Free up space, move files to external storage</li>
+<li><strong>ONGOING:</strong> Better data management, regular cleanup</li>
+<li><strong>PREVENTION:</strong> Still get surge protector</li>
+</ul>
+<p><strong>Reflection:</strong> Notice how the systematic process turns &quot;computer is slow&quot; (vague) into &quot;failing hard drive, needs backup and replacement, requires surge protection&quot; (specific, actionable).</p>
+<hr>
+<h2 id="section-2-3-common-failure-patterns">Section 2.3: Common Failure Patterns</h2>
+<p><strong>Time:</strong> 20 minutes</p>
+<h3 id="why-patterns-matter">Why Patterns Matter</h3>
+<p>You&#39;ll see certain problems again and again. Recognizing these patterns helps you diagnose faster and more accurately.</p>
+<h3 id="pattern-1-battery-issues">Pattern 1: Battery Issues</h3>
+<p><strong>Common symptoms:</strong></p>
+<ul>
+<li>Won&#39;t charge or charges very slowly</li>
+<li>&quot;Plugged in, not charging&quot; message</li>
+<li>Battery drains very quickly</li>
+<li>Computer won&#39;t run on battery at all</li>
+<li>Battery percentage jumps around</li>
+</ul>
+<p><strong>Likely causes:</strong></p>
+<ul>
+<li>Battery degradation (age + heat)</li>
+<li>Power adapter failure</li>
+<li>Charging port damage</li>
+<li>Charging circuitry problem</li>
+</ul>
+<p><strong>How to diagnose:</strong></p>
+<ul>
+<li>Check battery health report (built-in OS tool)</li>
+<li>Try wiggling power cable (loose port?)</li>
+<li>Check adapter temperature (should be warm, not extremely hot)</li>
+<li>Try different outlet (eliminates power source issue)</li>
+<li>If possible, try different adapter (isolates adapter vs. battery/port)</li>
+</ul>
+<p><strong>Common context:</strong></p>
+<ul>
+<li>Batteries 2+ years old in hot climates</li>
+<li>Power voltage fluctuations damaging adapters</li>
+<li>Physical damage to ports from frequent plugging/unplugging</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Replace battery (if that&#39;s the issue)</li>
+<li>Replace adapter (if that&#39;s the issue)</li>
+<li>Port repair may need professional help</li>
+<li>Can often continue working plugged in even with dead battery</li>
+</ul>
+<p><strong>Prevention:</strong></p>
+<ul>
+<li>Surge protector/voltage regulator</li>
+<li>Avoid extreme heat when possible</li>
+<li>Don&#39;t leave plugged in 24/7 in very hot environments</li>
+<li>Careful with charging port (don&#39;t stress connector)</li>
+</ul>
+<h3 id="pattern-2-overheating-and-thermal-shutdown">Pattern 2: Overheating and Thermal Shutdown</h3>
+<p><strong>Common symptoms:</strong></p>
+<ul>
+<li>Unexpected shutdowns (no warning, just powers off)</li>
+<li>Shutdowns more common with intensive tasks</li>
+<li>Very loud fan noise</li>
+<li>Computer hot to touch (especially bottom/sides)</li>
+<li>Slowness that improves after cooling</li>
+<li>More problems during hot parts of day</li>
+</ul>
+<p><strong>Likely causes:</strong></p>
+<ul>
+<li>Dust blocking cooling vents</li>
+<li>Fan failure</li>
+<li>Dried thermal paste</li>
+<li>Working in hot environment</li>
+</ul>
+<p><strong>How to diagnose:</strong></p>
+<ul>
+<li>Check temperature with monitoring software</li>
+<li>Listen to fan (not running? too loud?)</li>
+<li>Visual inspection of vents (dust visible?)</li>
+<li>Note correlation with workload and time of day</li>
+<li>Check if problem improves after computer cools down</li>
+</ul>
+<p><strong>Common context:</strong></p>
+<ul>
+<li>Dusty environments (dry season especially)</li>
+<li>Months without cleaning</li>
+<li>Hot workspaces without AC</li>
+<li>Working on soft surfaces that block vents</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Clean vents and fan (compressed air or careful brushing)</li>
+<li>Improve workspace ventilation</li>
+<li>Laptop cooling pad if available</li>
+<li>Fan replacement if fan has failed</li>
+<li>Work during cooler hours if possible</li>
+</ul>
+<p><strong>Prevention:</strong></p>
+<ul>
+<li>Monthly cleaning in dusty environments</li>
+<li>Always use on hard, flat surface</li>
+<li>Keep vents clear</li>
+<li>Work in coolest available location</li>
+</ul>
+<h3 id="pattern-3-storage-drive-problems">Pattern 3: Storage Drive Problems</h3>
+<p><strong>Common symptoms:</strong></p>
+<p><strong>For failing drives:</strong></p>
+<ul>
+<li>Clicking or grinding sounds</li>
+<li>Very slow performance (especially startup and file access)</li>
+<li>Files corrupting or disappearing</li>
+<li>Frequent crashes</li>
+<li>&quot;Disk error&quot; messages</li>
+<li>Computer freezes when accessing files</li>
+</ul>
+<p><strong>For full drives:</strong></p>
+<ul>
+<li>Slow performance</li>
+<li>&quot;Disk full&quot; warnings</li>
+<li>Can&#39;t save files</li>
+<li>Programs won&#39;t update or install</li>
+</ul>
+<p><strong>Likely causes:</strong></p>
+<ul>
+<li>HDD mechanical failure (clicking = very bad sign)</li>
+<li>SSD wear (less common but possible)</li>
+<li>Full drive (no space left)</li>
+<li>Corruption from power issues</li>
+<li>Physical shock damage</li>
+</ul>
+<p><strong>How to diagnose:</strong></p>
+<ul>
+<li>Listen for clicking (classic failing HDD sound)</li>
+<li>Check drive space (how full?)</li>
+<li>Run diagnostic tools (CHKDSK, manufacturer diagnostics)</li>
+<li>Note if problems correlate with file access</li>
+<li>Check SMART status (drive health indicator)</li>
+</ul>
+<p><strong>Common context:</strong></p>
+<ul>
+<li>HDDs in hot/dusty environments or after physical shock</li>
+<li>Language workers collecting large audio/video files</li>
+<li>Power outages causing corruption</li>
+<li>Older drives (3+ years)</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li><strong>If failing:</strong> Backup immediately, replace drive</li>
+<li><strong>If full:</strong> Free space, move files to external storage, better data management</li>
+<li><strong>If corrupted:</strong> Attempt repair, but prepare for replacement</li>
+</ul>
+<p><strong>Prevention:</strong></p>
+<ul>
+<li>Regular backups (external drive or cloud)</li>
+<li>Monitor drive space (don&#39;t let it get above 80% full)</li>
+<li>Surge protector (prevents corruption from power issues)</li>
+<li>Careful transport (physical shock damages HDDs)</li>
+<li>Consider SSD for reliability (if replacing)</li>
+</ul>
+<h3 id="pattern-4-display-issues">Pattern 4: Display Issues</h3>
+<p><strong>Common symptoms:</strong></p>
+<ul>
+<li>Screen stays black (but computer powers on)</li>
+<li>Flickering or intermittent display</li>
+<li>Lines or artifacts on screen</li>
+<li>Very dim display (backlight issue)</li>
+<li>Colors wrong or washed out</li>
+<li>Spots or clouding</li>
+</ul>
+<p><strong>Likely causes:</strong></p>
+<ul>
+<li>Loose display cable</li>
+<li>Backlight failure</li>
+<li>Display panel damage</li>
+<li>Graphics hardware problem</li>
+<li>Humidity damage</li>
+</ul>
+<p><strong>How to diagnose:</strong></p>
+<ul>
+<li><strong>Test with external monitor (KEY TEST)</strong> - isolates display vs. graphics<ul>
+<li>If external works: problem is in display assembly</li>
+<li>If external also fails: problem is in graphics hardware</li>
+</ul>
+</li>
+<li>Check brightness settings (surprisingly common oversight)</li>
+<li>Gently press around screen bezel (loose connection?)</li>
+<li>Note if problem is intermittent or constant</li>
+<li>Look for physical damage (cracks, pressure marks)</li>
+</ul>
+<p><strong>Common context:</strong></p>
+<ul>
+<li>Physical pressure on closed lid</li>
+<li>Humidity causing condensation</li>
+<li>Display cable damage from opening/closing repeatedly</li>
+<li>Impact or drop</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>If cable loose: reseating (may need professional)</li>
+<li>If backlight failed: replacement (expensive)</li>
+<li>If panel cracked: replacement</li>
+<li>If graphics issue: may need motherboard repair/replacement</li>
+<li>Workaround: External monitor while arranging repair</li>
+</ul>
+<p><strong>Prevention:</strong></p>
+<ul>
+<li>Protect laptop during transport</li>
+<li>Don&#39;t put pressure on closed lid</li>
+<li>Store in dry location (humidity control)</li>
+<li>Open/close gently (cable stress)</li>
+</ul>
+<h3 id="pattern-5-ram-issues">Pattern 5: RAM Issues</h3>
+<p><strong>Common symptoms:</strong></p>
+<ul>
+<li>Beep codes on startup (pattern varies by manufacturer)</li>
+<li>Computer powers on but no display</li>
+<li>Blue screen errors</li>
+<li>Random crashes or freezes</li>
+<li>Program crashes</li>
+<li>Often happens after physical shock</li>
+</ul>
+<p><strong>Likely causes:</strong></p>
+<ul>
+<li>RAM not seated properly (became dislodged)</li>
+<li>RAM module failure</li>
+<li>RAM slot corrosion (humidity)</li>
+<li>Incompatible RAM (if recently upgraded)</li>
+</ul>
+<p><strong>How to diagnose:</strong></p>
+<ul>
+<li>Listen for beep codes (usually indicate RAM)</li>
+<li>Test by reseating RAM modules</li>
+<li>Try one RAM stick at a time (if multiple)</li>
+<li>Run memory diagnostic tool</li>
+<li>Note if happened after transport or in humid conditions</li>
+</ul>
+<p><strong>Common context:</strong></p>
+<ul>
+<li>Rough transport (vibration unseats RAM)</li>
+<li>Humid environments (corrosion)</li>
+<li>After opening computer for other reasons</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Reseat RAM (remove and reinstall firmly)</li>
+<li>Clean contacts gently if corrosion visible</li>
+<li>Replace RAM if module has failed</li>
+<li>Ensure proper seating (should click into place)</li>
+</ul>
+<p><strong>Prevention:</strong></p>
+<ul>
+<li>Careful transport (padded case)</li>
+<li>Humidity control</li>
+<li>Ensure RAM properly seated after any internal work</li>
+</ul>
+<h3 id="pattern-6-power-and-charging-problems">Pattern 6: Power and Charging Problems</h3>
+<p><strong>Common symptoms:</strong></p>
+<ul>
+<li>Computer won&#39;t turn on at all</li>
+<li>Power light flickers or doesn&#39;t stay on</li>
+<li>Computer dies immediately when unplugged</li>
+<li>Charging light doesn&#39;t come on</li>
+<li>Works only when plugged in</li>
+<li>Burning smell from adapter</li>
+</ul>
+<p><strong>Likely causes:</strong></p>
+<ul>
+<li>Dead power adapter</li>
+<li>Damaged charging port</li>
+<li>Charging circuitry failure (motherboard)</li>
+<li>Completely dead battery</li>
+<li>Power button failure (rare)</li>
+</ul>
+<p><strong>How to diagnose:</strong></p>
+<ul>
+<li>Check adapter: Is it warm? Any damage to cable?</li>
+<li>Check charging light: Does it come on when plugged in?</li>
+<li>Try different outlet (eliminates wall power)</li>
+<li>Wiggle connection (loose port?)</li>
+<li>Smell adapter (burning smell = definitely bad)</li>
+<li>Check if any response when power button pressed (lights? sounds?)</li>
+</ul>
+<p><strong>Common context:</strong></p>
+<ul>
+<li>Voltage fluctuations/power surges</li>
+<li>Physical damage to adapter or port</li>
+<li>Old adapter (cables fray over time)</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Replace adapter (most common)</li>
+<li>Port repair (may need professional)</li>
+<li>Battery replacement</li>
+<li>Motherboard repair (expensive, often not worth it)</li>
+</ul>
+<p><strong>Prevention:</strong></p>
+<ul>
+<li>Surge protector/voltage regulator (ESSENTIAL)</li>
+<li>Unplug during storms</li>
+<li>Cable management (don&#39;t stress connections)</li>
+<li>Replace adapters at first sign of damage</li>
+</ul>
+<h3 id="activity-2-3-pattern-recognition">Activity 2.3: Pattern Recognition</h3>
+<p><strong>Time:</strong> 5 minutes</p>
+<p>Match each scenario to its most likely pattern and component:</p>
+<p><strong>Scenario A:</strong> Computer worked fine yesterday. Today user transported it 4 hours on rough roads. Now it makes three beeps and screen stays black.</p>
+<p><strong>Scenario B:</strong> Over the past month, computer has gotten progressively slower. Now takes 10 minutes to start. User hears clicking sounds. Works in hot, dusty environment.</p>
+<p><strong>Scenario C:</strong> Computer shuts down suddenly after 30-45 minutes of use. Fan is very loud before shutdown. Happens more on hot afternoons. Been getting worse.</p>
+<p><strong>Scenario D:</strong> Computer won&#39;t turn on. Charging light doesn&#39;t come on when plugged in. User mentions recent thunderstorm. Adapter feels unusually cool (not even warm).</p>
+<h4 id="answers">Answers</h4>
+<ul>
+<li><strong>A:</strong> Pattern 5 (RAM issues) - unseated RAM from rough transport</li>
+<li><strong>B:</strong> Pattern 3 (Storage drive failure) - clicking HDD, progressive slowness</li>
+<li><strong>C:</strong> Pattern 2 (Overheating) - thermal shutdown, loud fan, environmental correlation</li>
+<li><strong>D:</strong> Pattern 6 (Power problems) - dead adapter, likely from power surge</li>
+</ul>
+<hr>
+<h1 id="module-2-diagnosing-hardware-problems-part-3">MODULE 2: DIAGNOSING HARDWARE PROBLEMS - Part 3</h1>
+<p><strong>Duration:</strong> Continuation of Module 2
+<strong>Format:</strong> Asynchronous self-paced learning</p>
+<hr>
+<h2 id="section-2-4-remote-troubleshooting-skills">Section 2.4: Remote Troubleshooting Skills</h2>
+<p><strong>Time:</strong> 10 minutes</p>
+<h3 id="the-challenge-of-remote-support">The Challenge of Remote Support</h3>
+<p>As a language technology consultant, you won&#39;t be physically present with the user. This means you need to:</p>
+<ul>
+<li>Gather information through questions</li>
+<li>Guide users through steps they can perform</li>
+<li>Assess their comfort level with different tasks</li>
+<li>Know when to escalate rather than push beyond user capability</li>
+</ul>
+<h3 id="communication-strategies">Communication Strategies</h3>
+<h4 id="1-ask-clear-specific-questions">1. Ask Clear, Specific Questions</h4>
+<p><strong>Vague:</strong> &quot;Is it working okay?&quot;</p>
+<p><strong>Specific:</strong> &quot;When you press the power button, what exactly happens? Do any lights come on? Do you hear any sounds?&quot;</p>
+<p><strong>Vague:</strong> &quot;Is it slow?&quot;</p>
+<p><strong>Specific:</strong> &quot;How long does it take from when you press the power button until you can start working? And once you&#39;re working, do programs respond quickly or is there delay?&quot;</p>
+<p><strong>Vague:</strong> &quot;Does it get hot?&quot;</p>
+<p><strong>Specific:</strong> &quot;Where exactly does it feel hot - bottom, sides, near the vents? Can you hold your hand there comfortably or is it too hot to touch?&quot;</p>
+<h4 id="2-give-step-by-step-instructions">2. Give Step-by-Step Instructions</h4>
+<p>When guiding hardware procedures:</p>
+<ul>
+<li>One step at a time</li>
+<li>Very specific (not &quot;check the RAM&quot; but &quot;look for small green circuit boards with chips on them&quot;)</li>
+<li>Check understanding (&quot;Do you see the component I described?&quot;)</li>
+<li>Pause points (&quot;Before you remove anything, take a photo so you remember how it goes back&quot;)</li>
+<li>Safety warnings (&quot;Make sure the computer is powered off and unplugged&quot;)</li>
+</ul>
+<h4 id="3-assess-comfort-level">3. Assess Comfort Level</h4>
+<p>Before asking someone to open their computer:</p>
+<ul>
+<li>&quot;Have you ever opened the back of a laptop before?&quot;</li>
+<li>&quot;How comfortable would you feel removing a couple of screws and looking inside?&quot;</li>
+<li>&quot;I can walk you through this, but it&#39;s also okay to find someone local who can help if you&#39;re not comfortable with it.&quot;</li>
+</ul>
+<p>If they&#39;re uncertain, provide alternatives:</p>
+<ul>
+<li>&quot;Let&#39;s try these external tests first&quot;</li>
+<li>&quot;Is there anyone nearby who has done this before who could help?&quot;</li>
+<li>&quot;This might be one to escalate to IT support&quot;</li>
+</ul>
+<h4 id="4-use-visual-aids">4. Use Visual Aids</h4>
+<p>When possible:</p>
+<ul>
+<li>Send photos or diagrams</li>
+<li>Reference iFixit teardowns for their specific model</li>
+<li>Video calls if bandwidth allows (watch what they&#39;re doing)</li>
+<li>Ask them to take photos and send them</li>
+</ul>
+<h4 id="5-document-everything">5. Document Everything</h4>
+<p>Good documentation helps:</p>
+<ul>
+<li>Track patterns across users</li>
+<li>Smooth escalation to IT if needed</li>
+<li>Build organizational knowledge</li>
+<li>Prevent repeat questions</li>
+</ul>
+<p>Document:</p>
+<ul>
+<li>Symptoms (specific details)</li>
+<li>Tests performed</li>
+<li>Results</li>
+<li>Actions taken</li>
+<li>Recommendations</li>
+</ul>
+<h3 id="activity-2-4-write-remote-instructions">Activity 2.4: Write Remote Instructions</h3>
+<p><strong>Time:</strong> 5 minutes</p>
+<p>Write step-by-step instructions for guiding a user through this task:</p>
+<p><strong>Task:</strong> Check their computer&#39;s vents for dust buildup and clean them externally.</p>
+<p>Assume the user has never done this before. Write 5-7 steps that are clear enough for someone to follow via email or chat.</p>
+<h4 id="sample-answer-">Sample Answer:</h4>
+<ol>
+<li><p>Power off your computer completely and unplug the power adapter. Let it cool for at least 10 minutes.</p>
+</li>
+<li><p>Find the ventilation slots on your computer - these are usually along the sides or back edge and look like narrow slits or grilles. Take a photo and send it to me if you&#39;re not sure you&#39;ve found the right thing.</p>
+</li>
+<li><p>Look at the vents in good light. Do you see dust or debris inside? Is it blocking the openings? (It&#39;s okay if there&#39;s a little dust, but we&#39;re looking for obvious buildup)</p>
+</li>
+<li><p>If you see dust: Using a soft brush (like a clean paintbrush) or a dry cloth, gently brush away any dust from the outside. Brush AWAY from the openings so you&#39;re pulling dust out, not pushing it in.</p>
+</li>
+<li><p>If you have compressed air: Hold the can upright, keep it about 6 inches from the vents, and use short bursts. Don&#39;t spray continuously or hold the can upside down. This helps blow dust out from inside.</p>
+</li>
+<li><p>After cleaning, take another photo so I can see the result.</p>
+</li>
+<li><p>Let me know if you noticed a lot of dust buildup - that might explain your overheating issues!</p>
+</li>
+</ol>
+<p><strong>Key elements:</strong> Safety (power off, cool down), specificity (where vents are, what they look like), confirmation (photos), clear technique, connection to the problem.</p>
+<hr>
+<h2 id="section-2-5-guided-practice-scenarios">Section 2.5: Guided Practice Scenarios</h2>
+<p><strong>Time:</strong> 15 minutes</p>
+<p>Now let&#39;s practice the full diagnostic process on some realistic scenarios. For each one:</p>
+<ol>
+<li>Apply the four-step framework (Observe, Isolate, Test, Decide)</li>
+<li>Identify which failure pattern it matches</li>
+<li>Write out your complete diagnostic plan</li>
+</ol>
+<h3 id="teaching-scenario-1-the-black-screen">Teaching Scenario 1: The Black Screen</h3>
+<p><strong>Situation:</strong></p>
+<p>James in Papua New Guinea says his computer &quot;won&#39;t turn on.&quot; When you ask him to describe exactly what happens, he says: &quot;I press the power button and I can hear the fan running, and there&#39;s a small light on the front that comes on, but the screen stays completely black.&quot;</p>
+<p><strong>Context:</strong></p>
+<p>James works in a coastal area with high humidity. This morning he noticed some condensation on his desk when he came into the office.</p>
+<p><strong>Your turn:</strong> Work through the diagnostic process. Write down your answers before looking at the teaching points below.</p>
+<ol>
+<li><strong>OBSERVE:</strong> What additional questions would you ask?</li>
+<li><strong>ISOLATE:</strong> Based on symptoms, what components are most likely involved? What can you rule out?</li>
+<li><strong>TEST:</strong> What tests would you recommend? (Put them in order)</li>
+<li><strong>DECIDE:</strong> What would you recommend based on likely causes?</li>
+</ol>
+<hr>
+<h4 id="teaching-points-for-scenario-1-">Teaching Points for Scenario 1:</h4>
+<p><strong>OBSERVE questions:</strong></p>
+<ul>
+<li>Has this happened before?</li>
+<li>Did anything unusual happen yesterday or last night?</li>
+<li>Is there visible moisture on or around the computer?</li>
+<li>Can you hear the hard drive spinning or any beep codes?</li>
+<li>If you shine a flashlight on the screen, do you see anything faint?</li>
+</ul>
+<p><strong>ISOLATE:</strong></p>
+<p>Computer powers on (fan runs, power light on) which means power system works.</p>
+<p>Screen stays black which means display or graphics or connection issue.</p>
+<p>Given humidity context, likely moisture interfering with connections (display cable, RAM, or both).</p>
+<p><strong>Most likely:</strong> Loose or moisture-affected display connection or RAM</p>
+<p><strong>Can rule out:</strong> Power system (it&#39;s working), complete motherboard failure (fan runs)</p>
+<p><strong>Which pattern:</strong> This matches display issues (Pattern 4) or RAM issues (Pattern 5), complicated by environmental factors (humidity)</p>
+<p><strong>TEST (in order of least to most invasive):</strong></p>
+<ol>
+<li><strong>Let it dry:</strong> Power off completely, remove battery if possible, let sit for several hours in dry location</li>
+<li><strong>External monitor test</strong> (if available): Would definitively separate display from graphics issue</li>
+<li><strong>Listen for beeps:</strong> Any beep codes when starting?</li>
+<li><strong>Flashlight test:</strong> Shine light on screen - if you can faintly see image, backlight failed</li>
+<li><strong>If comfortable with opening:</strong> Reseat RAM (humidity can cause poor connection)</li>
+</ol>
+<p><strong>DECIDE:</strong></p>
+<p><strong>Immediate:</strong></p>
+<ul>
+<li>Don&#39;t keep trying to start it (could cause damage if moisture present)</li>
+<li>Let computer dry completely (several hours, warm dry location)</li>
+<li>Try restarting after it&#39;s dry</li>
+</ul>
+<p><strong>If problem persists after drying:</strong></p>
+<ul>
+<li>If external monitor works, then display assembly issue (cable or panel)</li>
+<li>If external monitor also doesn&#39;t work, then try reseating RAM</li>
+<li>If RAM reseat doesn&#39;t help, then likely need IT support</li>
+</ul>
+<p><strong>Prevention:</strong></p>
+<ul>
+<li>Store computer in sealed container with silica gel</li>
+<li>Allow computer to acclimate to room temp before starting</li>
+<li>Work in driest location possible</li>
+<li>Don&#39;t work immediately after moving from cold/humid environment</li>
+</ul>
+<p><strong>Key insight:</strong> Environmental context (humidity + condensation) immediately suggests moisture problem. Solution isn&#39;t technical repair, it&#39;s letting it dry! This is where understanding environmental factors really pays off.</p>
+<hr>
+<h3 id="teaching-scenario-2-the-intermittent-shutdown">Teaching Scenario 2: The Intermittent Shutdown</h3>
+<p><strong>Situation:</strong></p>
+<p>David in Chad contacts you frustrated because his notebook has shut down unexpectedly three times this week while he was working. He says there&#39;s no warning—it just turns off suddenly. When he restarts it, sometimes it works fine for hours, other times it shuts down again within 30 minutes. He mentions that it seems to happen more often when he&#39;s running his translation software and has multiple documents open.</p>
+<p><strong>Context:</strong></p>
+<p>It&#39;s dry season, and dust is a constant problem. David works in a small office with no air conditioning. He&#39;s been in location for 8 months and hasn&#39;t done any maintenance on the computer.</p>
+<p><strong>Your turn:</strong> Apply the diagnostic framework.</p>
+<ol>
+<li><strong>OBSERVE:</strong> What questions would you ask?</li>
+<li><strong>ISOLATE:</strong> What&#39;s your primary hypothesis? Alternative possibilities?</li>
+<li><strong>TEST:</strong> Design tests to confirm/rule out your hypothesis</li>
+<li><strong>DECIDE:</strong> Recommended solution and if problem persists</li>
+</ol>
+<hr>
+<h4 id="teaching-points-for-scenario-2-">Teaching Points for Scenario 2:</h4>
+<p><strong>OBSERVE questions:</strong></p>
+<ul>
+<li>Is the fan very loud before shutdown?</li>
+<li>Does the bottom/sides of the computer feel very hot?</li>
+<li>Does it happen more in the afternoon (hottest time)?</li>
+<li>Where do you work - on a desk, on your lap, on a cushion?</li>
+<li>Are the vents blocked by anything?</li>
+<li>Can you see dust in the vents?</li>
+</ul>
+<p><strong>ISOLATE:</strong></p>
+<p><strong>Primary hypothesis:</strong> Overheating due to dust accumulation</p>
+<ul>
+<li>Supports: Dry season, dust problem, 8 months no maintenance, shutdowns during intensive work, random timing</li>
+<li>Pattern matches: Overheating (Pattern 2)</li>
+</ul>
+<p><strong>Alternative possibilities:</strong></p>
+<ul>
+<li>Power adapter failure (but would expect more consistent behavior)</li>
+<li>RAM issue (but would expect different symptoms - crashes, not clean shutdowns)</li>
+<li>Battery problem (but seems to happen on both battery and plugged in based on description)</li>
+</ul>
+<p><strong>Why overheating is most likely:</strong></p>
+<ul>
+<li>Thermal shutdowns are protective (computer shuts down before damage)</li>
+<li>Worse with intensive work (generates more heat)</li>
+<li>Random timing fits overheating (depends on ambient temp + workload)</li>
+<li>Environmental context (dust, heat, no AC, no maintenance)</li>
+</ul>
+<p><strong>TEST (confirm hypothesis):</strong></p>
+<ol>
+<li><p><strong>Temperature check:</strong> Download and run temperature monitoring software (HWMonitor, Core Temp) - what temperatures right before shutdown? (Over 90°C confirms)</p>
+</li>
+<li><p><strong>Fan check:</strong> Is fan running loudly? Is it running at all?</p>
+</li>
+<li><p><strong>Visual inspection:</strong> Look at vents - is dust visible? Are they blocked?</p>
+</li>
+<li><p><strong>Pattern test:</strong> Does shutdown happen more during hot part of day? With intensive tasks? After longer work sessions?</p>
+</li>
+<li><p><strong>Position test:</strong> Does it happen more when laptop is on soft surface vs. hard desk?</p>
+</li>
+</ol>
+<p><strong>DECIDE:</strong></p>
+<p><strong>Immediate solution:</strong></p>
+<ol>
+<li><p><strong>Clean cooling vents:</strong></p>
+<ul>
+<li>External cleaning with brush/compressed air</li>
+<li>Walk David through this step-by-step</li>
+</ul>
+</li>
+<li><p><strong>Improve airflow:</strong></p>
+<ul>
+<li>Use on hard, flat surface (not lap, not cushion)</li>
+<li>Elevate slightly if possible (allows air under laptop)</li>
+<li>Position away from walls (don&#39;t block vents)</li>
+</ul>
+</li>
+<li><p><strong>Reduce heat generation:</strong></p>
+<ul>
+<li>Close unnecessary programs</li>
+<li>Work in coolest part of office</li>
+<li>Take breaks (let computer cool)</li>
+</ul>
+</li>
+</ol>
+<p><strong>If comfortable opening:</strong></p>
+<ol>
+<li><strong>Internal cleaning:</strong> Open bottom panel, clean dust from fan and heat sink</li>
+</ol>
+<p><strong>If problem persists after cleaning:</strong></p>
+<ul>
+<li>Fan might be failing (mechanical problem)</li>
+<li>Thermal paste might need replacement (advanced)</li>
+<li>Escalate to IT support</li>
+</ul>
+<p><strong>Prevention (critical for David):</strong></p>
+<ul>
+<li><strong>Monthly:</strong> External vent cleaning</li>
+<li><strong>Quarterly:</strong> Internal cleaning (or more often in dusty season)</li>
+<li><strong>Daily habits:</strong> Work on proper surface, keep workspace clean, don&#39;t block vents, monitor fan noise</li>
+<li><strong>Environmental:</strong> Close windows during dust storms if possible</li>
+</ul>
+<p><strong>Key insight:</strong> This scenario teaches that simple maintenance (cleaning) solves many &quot;hardware problems.&quot; Remote location + dusty environment + no maintenance = predictable overheating. The consultant&#39;s job includes helping users establish maintenance routines, not just fixing current problems.</p>
+<hr>
+<h3 id="practice-scenario-3-your-independent-work">Practice Scenario 3: Your Independent Work</h3>
+<p>Now try one completely on your own:</p>
+<p><strong>Situation:</strong></p>
+<p>Priya in rural India reports that her notebook battery &quot;isn&#39;t charging properly.&quot; She says the charging light comes on when she plugs it in, but the battery percentage doesn&#39;t seem to increase. Sometimes it says &quot;plugged in, not charging&quot; in the system tray. The laptop is about 2 years old.</p>
+<p><strong>Context:</strong></p>
+<p>Priya&#39;s area experiences significant voltage fluctuations. The temperature in her workspace regularly reaches 35-40°C (95-104°F) during the day.</p>
+<p><strong>Your task:</strong></p>
+<p>Write out your complete diagnostic plan following the four-step framework. Be specific - this will be reviewed by your mentor.</p>
+<p><strong>Submit to your mentor:</strong></p>
+<ol>
+<li>OBSERVE: Questions you&#39;d ask (at least 5)</li>
+<li>ISOLATE: Most likely cause(s) and reasoning</li>
+<li>TEST: Specific diagnostic steps in order</li>
+<li>DECIDE: Recommended solution(s) and prevention</li>
+</ol>
+<hr>
+<h2 id="module-2-summary">Module 2 Summary</h2>
+<h3 id="you-ve-learned">You&#39;ve Learned</h3>
+<ul>
+<li>How to distinguish hardware from software problems</li>
+<li>A systematic four-step diagnostic framework (Observe, Isolate, Test, Decide)</li>
+<li>Six common hardware failure patterns and how to recognize them</li>
+<li>How to troubleshoot remotely through clear communication</li>
+<li>How to apply diagnostic thinking to realistic scenarios</li>
+</ul>
+<h3 id="key-takeaways">Key Takeaways</h3>
+<ul>
+<li>Good diagnosis is systematic, not guesswork</li>
+<li>Environmental and timing clues are diagnostic gold</li>
+<li>Patterns repeat - learn to recognize them</li>
+<li>Remote support requires clear communication and assessing user comfort</li>
+<li>Prevention is part of your job - don&#39;t just fix, help users avoid future problems</li>
+</ul>
+<h3 id="before-module-3">Before Module 3</h3>
+<ul>
+<li>Make sure you&#39;ve completed the practice scenarios</li>
+<li>Review the six failure patterns - can you recognize each?</li>
+<li>Practice writing clear, step-by-step instructions</li>
+</ul>
+<p><strong>Ready for Module 3?</strong></p>
+<p>Now you&#39;ll apply everything you&#39;ve learned to more complex scenarios, learn when to repair vs. replace, and develop your resource toolkit.</p>
+<hr>
+<p>END OF MODULE 2</p>
