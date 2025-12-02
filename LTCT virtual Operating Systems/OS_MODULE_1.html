@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1: OS Fundamentals and Identification - Operating Systems Course</title>
+    <link rel="stylesheet" href="course-styles.css">
+</head>
+<body>
+    <div class="course-container">
+        <header class="course-header">
+            <h1 class="course-title">Operating Systems for Language Technology Consultants</h1>
+            <div class="module-info">
+                <h2 class="module-title">Module 1: OS Fundamentals and Identification</h2>
+                <div class="module-meta">
+                    <span class="duration">Duration: 60 minutes</span>
+                    <span class="format">Format: Asynchronous self-paced learning</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="learning-objectives">
+            <h2 class="section-heading">Learning Objectives</h2>
+            <p class="intro-text">By the end of this module, you will be able to:</p>
+            <ul class="objectives-list">
+                <li>Explain what an operating system does and why it matters for language technology work</li>
+                <li>Identify the current operating system environment and when each OS is appropriate</li>
+                <li>Locate detailed system information on Windows, macOS, and Linux systems</li>
+                <li>Assess system compatibility for language software requirements</li>
+                <li>Document system specifications accurately</li>
+            </ul>
+        </section>
+
+        <section class="module-section" id="section-1-1">
+            <div class="section-header">
+                <h2 class="section-title">Section 1.1: Welcome & Course Overview</h2>
+                <span class="time-estimate">Time: 5 minutes</span>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">Introduction</h3>
+                <p>Welcome to Operating Systems for Language Technology Consultants! As a language technology consultant, you support language workers around the world who depend on their computers to do translation, literacy, and linguistic work. While you won't be installing operating systems for everyone, you need to understand how operating systems work so you can:</p>
+                <ul class="feature-list">
+                    <li>Determine whether problems are OS-related or application-related</li>
+                    <li>Configure systems properly for language work (especially non-Latin scripts)</li>
+                    <li>Guide users through OS settings and troubleshooting remotely</li>
+                    <li>Make informed recommendations about OS choices and upgrades</li>
+                    <li>Know when to escalate issues to IT specialists</li>
+                    <li>Keep your own system running smoothly</li>
+                </ul>
+                <p class="emphasis-text">This course focuses on the <strong>three major operating system families</strong>: Windows, macOS, and Linux - because language workers use all three, depending on their location, resources, and specific needs.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">Why This Course Exists</h3>
+                <p>In the past, OS knowledge was assumed as a prerequisite for language technology training. In practice, many consultants arrived without this foundational knowledge, which created barriers to their effectiveness. This course fills that gap by giving you the essential OS understanding you need for all your other LT work.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">Course Structure</h3>
+                <ul class="course-structure-list">
+                    <li><strong>Module 1 (60 min):</strong> Understanding operating systems and identifying what you're working with</li>
+                    <li><strong>Module 2 (60 min):</strong> Installing and configuring systems for language work</li>
+                    <li><strong>Module 3 (60 min):</strong> Troubleshooting problems and maintaining systems</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">What You'll Need</h3>
+                <ul class="requirements-list">
+                    <li>Your own computer (Windows, macOS, or Linux)</li>
+                    <li>Internet connection to view resources</li>
+                    <li>A learning journal (digital or paper) to document your findings and responses</li>
+                    <li>Administrator access to your computer (for some configuration activities)</li>
+                    <li>Willingness to explore your own system settings</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">Learning Approach</h3>
+                <p>This course is hands-on. You'll be exploring your actual computer system, not just reading about operating systems in theory. Most activities ask you to examine, document, or adjust settings on your own machine. This approach helps you learn by doing while also improving your own system setup.</p>
+                <div class="important-note">
+                    <strong>Important:</strong> All activities are designed to be safe and reversible. We'll guide you carefully through any changes, and you can always undo what you've done.
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">Assessment and Growth</h3>
+                <p>Throughout Modules 2 and 3, you'll work through realistic scenarios that language technology consultants encounter. You'll document your responses in your learning journal, and your mentor will review your diagnostic thinking and provide feedback.</p>
+                <p><strong>Remember:</strong> This course builds <strong>"Has Knowledge"</strong> level competency. You'll continue developing toward <strong>"With Assistance"</strong> and <strong>"Independent"</strong> levels throughout the year as you apply this knowledge in real situations, work with mentors, and gain experience.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">Your Learning Journal</h3>
+                <p>Throughout this course, you'll be asked to document findings, answer questions, and record your thinking. Keep a learning journal (a simple document or notebook) where you can:</p>
+                <ul class="feature-list">
+                    <li>Record system information you discover</li>
+                    <li>Write responses to reflection questions</li>
+                    <li>Document troubleshooting steps you take</li>
+                    <li>Create checklists and references for future use</li>
+                </ul>
+                <p>Your mentor will ask to see parts of your learning journal as part of the assessment process.</p>
+            </div>
+        </section>
+
+        <section class="module-section" id="section-1-2">
+            <div class="section-header">
+                <h2 class="section-title">Section 1.2: What Does an Operating System Do?</h2>
+                <span class="time-estimate">Time: 15 minutes</span>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">Introduction</h3>
+                <p>Before you can troubleshoot OS problems or configure systems effectively, you need to understand what an operating system actually does. Most people use computers daily without thinking about the OS - it's invisible until something goes wrong. In this section, you'll develop a clear mental model of the OS's role.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">The OS as Bridge and Manager</h3>
+                <p>Think of your operating system as the <strong>bridge between your computer's hardware and the applications you use</strong>. Without an OS, your hardware is just expensive metal and silicon. Without an OS, applications have no way to access the keyboard, display text on screen, save files, or connect to the internet.</p>
+                <p>The operating system manages three critical jobs:</p>
+            </div>
+
+            <div class="content-block">
+                <h4 class="component-name">1. Managing Hardware Resources</h4>
+                <ul class="component-list">
+                    <li>Controls access to the processor (CPU)</li>
+                    <li>Allocates memory (RAM) to running programs</li>
+                    <li>Manages storage (reading and writing files to disk)</li>
+                    <li>Handles input devices (keyboard, mouse, touchscreen)</li>
+                    <li>Controls output devices (display, speakers, printers)</li>
+                    <li>Manages network connections</li>
+                </ul>
+                <p>When you click to open a document, the OS finds the file on disk, loads it into memory, tells the processor to run the application, and displays the result on screen. The application doesn't talk directly to the hardware - the OS handles all of that.</p>
+            </div>
+
+            <div class="content-block">
+                <h4 class="component-name">2. Running and Managing Applications</h4>
+                <ul class="component-list">
+                    <li>Launches programs when you click them</li>
+                    <li>Keeps multiple programs running simultaneously</li>
+                    <li>Prevents programs from interfering with each other</li>
+                    <li>Closes programs properly when you're done</li>
+                    <li>Handles what happens when programs crash or freeze</li>
+                </ul>
+                <p>When you have a word processor, email client, and web browser all open at once, the OS is juggling their competing demands for processor time, memory, and hardware access.</p>
+            </div>
+
+            <div class="content-block">
+                <h4 class="component-name">3. Providing the User Interface</h4>
+                <ul class="component-list">
+                    <li>Creates the desktop, windows, menus, and icons you interact with</li>
+                    <li>Handles file management (folders, copying, deleting)</li>
+                    <li>Manages user accounts and permissions</li>
+                    <li>Provides system settings and control panels</li>
+                    <li>Runs background services (like checking for updates or syncing files)</li>
+                </ul>
+                <p>The "look and feel" of your computer - whether it's Windows, macOS, or Linux - is largely determined by how the OS presents itself to you.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">Why This Matters for Language Technology Work</h3>
+                <p>Understanding these three jobs helps you diagnose problems more effectively:</p>
+                
+                <div class="symptom-category">
+                    <h4 class="category-title">Hardware management issues show up as:</h4>
+                    <ul class="symptom-list">
+                        <li>Computers that won't recognize USB drives or keyboards</li>
+                        <li>Display problems (wrong resolution, can't detect external monitor)</li>
+                        <li>Network connectivity failures</li>
+                        <li>Printers that won't print</li>
+                    </ul>
+                </div>
+
+                <div class="symptom-category">
+                    <h4 class="category-title">Application management issues show up as:</h4>
+                    <ul class="symptom-list">
+                        <li>Programs that won't launch or crash repeatedly</li>
+                        <li>"Not enough memory" errors</li>
+                        <li>Slow performance when many programs are running</li>
+                        <li>Programs that conflict with each other</li>
+                    </ul>
+                </div>
+
+                <div class="symptom-category">
+                    <h4 class="category-title">User interface issues show up as:</h4>
+                    <ul class="symptom-list">
+                        <li>Can't find files or folders</li>
+                        <li>Settings that won't save</li>
+                        <li>Language or keyboard input problems</li>
+                        <li>Font display issues (critical for language work!)</li>
+                    </ul>
+                </div>
+
+                <p>When a language worker contacts you saying "my computer isn't working," your OS knowledge helps you ask the right questions to narrow down which of these three areas is causing the problem.</p>
+            </div>
+
+            <div class="activity-box">
+                <div class="activity-header">
+                    <h3 class="activity-title">Activity 1.2a: Explore What's Running Right Now</h3>
+                    <span class="activity-time">Time: 8 minutes</span>
+                </div>
+                <div class="activity-content">
+                    <p class="activity-intro">Let's make this concrete by looking at what your operating system is doing right now.</p>
+                    
+                    <h4 class="activity-section-title">Instructions:</h4>
+                    
+                    <div class="platform-instructions">
+                        <h5 class="platform-name">For Windows users:</h5>
+                        <ol class="instruction-steps">
+                            <li>Press <code>Ctrl + Shift + Esc</code> to open Task Manager</li>
+                            <li>Click "More details" if you see that option</li>
+                            <li>Look at the "Processes" tab</li>
+                        </ol>
+                    </div>
+
+                    <div class="platform-instructions">
+                        <h5 class="platform-name">For macOS users:</h5>
+                        <ol class="instruction-steps">
+                            <li>Press <code>Command + Space</code> and type "Activity Monitor"</li>
+                            <li>Press Enter to open it</li>
+                            <li>Look at the list of processes</li>
+                        </ol>
+                    </div>
+
+                    <div class="platform-instructions">
+                        <h5 class="platform-name">For Linux users:</h5>
+                        <ol class="instruction-steps">
+                            <li>Open your system monitor application (varies by distribution)
+                                <ul>
+                                    <li>Ubuntu: Search for "System Monitor"</li>
+                                    <li>Other distros: May be called "Task Manager" or similar</li>
+                                </ul>
+                            </li>
+                            <li>Look at the processes list</li>
+                        </ol>
+                    </div>
+
+                    <div class="observation-guide">
+                        <h5>What you're seeing:</h5>
+                        <p>You're looking at all the programs and background services your OS is currently managing. Notice:</p>
+                        <ul>
+                            <li>How many processes are running (probably dozens, even if you only opened a few programs)</li>
+                            <li>Which ones are using CPU (processor) resources</li>
+                            <li>Which ones are using memory (RAM)</li>
+                            <li>Some you recognize (like your web browser) and many you don't (background system services)</li>
+                        </ul>
+                    </div>
+
+                    <div class="journal-prompt">
+                        <h5>In your learning journal, write:</h5>
+                        <ol>
+                            <li>How many total processes are running on your system right now?</li>
+                            <li>What is using the most memory?</li>
+                            <li>What is using the most CPU?</li>
+                            <li>List 3-4 processes you don't recognize - these are likely OS services working in the background</li>
+                        </ol>
+                    </div>
+
+                    <p class="activity-reflection"><strong>Reflection:</strong> This is your OS at work - managing dozens of things simultaneously so you can focus on your actual work. When someone says their computer is "slow," you now have a window into what might be happening behind the scenes.</p>
+                </div>
+            </div>
+
+            <div class="activity-box">
+                <div class="activity-header">
+                    <h3 class="activity-title">Activity 1.2b: The OS as Problem-Solver</h3>
+                    <span class="activity-time">Time: 5 minutes</span>
+                </div>
+                <div class="activity-content">
+                    <p class="activity-intro">Here's a scenario to help you think about the OS's role:</p>
+                    
+                    <div class="scenario-box">
+                        <p><strong>Scenario:</strong> Maria is working on a translation project. She has her translation software open, a web browser with research materials, and a PDF document she's referencing. Suddenly her translation software freezes and won't respond.</p>
+                    </div>
+
+                    <div class="journal-prompt">
+                        <h5>In your learning journal, answer:</h5>
+                        <ol>
+                            <li>Which of the OS's three jobs (hardware management, application management, user interface) is most relevant to this problem?</li>
+                            <li>What might the OS need to do to resolve this situation?</li>
+                            <li>If the OS can't resolve it automatically, what options might it give Maria?</li>
+                        </ol>
+                    </div>
+
+                    <p class="activity-reflection"><strong>Think about:</strong> You've probably experienced this yourself - a frozen program. What does your OS do when this happens? How does it let you know? What choices does it give you?</p>
+                </div>
+            </div>
+
+            <div class="key-takeaways">
+                <h3 class="takeaways-title">Key Takeaways</h3>
+                <ul class="takeaways-list">
+                    <li>The OS is the essential bridge between hardware and applications</li>
+                    <li>It manages hardware resources, runs applications, and provides the user interface</li>
+                    <li>Understanding these roles helps you diagnose where problems originate</li>
+                    <li>Your OS is constantly working in the background, managing dozens of processes you never see</li>
+                    <li>When troubleshooting, ask yourself: Is this a hardware issue, an application issue, or a user interface issue?</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="module-section" id="section-1-3">
+            <div class="section-header">
+                <h2 class="section-title">Section 1.3: The Current OS Environment</h2>
+                <span class="time-estimate">Time: 20 minutes</span>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">Introduction</h3>
+                <p>Now that you understand what an operating system does, let's look at the operating systems you'll actually encounter in your work as a language technology consultant. Understanding the strengths, limitations, and typical use cases of each OS helps you make informed recommendations and provide better support.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">The Three Major Operating System Families</h3>
+                <p>Language workers around the world use three main operating system families: Windows, macOS, and Linux. Each has different characteristics that make it more or less suitable for different contexts.</p>
+            </div>
+
+            <div class="os-profile">
+                <h3 class="os-name">Windows</h3>
+                
+                <div class="os-section">
+                    <h4 class="os-section-title">Current Versions:</h4>
+                    <ul>
+                        <li>Windows 11 (released 2021, current version)</li>
+                        <li>Windows 10 (released 2015, still widely used, support until October 2025)</li>
+                        <li>Older versions (Windows 7, 8, 8.1) are end-of-life and no longer receive security updates</li>
+                    </ul>
+                </div>
+
+                <div class="os-section">
+                    <h4 class="os-section-title">Market Position:</h4>
+                    <p>Windows remains the dominant operating system globally, especially in Africa and the Americas where most language technology work happens. Many organizations standardize on Windows because:</p>
+                    <ul>
+                        <li>It's pre-installed on most new computers</li>
+                        <li>Most language software is developed for Windows first</li>
+                        <li>IT departments are familiar with managing Windows networks</li>
+                        <li>Hardware compatibility is broad</li>
+                    </ul>
+                </div>
+
+                <div class="os-section">
+                    <h4 class="os-section-title">Strengths for Language Technology Work:</h4>
+                    <ul class="strength-list">
+                        <li>Wide software compatibility - most language tools run on Windows</li>
+                        <li>Extensive font support and rendering capabilities</li>
+                        <li>Good keyboard layout customization</li>
+                        <li>Familiar to most users</li>
+                        <li>Strong support for assistive technologies</li>
+                    </ul>
+                </div>
+
+                <div class="os-section">
+                    <h4 class="os-section-title">Considerations:</h4>
+                    <ul class="consideration-list">
+                        <li>Licensing costs (though many organizations have volume licenses)</li>
+                        <li>Higher hardware requirements, especially for Windows 11</li>
+                        <li>Regular updates can sometimes cause compatibility issues</li>
+                        <li>Requires antivirus and security software</li>
+                    </ul>
+                </div>
+
+                <div class="os-section">
+                    <h4 class="os-section-title">When Windows Makes Sense:</h4>
+                    <ul>
+                        <li>Organizations with existing Windows infrastructure</li>
+                        <li>Users who need specific Windows-only language software</li>
+                        <li>Contexts where IT support is Windows-focused</li>
+                        <li>When budget allows for licensing and capable hardware</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="os-profile">
+                <h3 class="os-name">macOS</h3>
+                
+                <div class="os-section">
+                    <h4 class="os-section-title">Current Versions:</h4>
+                    <ul>
+                        <li>macOS Sonoma (released 2023)</li>
+                        <li>macOS Ventura (released 2022)</li>
+                        <li>macOS Monterey (released 2021)</li>
+                        <li>Apple typically supports the current version plus two previous versions</li>
+                    </ul>
+                </div>
+
+                <div class="os-section">
+                    <h4 class="os-section-title">Market Position:</h4>
+                    <p>macOS has grown in popularity, especially among younger language workers and in contexts where font and typography work is central. Apple computers come with macOS pre-installed, and the OS is tightly integrated with Apple hardware.</p>
+                </div>
+
+                <div class="os-section">
+                    <h4 class="os-section-title">Strengths for Language Technology Work:</h4>
+                    <ul class="strength-list">
+                        <li>Excellent font rendering and typography support</li>
+                        <li>Superior handling of complex scripts and right-to-left languages</li>
+                        <li>Built-in support for many languages and keyboards</li>
+                        <li>Unix-based system (similar to Linux underneath)</li>
+                        <li>Generally fewer security concerns than Windows</li>
+                        <li>Long-term hardware reliability</li>
+                    </ul>
+                </div>
+
+                <div class="os-section">
+                    <h4 class="os-section-title">Considerations:</h4>
+                    <ul class="consideration-list">
+                        <li>Only runs on Apple hardware (significantly higher upfront cost)</li>
+                        <li>Smaller selection of language-specific software</li>
+                        <li>Some popular language tools are Windows-only</li>
+                        <li>Repair and replacement can be expensive in remote locations</li>
+                        <li>Less familiar to IT staff in some regions</li>
+                    </ul>
+                </div>
+
+                <div class="os-section">
+                    <h4 class="os-section-title">When macOS Makes Sense:</h4>
+                    <ul>
+                        <li>Work heavily involves complex scripts, fonts, or typography</li>
+                        <li>Budget allows for Apple hardware investment</li>
+                        <li>User prefers the macOS interface and ecosystem</li>
+                        <li>Language software needed is macOS-compatible</li>
+                        <li>Long-term reliability is prioritized over initial cost</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="os-profile">
+                <h3 class="os-name">Linux</h3>
+                
+                <div class="os-section">
+                    <h4 class="os-section-title">Common Distributions:</h4>
+                    <ul>
+                        <li>Ubuntu (most popular, user-friendly)</li>
+                        <li>Linux Mint (similar to Windows interface)</li>
+                        <li>Debian (stable, widely supported)</li>
+                        <li>Fedora (cutting-edge features)</li>
+                        <li>Many others, each with different characteristics</li>
+                    </ul>
+                </div>
+
+                <div class="os-section">
+                    <h4 class="os-section-title">Market Position:</h4>
+                    <p>Linux has traditionally been less common for general language work, but it's growing in use for several important reasons:</p>
+                    <ul>
+                        <li>Extends life of older hardware that can't run current Windows</li>
+                        <li>No licensing costs</li>
+                        <li>Increasing software compatibility</li>
+                        <li>Strong in certain regions and technical communities</li>
+                    </ul>
+                </div>
+
+                <div class="os-section">
+                    <h4 class="os-section-title">Strengths for Language Technology Work:</h4>
+                    <ul class="strength-list">
+                        <li>Free and open source (no licensing costs)</li>
+                        <li>Runs well on older, less powerful hardware</li>
+                        <li>Highly customizable</li>
+                        <li>Strong security</li>
+                        <li>Good font support (especially in recent versions)</li>
+                        <li>Active community support</li>
+                        <li>Can dual-boot with Windows on same computer</li>
+                    </ul>
+                </div>
+
+                <div class="os-section">
+                    <h4 class="os-section-title">Considerations:</h4>
+                    <ul class="consideration-list">
+                        <li>Steeper learning curve for users coming from Windows</li>
+                        <li>Some language software doesn't run natively on Linux</li>
+                        <li>May require workarounds (Wine, virtual machines) for Windows software</li>
+                        <li>Less familiar to many IT support staff</li>
+                        <li>Troubleshooting often requires command-line knowledge</li>
+                    </ul>
+                </div>
+
+                <div class="os-section">
+                    <h4 class="os-section-title">When Linux Makes Sense:</h4>
+                    <ul>
+                        <li>Extending life of older computers</li>
+                        <li>Budget constraints prevent Windows licensing or Mac hardware</li>
+                        <li>Users are technically capable or have Linux-savvy support</li>
+                        <li>Language software needs are met by Linux-compatible tools</li>
+                        <li>Organization has commitment to open source software</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">Making OS Recommendations</h3>
+                <p>As a language technology consultant, you'll sometimes be asked "What operating system should I use?" or "Should we upgrade?" Here are key questions to ask:</p>
+                
+                <div class="question-category">
+                    <h4 class="category-title">About the User:</h4>
+                    <ul>
+                        <li>What is their current OS and comfort level?</li>
+                        <li>What language software do they need to run?</li>
+                        <li>How technically confident are they?</li>
+                        <li>Do they have local IT support? What OS does that support know?</li>
+                    </ul>
+                </div>
+
+                <div class="question-category">
+                    <h4 class="category-title">About the Context:</h4>
+                    <ul>
+                        <li>What hardware is available or affordable?</li>
+                        <li>Are there organizational standards or restrictions?</li>
+                        <li>What do other team members use (for collaboration)?</li>
+                        <li>Is internet connectivity reliable (for updates, cloud features)?</li>
+                    </ul>
+                </div>
+
+                <div class="question-category">
+                    <h4 class="category-title">About the Work:</h4>
+                    <ul>
+                        <li>What scripts and languages will they work with?</li>
+                        <li>Are they doing heavy font work or typography?</li>
+                        <li>Do they need specific software that's OS-dependent?</li>
+                        <li>How critical is system stability vs. having latest features?</li>
+                    </ul>
+                </div>
+
+                <p class="emphasis-text">There's rarely one "right" answer - it depends on weighing these factors for each specific situation.</p>
+            </div>
+
+            <div class="activity-box">
+                <div class="activity-header">
+                    <h3 class="activity-title">Activity 1.3a: Identify Your Operating System</h3>
+                    <span class="activity-time">Time: 7 minutes</span>
+                </div>
+                <div class="activity-content">
+                    <p class="activity-intro">Let's get hands-on. You're going to identify exactly what operating system version you're currently running.</p>
+                    
+                    <div class="platform-instructions">
+                        <h5 class="platform-name">For Windows:</h5>
+                        <ol class="instruction-steps">
+                            <li>Click the Start button (Windows icon)</li>
+                            <li>Type "About" and select "About your PC" or "System Information"</li>
+                            <li>Look for "Windows specifications" section</li>
+                        </ol>
+                    </div>
+
+                    <div class="platform-instructions">
+                        <h5 class="platform-name">For macOS:</h5>
+                        <ol class="instruction-steps">
+                            <li>Click the Apple menu (top-left corner)</li>
+                            <li>Select "About This Mac"</li>
+                            <li>You'll see the macOS version name and number</li>
+                        </ol>
+                    </div>
+
+                    <div class="platform-instructions">
+                        <h5 class="platform-name">For Linux:</h5>
+                        <ol class="instruction-steps">
+                            <li>Open a terminal window</li>
+                            <li>Type: <code>lsb_release -a</code> and press Enter
+                                <ul><li>OR type: <code>cat /etc/os-release</code> and press Enter</li></ul>
+                            </li>
+                            <li>You'll see your distribution name and version</li>
+                        </ol>
+                    </div>
+
+                    <div class="journal-prompt">
+                        <h5>In your learning journal, document:</h5>
+                        <ol>
+                            <li><strong>Operating System:</strong> (e.g., Windows 11, macOS Sonoma, Ubuntu 22.04)</li>
+                            <li><strong>Version Number:</strong> (e.g., 23H2, 14.1, 22.04.3)</li>
+                            <li><strong>Architecture:</strong> 64-bit or 32-bit (usually shown in same location)</li>
+                            <li><strong>Build Number:</strong> (if shown - this is the specific build of your OS version)</li>
+                        </ol>
+                    </div>
+
+                    <p class="activity-reflection"><strong>Why this matters:</strong> When troubleshooting problems or checking software compatibility, you need to know exactly what OS version you're running. "I have Windows" isn't specific enough - Windows 10 and Windows 11 have different capabilities and requirements.</p>
+                </div>
+            </div>
+
+            <div class="activity-box">
+                <div class="activity-header">
+                    <h3 class="activity-title">Activity 1.3b: OS Suitability Scenario</h3>
+                    <span class="activity-time">Time: 8 minutes</span>
+                </div>
+                <div class="activity-content">
+                    <div class="scenario-box">
+                        <p><strong>Scenario:</strong> Pastor John in rural Kenya needs a computer for Bible translation work. He'll be using Paratext (translation software) and needs to work with Ge'ez script (Ethiopic). His organization has a donated 7-year-old Dell laptop with Windows 7 installed. The laptop has 4GB RAM and a Core i3 processor. He has limited internet connectivity (checks email weekly when he goes to town). His nephew is tech-savvy and runs Linux on his own computer.</p>
+                    </div>
+
+                    <div class="journal-prompt">
+                        <h5>In your learning journal, consider and write:</h5>
+                        <ol>
+                            <li><strong>What are Pastor John's options for this computer?</strong>
+                                <ul>
+                                    <li>Can he keep using Windows 7? Why or why not?</li>
+                                    <li>Could he upgrade to Windows 10 or 11? What would be needed?</li>
+                                    <li>Would Linux be a viable option? What are the tradeoffs?</li>
+                                </ul>
+                            </li>
+                            <li><strong>What questions would you need to ask to give good advice?</strong>
+                                <ul>
+                                    <li>About his software needs?</li>
+                                    <li>About support available to him?</li>
+                                    <li>About his technical comfort level?</li>
+                                </ul>
+                            </li>
+                            <li><strong>What would you recommend and why?</strong>
+                                <ul>
+                                    <li>Consider: security, software compatibility, hardware limitations, support availability, cost</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <p class="activity-reflection">There's no single "right" answer here - this is about thinking through the factors that matter in real-world situations.</p>
+                </div>
+            </div>
+
+            <div class="key-takeaways">
+                <h3 class="takeaways-title">Key Takeaways</h3>
+                <ul class="takeaways-list">
+                    <li>Windows, macOS, and Linux each have distinct strengths and appropriate use cases</li>
+                    <li>Windows remains dominant but macOS and Linux are viable alternatives in specific contexts</li>
+                    <li>OS recommendations depend on user needs, hardware, budget, software requirements, and available support</li>
+                    <li>Knowing exactly what OS version someone is running is essential for troubleshooting and compatibility checking</li>
+                    <li>The "best" OS is the one that fits the specific context and constraints</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="module-section" id="section-1-4">
+            <div class="section-header">
+                <h2 class="section-title">Section 1.4: System Information and Compatibility</h2>
+                <span class="time-estimate">Time: 15 minutes</span>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">Introduction</h3>
+                <p>Identifying your OS version (as you did in the previous section) is just the beginning. As a language technology consultant, you need to know how to gather detailed system information and assess whether a system meets the requirements for specific language software. This section teaches you where to find that information and how to use it.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">Why System Information Matters</h3>
+                <p>When someone contacts you with a problem or asks if they can run certain software, you need more than just "I have Windows 10." You need to know:</p>
+                <ul class="component-list">
+                    <li>Processor type and speed (affects performance)</li>
+                    <li>Amount of RAM (determines what can run simultaneously)</li>
+                    <li>Available storage space (for installing software and storing files)</li>
+                    <li>Graphics capabilities (especially for display-intensive work)</li>
+                    <li>Current updates installed (some problems are fixed by updates)</li>
+                </ul>
+                <p>You also need this information to:</p>
+                <ul class="feature-list">
+                    <li>Determine if their system meets software requirements</li>
+                    <li>Diagnose performance problems</li>
+                    <li>Decide if an upgrade is feasible</li>
+                    <li>Plan for new software installations</li>
+                    <li>Help users understand their system's capabilities and limitations</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">Finding Detailed System Information</h3>
+                <p>Each operating system provides tools to view comprehensive system information. Let's look at where to find them.</p>
+            </div>
+
+            <div class="tool-section">
+                <h4 class="tool-name">Windows: System Information Tool</h4>
+                <p>Windows has a built-in System Information utility that shows detailed specifications:</p>
+                
+                <div class="how-to-access">
+                    <h5>How to access:</h5>
+                    <ol>
+                        <li>Press <code>Windows key + R</code> to open Run dialog</li>
+                        <li>Type <code>msinfo32</code> and press Enter</li>
+                        <li>The System Information window opens</li>
+                    </ol>
+                </div>
+
+                <div class="what-you-see">
+                    <h5>What you'll see:</h5>
+                    <ul>
+                        <li><strong>System Summary</strong> (first screen):
+                            <ul>
+                                <li>OS Name and Version</li>
+                                <li>System Manufacturer and Model</li>
+                                <li>Processor (CPU) details</li>
+                                <li>Installed Physical Memory (RAM)</li>
+                                <li>BIOS Version/Date</li>
+                            </ul>
+                        </li>
+                        <li><strong>Components section</strong> (expandable menu on left):
+                            <ul>
+                                <li>Storage devices</li>
+                                <li>Display adapters</li>
+                                <li>Network adapters</li>
+                                <li>USB devices</li>
+                            </ul>
+                        </li>
+                        <li><strong>Software Environment section</strong>:
+                            <ul>
+                                <li>Running tasks</li>
+                                <li>Startup programs</li>
+                                <li>System drivers</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="quick-tip"><strong>Quick alternative:</strong> Right-click on "This PC" or "My Computer" → Properties shows basic information.</p>
+            </div>
+
+            <div class="tool-section">
+                <h4 class="tool-name">macOS: System Information</h4>
+                <p>macOS provides system information through "About This Mac" and a more detailed System Information utility.</p>
+                
+                <div class="how-to-access">
+                    <h5>Basic information:</h5>
+                    <ol>
+                        <li>Click Apple menu → About This Mac</li>
+                        <li>You'll see: macOS version, processor, memory, graphics</li>
+                    </ol>
+                </div>
+
+                <div class="how-to-access">
+                    <h5>Detailed information:</h5>
+                    <ol>
+                        <li>From "About This Mac," click "System Report" button</li>
+                        <li>OR: Hold Option key, click Apple menu, select "System Information"</li>
+                        <li>This opens detailed system profiler</li>
+                    </ol>
+                </div>
+
+                <div class="what-you-see">
+                    <h5>What you'll see:</h5>
+                    <ul>
+                        <li><strong>Hardware section</strong>:
+                            <ul>
+                                <li>Model identifier</li>
+                                <li>Processor details</li>
+                                <li>Memory specifications</li>
+                                <li>Storage devices</li>
+                                <li>Graphics cards</li>
+                            </ul>
+                        </li>
+                        <li><strong>Network section</strong>:
+                            <ul>
+                                <li>Wi-Fi information</li>
+                                <li>Network locations</li>
+                            </ul>
+                        </li>
+                        <li><strong>Software section</strong>:
+                            <ul>
+                                <li>System version</li>
+                                <li>Applications installed</li>
+                                <li>Extensions and frameworks</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tool-section">
+                <h4 class="tool-name">Linux: System Information Commands and Tools</h4>
+                <p>Linux provides system information through command-line tools and graphical applications.</p>
+                
+                <div class="command-section">
+                    <h5>Command-line methods:</h5>
+                    <p>For basic system info:</p>
+                    <pre class="code-block">uname -a           # Kernel and system information
+lscpu              # CPU information
+free -h            # Memory information
+df -h              # Disk space information
+lsb_release -a     # Distribution information</pre>
+                    
+                    <p>For hardware details:</p>
+                    <pre class="code-block">sudo lshw          # Comprehensive hardware list
+lspci              # PCI devices (graphics, network, etc.)
+lsusb              # USB devices</pre>
+                </div>
+
+                <div class="what-you-see">
+                    <h5>Graphical tools (varies by distribution):</h5>
+                    <ul>
+                        <li>Ubuntu: "Settings" → "About" shows basic info</li>
+                        <li>System Monitor shows real-time resource usage</li>
+                        <li>HardInfo (install separately) provides detailed hardware information</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">Understanding System Requirements</h3>
+                <p>Software developers specify minimum and recommended requirements for their applications. Here's how to read and assess them:</p>
+                
+                <div class="requirements-example">
+                    <h5>Typical requirement specifications look like:</h5>
+                    <pre class="requirements-block">Minimum Requirements:
+- Operating System: Windows 10 (64-bit) or later
+- Processor: Intel Core i3 or equivalent
+- Memory: 4 GB RAM
+- Storage: 2 GB available space
+- Display: 1280x720 resolution
+
+Recommended Requirements:
+- Operating System: Windows 11 (64-bit)
+- Processor: Intel Core i5 or equivalent
+- Memory: 8 GB RAM
+- Storage: 5 GB available space (SSD preferred)
+- Display: 1920x1080 resolution</pre>
+                </div>
+
+                <div class="interpretation-guide">
+                    <h5>How to interpret this:</h5>
+                    <ul>
+                        <li><strong>Minimum</strong> = Software will run, but may be slow or limited</li>
+                        <li><strong>Recommended</strong> = Software will run well with good performance</li>
+                        <li><strong>64-bit</strong> = Most modern systems, but verify in your system information</li>
+                        <li><strong>Processor equivalents</strong> = "or equivalent" means comparable AMD or other processors</li>
+                        <li><strong>SSD preferred</strong> = Faster than traditional hard drives, but not required</li>
+                    </ul>
+                </div>
+
+                <div class="compatibility-issues">
+                    <h5>Common compatibility issues:</h5>
+                    
+                    <div class="issue-item">
+                        <h6>1. 32-bit vs 64-bit:</h6>
+                        <ul>
+                            <li>Most new software requires 64-bit OS</li>
+                            <li>32-bit systems cannot run 64-bit software</li>
+                            <li>Check your system architecture in system information</li>
+                        </ul>
+                    </div>
+
+                    <div class="issue-item">
+                        <h6>2. RAM limitations:</h6>
+                        <ul>
+                            <li>4GB RAM is often minimum, but tight for multitasking</li>
+                            <li>8GB is comfortable for most language work</li>
+                            <li>More RAM helps with large documents, multiple programs</li>
+                        </ul>
+                    </div>
+
+                    <div class="issue-item">
+                        <h6>3. Storage space:</h6>
+                        <ul>
+                            <li>Check not just total space, but available space</li>
+                            <li>Consider space for data files, not just the program</li>
+                            <li>System drive (C: on Windows) needs breathing room</li>
+                        </ul>
+                    </div>
+
+                    <div class="issue-item">
+                        <h6>4. OS version specifics:</h6>
+                        <ul>
+                            <li>"Windows 10 or later" means Windows 11 is fine</li>
+                            <li>"macOS 12 or later" means Ventura (13) and Sonoma (14) work</li>
+                            <li>Linux requirements may specify kernel version or specific distributions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-box">
+                <div class="activity-header">
+                    <h3 class="activity-title">Activity 1.4a: Document Your System Specifications</h3>
+                    <span class="activity-time">Time: 8 minutes</span>
+                </div>
+                <div class="activity-content">
+                    <p class="activity-intro">Now you're going to gather and document detailed information about your own system. This creates a reference you can use anytime you need to check compatibility or troubleshoot.</p>
+                    
+                    <h5>Instructions:</h5>
+                    <p>Use the appropriate system information tool for your OS (described above), and document the following in your learning journal:</p>
+
+                    <div class="journal-prompt">
+                        <h5>Basic Specifications:</h5>
+                        <ol>
+                            <li><strong>Operating System:</strong> (full name and version)</li>
+                            <li><strong>Processor (CPU):</strong>
+                                <ul>
+                                    <li>Brand and model (e.g., Intel Core i5-8250U)</li>
+                                    <li>Speed (e.g., 1.6 GHz)</li>
+                                    <li>Number of cores (e.g., 4 cores)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Memory (RAM):</strong>
+                                <ul>
+                                    <li>Total installed (e.g., 8 GB)</li>
+                                    <li>Type if shown (e.g., DDR4)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Storage:</strong>
+                                <ul>
+                                    <li>Total capacity (e.g., 256 GB)</li>
+                                    <li>Type (SSD or HDD)</li>
+                                    <li>Available free space (e.g., 128 GB free)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Display:</strong>
+                                <ul>
+                                    <li>Screen resolution (e.g., 1920 x 1080)</li>
+                                    <li>Graphics/video card if shown</li>
+                                </ul>
+                            </li>
+                        </ol>
+
+                        <h5>Additional Information:</h5>
+                        <ol start="6">
+                            <li><strong>System manufacturer and model</strong> (e.g., Dell Latitude 5400)</li>
+                            <li><strong>64-bit or 32-bit architecture</strong></li>
+                        </ol>
+                    </div>
+
+                    <p class="activity-tip"><strong>Tip:</strong> Take a screenshot of your system information window and save it with your learning journal. This gives you a quick visual reference.</p>
+                </div>
+            </div>
+
+            <div class="activity-box">
+                <div class="activity-header">
+                    <h3 class="activity-title">Activity 1.4b: Assess Compatibility</h3>
+                    <span class="activity-time">Time: 5 minutes</span>
+                </div>
+                <div class="activity-content">
+                    <p class="activity-intro">Now let's practice using system information to assess software compatibility.</p>
+                    
+                    <div class="scenario-box">
+                        <p><strong>Scenario:</strong> A language worker wants to install Paratext 9 on their computer. Here are Paratext's actual requirements:</p>
+                        
+                        <div class="requirements-example">
+                            <strong>Paratext 9 Requirements:</strong>
+                            <ul>
+                                <li>Operating System: Windows 10 (64-bit) or later, OR macOS 10.13 or later</li>
+                                <li>Processor: 1 GHz or faster</li>
+                                <li>Memory: 2 GB RAM (4 GB recommended)</li>
+                                <li>Storage: 1 GB available space</li>
+                                <li>Display: 1024x768 resolution minimum</li>
+                                <li>.NET Framework 4.8 or later (Windows) / Mono (Linux)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="journal-prompt">
+                        <h5>In your learning journal, answer:</h5>
+                        <ol>
+                            <li><strong>Based on your own system specifications (from Activity 1.4a), can your computer run Paratext 9?</strong>
+                                <ul>
+                                    <li>Check each requirement against your specifications</li>
+                                    <li>Identify any that don't meet minimum requirements</li>
+                                    <li>Identify any that don't meet recommended requirements</li>
+                                </ul>
+                            </li>
+                            <li><strong>If your system doesn't meet all requirements, what would need to change?</strong>
+                                <ul>
+                                    <li>Which component is insufficient?</li>
+                                    <li>Would an upgrade be possible, or would a new computer be needed?</li>
+                                </ul>
+                            </li>
+                            <li><strong>For Pastor John's computer from Activity 1.3b</strong> (7-year-old Dell, Windows 7, 4GB RAM, Core i3):
+                                <ul>
+                                    <li>Which requirements does it meet?</li>
+                                    <li>Which requirements does it fail?</li>
+                                    <li>What's the main barrier to running Paratext 9?</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <p class="activity-reflection"><strong>Think about:</strong> Sometimes a system technically meets minimum requirements but wouldn't provide a good user experience. How would you communicate that to a user?</p>
+                </div>
+            </div>
+
+            <div class="key-takeaways">
+                <h3 class="takeaways-title">Key Takeaways</h3>
+                <ul class="takeaways-list">
+                    <li>Every operating system has tools to view detailed system specifications</li>
+                    <li>Key specifications include: OS version, processor, RAM, storage, and display</li>
+                    <li>Software requirements specify minimum (barely runs) and recommended (runs well) specifications</li>
+                    <li>64-bit vs 32-bit architecture is a critical compatibility factor</li>
+                    <li>Knowing your system specifications helps you assess compatibility before installing software</li>
+                    <li>System information is essential for troubleshooting and making upgrade decisions</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="module-section" id="section-1-5">
+            <div class="section-header">
+                <h2 class="section-title">Section 1.5: Module 1 Wrap-Up</h2>
+                <span class="time-estimate">Time: 5 minutes</span>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">What You've Learned</h3>
+                <p>In Module 1, you've built foundational knowledge about operating systems:</p>
+                
+                <div class="learned-section">
+                    <h4>Understanding the OS role:</h4>
+                    <ul>
+                        <li>The OS bridges hardware and applications</li>
+                        <li>It manages resources, runs programs, and provides the user interface</li>
+                        <li>OS problems fall into three categories: hardware management, application management, and user interface</li>
+                    </ul>
+                </div>
+
+                <div class="learned-section">
+                    <h4>The current OS environment:</h4>
+                    <ul>
+                        <li>Windows, macOS, and Linux each have strengths and appropriate use cases</li>
+                        <li>OS recommendations depend on context: user needs, hardware, software requirements, support, and budget</li>
+                        <li>There's no universally "best" OS - only the best fit for specific situations</li>
+                    </ul>
+                </div>
+
+                <div class="learned-section">
+                    <h4>System identification and compatibility:</h4>
+                    <ul>
+                        <li>You can locate detailed system specifications on any OS</li>
+                        <li>Software requirements specify what's needed to run programs</li>
+                        <li>Checking compatibility before installation prevents problems</li>
+                        <li>Your system specifications inform troubleshooting and upgrade decisions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">How This Prepares You for Module 2</h3>
+                <p>Now that you understand what operating systems do and how to identify what you're working with, Module 2 will teach you how to:</p>
+                <ul class="next-steps-list">
+                    <li>Install and activate operating systems</li>
+                    <li>Configure systems for language work (languages, displays, preferences)</li>
+                    <li>Set up systems optimally for users working with diverse scripts</li>
+                </ul>
+                <p>You'll continue to work hands-on with your own system, this time making configuration changes that improve how it handles language work.</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">Before Module 2</h3>
+                <div class="preparation-checklist">
+                    <h4>Review your learning journal:</h4>
+                    <ul>
+                        <li>Make sure you've documented your system specifications</li>
+                        <li>Review your answers to the scenario questions</li>
+                        <li>Note any questions or uncertainties to discuss with your mentor</li>
+                    </ul>
+                </div>
+
+                <div class="optional-exploration">
+                    <h4>Optional exploration:</h4>
+                    <p>If you want to go deeper before Module 2, explore:</p>
+                    <ul>
+                        <li>Your system's language and regional settings (you'll work with these in Module 2)</li>
+                        <li>Your display settings and how they affect text readability</li>
+                        <li>Any system information tools we mentioned that you didn't try yet</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">Resources for Staying Current</h3>
+                <p>Operating systems change regularly. Here's where to stay informed:</p>
+                
+                <div class="resource-section">
+                    <h4>For Windows:</h4>
+                    <ul>
+                        <li>Microsoft's Windows Blog: <a href="https://blogs.windows.com" target="_blank">https://blogs.windows.com</a></li>
+                        <li>Windows Update release information</li>
+                        <li>IT professional communities</li>
+                    </ul>
+                </div>
+
+                <div class="resource-section">
+                    <h4>For macOS:</h4>
+                    <ul>
+                        <li>Apple's macOS page: <a href="https://www.apple.com/macos" target="_blank">https://www.apple.com/macos</a></li>
+                        <li>macOS release notes and support pages</li>
+                    </ul>
+                </div>
+
+                <div class="resource-section">
+                    <h4>For Linux:</h4>
+                    <ul>
+                        <li>Distribution-specific websites (Ubuntu, Linux Mint, etc.)</li>
+                        <li>Linux news sites like OMG! Ubuntu, It's FOSS</li>
+                        <li>Community forums for your specific distribution</li>
+                    </ul>
+                </div>
+
+                <div class="resource-section">
+                    <h4>For language technology:</h4>
+                    <ul>
+                        <li>SIL's software pages for OS compatibility information</li>
+                        <li>Language software vendor support pages</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="completion-message">
+                <h3>You've completed Module 1!</h3>
+                <p>Take a break before continuing to Module 2.</p>
+            </div>
+        </section>
+
+        <footer class="course-footer">
+            <p>Operating Systems for Language Technology Consultants - Module 1</p>
+            <p>Continue to Module 2: Installation and Configuration</p>
+        </footer>
+    </div>
+</body>
+</html>
