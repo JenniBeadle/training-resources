@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "course-styles.css">
+    <title>Module 2: Installation and Configuration</title>
+</head>
+<body>
+<h1 id="module-2-installation-and-configuration">MODULE 2: INSTALLATION AND CONFIGURATION</h1>
+<p><strong>Duration:</strong> 40-45 minutes<br><strong>Format:</strong> Asynchronous self-paced learning</p>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this module, you will be able to:</p>
+<ul>
+<li>Determine when OS installation is necessary and how to prepare users</li>
+<li>Locate and document system information for troubleshooting</li>
+<li>Install fonts (especially SIL fonts) for language work</li>
+<li>Configure basic input languages and keyboard layouts</li>
+<li>Optimize display settings for readability</li>
+</ul>
+<h2 id="section-2-1-module-2-introduction">Section 2.1: Module 2 Introduction</h2>
+<p><strong>Time:</strong> 3 minutes</p>
+<h3 id="welcome-to-module-2">Welcome to Module 2</h3>
+<p>In Module 1, you learned what operating systems do and how to identify what you&#39;re working with. You explored the three major OS families and located system information. Now you&#39;re ready to learn the practical configuration skills that language technology consultants actually need.</p>
+<h3 id="why-these-skills-matter">Why These Skills Matter</h3>
+<p>As a language technology consultant, you&#39;ll encounter situations where:</p>
+<p><strong>Users can&#39;t work because of configuration issues:</strong></p>
+<ul>
+<li>&quot;I can&#39;t type in my language&quot;</li>
+<li>&quot;The text shows up as boxes&quot;</li>
+<li>&quot;Everything looks blurry and hard to read&quot;</li>
+</ul>
+<p><strong>Systems need preparation or setup:</strong></p>
+<ul>
+<li>A user needs their OS reinstalled - how do you help them prepare?</li>
+<li>A new computer arrives - what needs to be configured for language work?</li>
+<li>Someone asks &quot;Do I really need to reinstall?&quot; - how do you advise them?</li>
+</ul>
+<p><strong>You need information to help troubleshoot:</strong></p>
+<ul>
+<li>Remote support requires knowing exactly what system the user has</li>
+<li>Software compatibility questions need specific system details</li>
+<li>Performance problems require understanding the user&#39;s setup</li>
+</ul>
+<p>This module teaches you the practical skills to handle these situations.</p>
+<h3 id="what-you-ll-learn">What You&#39;ll Learn</h3>
+<p>Module 2 focuses on five essential areas:</p>
+<p><strong>Installation fundamentals</strong> - When reinstallation is actually needed (and when it&#39;s not), and how to prepare users so the process goes smoothly.</p>
+<p><strong>System information</strong> - How to quickly gather the details you need to troubleshoot problems or check software compatibility.</p>
+<p><strong>Font installation</strong> - How to install SIL fonts (and why they&#39;re your best choice) for language work.</p>
+<p><strong>Input languages</strong> - How to configure keyboards for typing in different languages and scripts.</p>
+<p><strong>Display optimization</strong> - How to make text readable and clear, especially for extended language work.</p>
+<h3 id="what-this-module-doesn-t-cover">What This Module Doesn&#39;t Cover</h3>
+<p>To keep this module focused and practical, we&#39;re not covering:</p>
+<ul>
+<li>Detailed step-by-step installation processes (IT specialists handle that, or it happens during &quot;With Assistance&quot; phase)</li>
+<li>Custom keyboard layouts (covered in later courses)</li>
+<li>Every possible system setting (only what matters for language work)</li>
+<li>Advanced troubleshooting (that&#39;s Module 3)</li>
+</ul>
+<h3 id="module-structure">Module Structure</h3>
+<ul>
+<li><strong>Section 2.2 (12 min):</strong> Installation fundamentals and gathering system information</li>
+<li><strong>Section 2.3 (12 min):</strong> Installing fonts for language work</li>
+<li><strong>Section 2.4 (12 min):</strong> Configuring input languages</li>
+<li><strong>Section 2.5 (10 min):</strong> Display optimization and wrap-up</li>
+</ul>
+<h3 id="before-you-begin">Before You Begin</h3>
+<p>For the hands-on activities in this module, you&#39;ll need:</p>
+<ul>
+<li>Administrator access to your computer (to install fonts and change settings)</li>
+<li>Your learning journal from Module 1</li>
+<li>Internet connection (to download fonts)</li>
+<li>About 25-30 minutes for hands-on activities</li>
+</ul>
+<p>All activities are safe and reversible. We&#39;ll guide you through each step.</p>
+<h2 id="section-2-2-installation-fundamentals-and-system-information">Section 2.2: Installation Fundamentals and System Information</h2>
+<p><strong>Time:</strong> 12 minutes</p>
+<h3 id="part-a-when-installation-is-necessary">Part A: When Installation is Necessary</h3>
+<p>Understanding when operating system installation or reinstallation is actually needed helps you give good advice and prevent unnecessary work.</p>
+<h3 id="when-reinstallation-is-necessary">When Reinstallation IS Necessary</h3>
+<p><strong>You must reinstall when:</strong></p>
+<ul>
+<li>New computer arrives with no operating system (rare - most come pre-installed)</li>
+<li>Hard drive was replaced (no OS on the new drive)</li>
+<li>Upgrading to completely different OS (Windows to Linux, for example)</li>
+<li>System corruption is so severe the OS won&#39;t start at all</li>
+<li>Severe virus or malware infection that can&#39;t be cleaned</li>
+</ul>
+<p><strong>Reinstallation might be the best option when:</strong></p>
+<ul>
+<li>System has become extremely slow despite troubleshooting attempts</li>
+<li>Persistent software conflicts that can&#39;t be resolved</li>
+<li>Major OS update failed and caused ongoing problems</li>
+<li>User wants a &quot;fresh start&quot; after years of accumulated software and settings</li>
+</ul>
+<h3 id="when-reinstallation-is-not-necessary">When Reinstallation is NOT Necessary</h3>
+<p>Many problems that seem severe don&#39;t actually require reinstallation:</p>
+<p><strong>Don&#39;t reinstall for:</strong></p>
+<ul>
+<li>Minor software problems (uninstall and reinstall that specific program instead)</li>
+<li>Slow performance that hasn&#39;t been diagnosed yet (troubleshoot first - Module 3 teaches this)</li>
+<li>Configuration issues like language settings or display problems (that&#39;s what you&#39;re learning to fix!)</li>
+<li>User account problems (usually fixable without touching the OS)</li>
+<li>&quot;The computer is acting weird&quot; (diagnose first, reinstall last)</li>
+</ul>
+<p><strong>Your value as a consultant:</strong> Knowing when reinstallation is actually needed versus when simpler solutions will work. Reinstallation takes hours, risks data loss if not done carefully, and requires complete reconfiguration afterward. It should be a last resort, not a first response.</p>
+<h3 id="preparing-users-for-installation">Preparing Users for Installation</h3>
+<p>When reinstallation truly is necessary, proper preparation makes all the difference between a smooth process and a disaster.</p>
+<p><strong>Your pre-installation checklist for users:</strong></p>
+<p><strong>Critical - must happen:</strong></p>
+<ol>
+<li><strong>Back up all data</strong> - Documents, photos, email, browser bookmarks, application data</li>
+<li><strong>Document what&#39;s installed</strong> - List all programs they use, especially language software</li>
+<li><strong>Save settings</strong> - Note any custom configurations, especially for language work</li>
+<li><strong>Verify license keys</strong> - Find product keys for OS and software before they&#39;re inaccessible</li>
+<li><strong>Test the backup</strong> - Can you actually restore files from it? Test before wiping the system</li>
+</ol>
+<p><strong>Important - should happen:</strong></p>
+<ol>
+<li><strong>Check system requirements</strong> - Use your Module 1 skills to verify the system can run the OS</li>
+<li><strong>Plan for downtime</strong> - Minimum 2-4 hours, possibly longer</li>
+<li><strong>Arrange support</strong> - Know who to contact if problems arise during installation</li>
+<li><strong>Have installation media ready</strong> - USB drive, download link, product key accessible</li>
+</ol>
+<p><strong>Common backup mistakes that cause data loss:</strong></p>
+<ul>
+<li>Backing up to the same drive that will be erased</li>
+<li>Not backing up application data (just documents)</li>
+<li>Forgetting email, browser data, custom dictionaries</li>
+<li>Not testing the backup before wiping the system</li>
+<li>Forgetting passwords for email, software, online accounts</li>
+</ul>
+<h3 id="after-installation-where-you-add-value">After Installation: Where You Add Value</h3>
+<p>IT specialists might install the operating system, but <strong>you&#39;re the one who makes it usable for language work.</strong> Fresh installations need:</p>
+<ul>
+<li>Language packs and input languages configured</li>
+<li>Fonts installed (SIL fonts for the scripts they work with)</li>
+<li>Display settings optimized for readability</li>
+<li>Language software reinstalled and configured</li>
+<li>User data restored from backup</li>
+</ul>
+<p>Modules 2 and 3 teach you these post-installation skills. This is where your specialized knowledge matters most.</p>
+<h3 id="when-to-do-it-yourself-vs-when-to-escalate">When to Do It Yourself vs. When to Escalate</h3>
+<p><strong>You can likely guide a user through reinstallation if:</strong></p>
+<ul>
+<li>It&#39;s straightforward (same OS, same computer)</li>
+<li>User is technically capable</li>
+<li>All prerequisites are met (backup done, license available)</li>
+<li>You can provide remote support if needed</li>
+</ul>
+<p><strong>Escalate to IT specialist if:</strong></p>
+<ul>
+<li>Hardware problems suspected (diagnose hardware first)</li>
+<li>Complex setup needed (dual-boot, domain joining, RAID)</li>
+<li>User is not confident technically</li>
+<li>Mission-critical system (downtime very costly)</li>
+<li>Licensing questions you can&#39;t answer confidently</li>
+</ul>
+<p><strong>Remember:</strong> You&#39;re a consultant who understands the process and prepares users well, not someone who must do every technical task personally.</p>
+<h3 id="part-b-gathering-system-information-for-troubleshooting">Part B: Gathering System Information for Troubleshooting</h3>
+<p>Now let&#39;s shift to a practical skill you&#39;ll use constantly: quickly gathering system information.</p>
+<h3 id="why-you-need-system-information">Why You Need System Information</h3>
+<p>When troubleshooting remotely or advising users, you need more than &quot;I have Windows.&quot; You need specifics:</p>
+<p><strong>For troubleshooting:</strong></p>
+<ul>
+<li>&quot;Is this a hardware limit or software problem?&quot;</li>
+<li>&quot;Why is the system slow?&quot;</li>
+<li>&quot;Is the RAM sufficient for this task?&quot;</li>
+</ul>
+<p><strong>For compatibility:</strong></p>
+<ul>
+<li>&quot;Can this system run the new version of Paratext?&quot;</li>
+<li>&quot;Will this language software work?&quot;</li>
+<li>&quot;Is an upgrade possible?&quot;</li>
+</ul>
+<p><strong>For making recommendations:</strong></p>
+<ul>
+<li>&quot;Should we reinstall or just add RAM?&quot;</li>
+<li>&quot;Is this system too old for Windows 11?&quot;</li>
+<li>&quot;What&#39;s the bottleneck affecting performance?&quot;</li>
+</ul>
+<h3 id="quick-access-to-system-information">Quick Access to System Information</h3>
+<p>Each OS provides tools to view system details. You learned these locations in Module 1, but let&#39;s focus on the quick methods you&#39;ll use most often.</p>
+<p><strong>Windows - Quick Method:</strong></p>
+<ol>
+<li>Press <code>Windows key + R</code></li>
+<li>Type <code>msinfo32</code> and press Enter</li>
+<li>System Information window opens with all details</li>
+</ol>
+<p><strong>Alternative:</strong> Right-click &quot;This PC&quot; → Properties (shows basic info)</p>
+<p><strong>macOS - Quick Method:</strong></p>
+<ol>
+<li>Click Apple menu → &quot;About This Mac&quot;</li>
+<li>Basic info appears immediately</li>
+<li>Click &quot;System Report&quot; for detailed information</li>
+</ol>
+<p><strong>Linux - Quick Method (Ubuntu/GNOME):</strong></p>
+<ol>
+<li>Settings → About</li>
+<li>Shows basic system information</li>
+</ol>
+<p><strong>Command line (all Linux):</strong> <code>lscpu</code> for CPU, <code>free -h</code> for memory, <code>df -h</code> for disk</p>
+<h3 id="activity-2-2-document-your-system-information">Activity 2.2: Document Your System Information</h3>
+<p><strong>Time:</strong> 5 minutes</p>
+<p>You&#39;re going to create a quick reference of your system specifications that you can use for troubleshooting throughout this course and in your future work.</p>
+<p><strong>Instructions:</strong></p>
+<p>Use the quick access methods above to find your system information.</p>
+<p><strong>In your learning journal, document these essentials:</strong></p>
+<ol>
+<li><strong>Operating System:</strong><ol>
+<li>Full name and version (e.g., &quot;Windows 11 Pro version 23H2&quot;)</li>
+<li>32-bit or 64-bit</li>
+</ol>
+</li>
+<li><strong>Processor:</strong><ol>
+<li>Brand and model (e.g., &quot;Intel Core i5-8250U&quot;)</li>
+<li>Speed (e.g., &quot;1.6 GHz&quot;)</li>
+<li>Cores (e.g., &quot;4 cores&quot;)</li>
+</ol>
+</li>
+<li><strong>Memory (RAM):</strong><ol>
+<li>Total installed (e.g., &quot;8 GB&quot;)</li>
+</ol>
+</li>
+<li><strong>Storage:</strong><ol>
+<li>Total capacity (e.g., &quot;256 GB SSD&quot;)</li>
+<li>Available free space (e.g., &quot;128 GB free&quot;)</li>
+</ol>
+</li>
+<li><strong>Display:</strong><ol>
+<li>Resolution (e.g., &quot;1920 x 1080&quot;)</li>
+</ol>
+</li>
+<li><strong>System Model:</strong><ol>
+<li>Manufacturer and model (e.g., &quot;Dell Latitude 5400&quot;)</li>
+</ol>
+</li>
+</ol>
+<p><strong>Why document this?</strong></p>
+<ul>
+<li>You&#39;ll reference it in Module 3 troubleshooting exercises</li>
+<li>It&#39;s a model for the information you&#39;ll need from users</li>
+<li>Helps you practice gathering information quickly</li>
+<li>Creates a baseline for your system&#39;s configuration</li>
+</ul>
+<p><strong>Tip:</strong> Take a screenshot of your system information window and save it with your learning journal. A picture is sometimes faster than writing everything down.</p>
+<h3 id="key-takeaways-from-section-2-2">Key Takeaways from Section 2.2</h3>
+<ul>
+<li>Reinstallation is necessary sometimes, but less often than people think</li>
+<li>Proper preparation (especially backup!) prevents data loss disasters</li>
+<li>System information is essential for troubleshooting and compatibility checking</li>
+<li>Quick access methods let you gather information efficiently</li>
+<li>Your documented system specs become a reference for troubleshooting work</li>
+</ul>
+<h2 id="section-2-3-installing-fonts-for-language-work">Section 2.3: Installing Fonts for Language Work</h2>
+<p><strong>Time:</strong> 12 minutes</p>
+<h3 id="introduction">Introduction</h3>
+<p>One of the most common problems language workers face is text that doesn&#39;t display correctly. Often the issue is simple: the right font isn&#39;t installed. This section teaches you how to install fonts, with emphasis on SIL fonts which are specifically designed for language work.</p>
+<h3 id="why-fonts-matter-for-language-work">Why Fonts Matter for Language Work</h3>
+<p><strong>The problem:</strong></p>
+<p>When a computer doesn&#39;t have the right font, characters can:</p>
+<ul>
+<li>Show up as empty boxes: □□□</li>
+<li>Display as question marks: ???</li>
+<li>Appear as generic replacement characters</li>
+<li>Render incorrectly (letters don&#39;t connect, diacritics misplaced)</li>
+</ul>
+<p>This completely blocks language work. Translators can&#39;t read source text. Literacy workers can&#39;t create materials. Linguists can&#39;t document languages.</p>
+<p><strong>The solution:</strong></p>
+<p>Installing proper fonts - specifically fonts designed for the scripts you&#39;re working with.</p>
+<h3 id="sil-fonts-your-primary-recommendation">SIL Fonts: Your Primary Recommendation</h3>
+<p><strong>For language technology work, SIL fonts should be your first choice.</strong> Here&#39;s why:</p>
+<p><strong>Designed specifically for language work:</strong></p>
+<ul>
+<li>Extensive character coverage (including minority languages)</li>
+<li>Excellent rendering quality for complex scripts</li>
+<li>Proper handling of diacritics and combining characters</li>
+<li>Regular updates and maintenance</li>
+</ul>
+<p><strong>Free and accessible:</strong></p>
+<ul>
+<li>No cost for any use</li>
+<li>Open source license</li>
+<li>Available for Windows, macOS, Linux</li>
+<li>Easy to download and distribute</li>
+</ul>
+<p><strong>Proven and trusted:</strong></p>
+<ul>
+<li>Used worldwide in language projects</li>
+<li>Technical support available</li>
+<li>Comprehensive documentation</li>
+<li>Compatible with major software</li>
+</ul>
+<h3 id="key-sil-fonts-to-know">Key SIL Fonts to Know</h3>
+<p>You don&#39;t need to memorize all SIL fonts, but know these commonly used ones:</p>
+<p><strong>For Latin scripts (including extended Latin):</strong></p>
+<ul>
+<li><strong>Charis SIL</strong> - Serif font, excellent for body text, very comprehensive</li>
+<li><strong>Andika</strong> - Sans-serif, designed for literacy materials, clear letterforms</li>
+<li><strong>Gentium Plus</strong> - Elegant serif font with extensive language support</li>
+</ul>
+<p><strong>For Arabic script:</strong></p>
+<ul>
+<li><strong>Scheherazade New</strong> - Traditional Naskh style, excellent for extended text</li>
+<li><strong>Harmattan</strong> - West African Warsh style</li>
+<li><strong>Lateef</strong> - Sindhi style, also good for Urdu</li>
+</ul>
+<p><strong>For Ethiopic script (Amharic, Tigrinya, etc.):</strong></p>
+<ul>
+<li><strong>Abyssinica SIL</strong> - Excellent rendering, comprehensive character set</li>
+</ul>
+<p><strong>For Southeast Asian scripts:</strong></p>
+<ul>
+<li><strong>Padauk</strong> - Myanmar (Burmese) script</li>
+<li><strong>Annapurna SIL</strong> - Devanagari (Hindi, Nepali, Sanskrit)</li>
+<li><strong>Dai Banna SIL</strong> - New Tai Lue script</li>
+</ul>
+<p><strong>For other scripts:</strong></p>
+<ul>
+<li><strong>Alkalami</strong> - Kano region Arabic style</li>
+<li><strong>Awami Nastaliq</strong> - Nastaliq style (Urdu, Persian)</li>
+</ul>
+<p><strong>Where to find them:</strong> software.sil.org/fonts</p>
+<p>Each font has its own page with download links, documentation, and character charts.</p>
+<h3 id="understanding-font-formats">Understanding Font Formats</h3>
+<p>Fonts come in different formats. Here&#39;s what you need to know:</p>
+<p><strong>TrueType (.ttf)</strong></p>
+<ul>
+<li>Widely supported</li>
+<li>Works on all platforms</li>
+<li>Single file per font style</li>
+</ul>
+<p><strong>OpenType (.otf)</strong></p>
+<ul>
+<li>Modern format</li>
+<li>Better for complex scripts</li>
+<li>Supports advanced typography features</li>
+<li>Most SIL fonts use this format</li>
+</ul>
+<p><strong>Font families:</strong></p>
+<ul>
+<li>Regular, Bold, Italic, Bold Italic</li>
+<li>Download the complete family</li>
+<li>Applications need all styles for full functionality</li>
+</ul>
+<h3 id="how-to-install-fonts">How to Install Fonts</h3>
+<p>Installation is straightforward but differs slightly by platform.</p>
+<p><strong>Windows:</strong></p>
+<p><strong>Method 1 (Easiest):</strong></p>
+<ol>
+<li>Download the font file (usually a .zip file)</li>
+<li>Extract the .zip file</li>
+<li>Right-click on the .ttf or .otf file</li>
+<li>Click &quot;Install&quot; or &quot;Install for all users&quot;</li>
+<li>Font installs immediately</li>
+</ol>
+<p><strong>Method 2:</strong></p>
+<ol>
+<li>Download and extract font files</li>
+<li>Copy the font files</li>
+<li>Open Fonts folder: Settings → Personalization → Fonts</li>
+<li>Drag font files into the Fonts window</li>
+<li>Fonts install automatically</li>
+</ol>
+<p><strong>macOS:</strong></p>
+<ol>
+<li>Download the font file</li>
+<li>Double-click the .ttf or .otf file</li>
+<li>Font Book application opens showing the font</li>
+<li>Click &quot;Install Font&quot; button</li>
+<li>Font installs and is immediately available</li>
+</ol>
+<p><strong>Linux (Ubuntu/GNOME):</strong></p>
+<ol>
+<li>Download the font file</li>
+<li>Double-click the .ttf or .otf file</li>
+<li>Font Viewer opens</li>
+<li>Click &quot;Install&quot; button (top right)</li>
+<li>Font installs for current user</li>
+</ol>
+<p><strong>Alternative (all Linux):</strong></p>
+<ol>
+<li>Create fonts directory: <code>mkdir -p ~/.local/share/fonts</code></li>
+<li>Copy font files to that directory</li>
+<li>Run: <code>fc-cache -f -v</code></li>
+<li>Fonts are now available</li>
+</ol>
+<h3 id="activity-2-3a-install-a-sil-font">Activity 2.3a: Install a SIL Font</h3>
+<p><strong>Time:</strong> 7 minutes</p>
+<p>Now you&#39;ll install a SIL font relevant to your language work.</p>
+<p><strong>Part 1: Choose and Download</strong></p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>Go to software.sil.org/fonts</li>
+<li>Browse the available fonts</li>
+<li>Choose one font relevant to your work (or one you&#39;re curious about)<ol>
+<li>If unsure, choose <strong>Charis SIL</strong> (excellent general-purpose font)</li>
+<li>Or choose a font for a script you work with</li>
+</ol>
+</li>
+<li>Click on the font name to go to its page</li>
+<li>Click the &quot;Download&quot; button</li>
+<li>Save the .zip file</li>
+</ol>
+<p><strong>Part 2: Install the Font</strong></p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>Extract/unzip the downloaded file</li>
+<li>Look inside the extracted folder - you&#39;ll see .ttf or .otf files</li>
+<li>Follow the installation method for your platform (above)</li>
+<li>Install all the font files in the family (Regular, Bold, Italic, Bold Italic)</li>
+</ol>
+<p><strong>Part 3: Test the Font</strong></p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>Open a text editor or word processor</li>
+<li>Type some text in English first</li>
+<li>Select the text and change the font to the one you just installed</li>
+<li>Observe: Does it look different from your default font?</li>
+<li>If the font supports other scripts, type or paste text in that script</li>
+<li>Does the text display correctly?</li>
+</ol>
+<p><strong>In your learning journal, document:</strong></p>
+<ol>
+<li><strong>What font did you install?</strong></li>
+<li><strong>Did installation work smoothly?</strong> (Note any problems)</li>
+<li><strong>What script/language is this font designed for?</strong></li>
+<li><strong>Did text display correctly when you tested it?</strong></li>
+<li><strong>How does this font compare to default system fonts for this script?</strong></li>
+</ol>
+<p><strong>If you encountered problems:</strong></p>
+<ul>
+<li>Document what went wrong</li>
+<li>Did you get an error message? What did it say?</li>
+<li>Is the font showing up in your application&#39;s font list?</li>
+<li>Try restarting the application (sometimes needed for fonts to appear)</li>
+</ul>
+<h3 id="troubleshooting-font-problems">Troubleshooting Font Problems</h3>
+<p><strong>Problem: Font installed but doesn&#39;t appear in application</strong></p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Restart the application (close completely and reopen)</li>
+<li>Check you installed for &quot;all users&quot; not just current user (Windows)</li>
+<li>Verify font files are actually in the fonts folder</li>
+<li>Some applications cache font lists - may need to restart computer</li>
+</ul>
+<p><strong>Problem: Characters still show as boxes after installing font</strong></p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Make sure you actually selected the new font (didn&#39;t just install it)</li>
+<li>Check if the font includes those specific characters (view character map)</li>
+<li>Try a different font family (maybe this one doesn&#39;t support that script)</li>
+<li>Verify the text encoding is correct (UTF-8 usually)</li>
+</ul>
+<p><strong>Problem: Font looks wrong or text doesn&#39;t connect properly (Arabic, etc.)</strong></p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Verify you&#39;re using an OpenType font (better for complex scripts)</li>
+<li>Use a different application (some don&#39;t support complex text layout well)</li>
+<li>Make sure you installed all font styles (not just Regular)</li>
+<li>Try a different SIL font for that script</li>
+</ul>
+<p><strong>Problem: Downloaded font file won&#39;t open or install</strong></p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Verify download completed (check file size)</li>
+<li>Try downloading again (file might be corrupted)</li>
+<li>Make sure you extracted the .zip file first</li>
+<li>Check if you have administrator rights (needed for installation)</li>
+</ul>
+<h3 id="teaching-users-about-fonts">Teaching Users About Fonts</h3>
+<p>When you help users with fonts, they need to understand:</p>
+<p><strong>What fonts do:</strong></p>
+<ul>
+<li>Make characters visible and readable</li>
+<li>Different fonts for different scripts</li>
+<li>Not just about appearance - about functionality</li>
+</ul>
+<p><strong>When they need new fonts:</strong></p>
+<ul>
+<li>Characters showing as boxes</li>
+<li>Text from another language doesn&#39;t display</li>
+<li>Better rendering quality needed</li>
+</ul>
+<p><strong>How to install fonts:</strong></p>
+<ul>
+<li>Show them once, have them do it once</li>
+<li>Create a simple guide with screenshots</li>
+<li>Emphasize: this is a one-time task per font</li>
+</ul>
+<p><strong>Where to get fonts:</strong></p>
+<ul>
+<li>SIL fonts: software.sil.org/fonts</li>
+<li>Emphasize these are free and safe</li>
+<li>Caution about random internet downloads (stick to trusted sources)</li>
+</ul>
+<h3 id="best-practices-for-font-management">Best Practices for Font Management</h3>
+<p><strong>For consultants:</strong></p>
+<ul>
+<li>Keep a collection of commonly needed SIL fonts on a USB drive</li>
+<li>Know which fonts work best for the languages in your region</li>
+<li>Test fonts before recommending them to users</li>
+<li>Document which fonts you&#39;ve installed on each system you support</li>
+</ul>
+<p><strong>For users:</strong></p>
+<ul>
+<li>Install fonts as needed, not everything &quot;just in case&quot;</li>
+<li>Use SIL fonts for language work (reliable, well-supported)</li>
+<li>Keep font files backed up (in case of reinstallation)</li>
+<li>Don&#39;t delete fonts you don&#39;t recognize (might be needed by system or applications)</li>
+</ul>
+<h3 id="key-takeaways-from-section-2-3">Key Takeaways from Section 2.3</h3>
+<ul>
+<li>SIL fonts are the primary recommendation for language technology work</li>
+<li>Fonts must support the specific scripts and characters you&#39;re working with</li>
+<li>Installation is straightforward: download, extract, install</li>
+<li>Testing confirms fonts work correctly for your needs</li>
+<li>Common font problems have simple solutions</li>
+<li>Keep commonly needed fonts accessible for quick installation</li>
+</ul>
+<h2 id="section-2-4-configuring-input-languages">Section 2.4: Configuring Input Languages</h2>
+<p><strong>Time:</strong> 12 minutes</p>
+<h3 id="introduction">Introduction</h3>
+<p>Installing fonts lets you see languages. Configuring input languages lets you type them. This section teaches you how to add keyboard layouts so users can actually input the languages they work with.</p>
+<h3 id="understanding-input-languages">Understanding Input Languages</h3>
+<p><strong>What input languages do:</strong></p>
+<p>Input languages (also called keyboard layouts or input methods) determine what happens when you press keys on your keyboard.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>With English (US) input: pressing A types &quot;a&quot;</li>
+<li>With Russian input: pressing A types &quot;ф&quot;</li>
+<li>With Arabic input: pressing A types &quot;ش&quot;</li>
+<li>With Amharic input: pressing &quot;s&quot; then &quot;a&quot; types &quot;ሰ&quot;</li>
+</ul>
+<p>The same physical keyboard can input completely different scripts depending on which input language is active.</p>
+<h3 id="input-language-vs-display-language">Input Language vs. Display Language</h3>
+<p>It&#39;s important to understand the difference:</p>
+<p><strong>Display language (UI language):</strong></p>
+<ul>
+<li>Language of menus, buttons, error messages</li>
+<li>System-wide setting</li>
+<li>Usually requires downloading language packs</li>
+<li>Example: Seeing &quot;File&quot; vs &quot;Fichier&quot; in menus</li>
+</ul>
+<p><strong>Input language (keyboard layout):</strong></p>
+<ul>
+<li>What you type when you press keys</li>
+<li>Multiple input languages can be active simultaneously</li>
+<li>Switch between them while working</li>
+<li>Example: Typing in English, then switching to type in Amharic</li>
+</ul>
+<p><strong>You can mix these:</strong> Display in English (comfortable for menus) while typing in multiple other languages. This is common for language workers.</p>
+<h3 id="how-input-switching-works">How Input Switching Works</h3>
+<p><strong>Key concepts:</strong></p>
+<p><strong>Multiple input languages installed:</strong></p>
+<ul>
+<li>You can have many keyboard layouts ready</li>
+<li>Only one is active at any time</li>
+<li>Switch between them quickly</li>
+</ul>
+<p><strong>Visual indicator:</strong></p>
+<ul>
+<li>System shows which input is currently active</li>
+<li>Windows: Language code in taskbar (ENG, AMH, ARA, etc.)</li>
+<li>macOS: Flag or language icon in menu bar</li>
+<li>Linux: Indicator in top panel</li>
+</ul>
+<p><strong>Switching methods:</strong></p>
+<ul>
+<li>Keyboard shortcut (fastest)<ul>
+<li>Windows: Windows key + Space (or Alt + Shift)</li>
+<li>macOS: Control + Space (or Command + Space)</li>
+<li>Linux: Super + Space (varies by desktop)</li>
+</ul>
+</li>
+<li>Click the indicator and choose from list</li>
+</ul>
+<p><strong>Why this matters:</strong> Language workers constantly switch between languages - typing English emails, then translating in another language, then back to English for notes. Smooth switching is essential for efficient work.</p>
+<h3 id="platform-specific-configuration">Platform-Specific Configuration</h3>
+<p><strong>Windows Language Settings:</strong></p>
+<ol>
+<li>Settings → Time &amp; Language → Language &amp; Region</li>
+<li>Click &quot;Add a language&quot;</li>
+<li>Search for your language</li>
+<li>Click Next and Install</li>
+<li>Language appears in your language list</li>
+<li>To switch: Windows key + Space</li>
+</ol>
+<p><strong>macOS Language Settings:</strong></p>
+<ol>
+<li>System Settings → Keyboard → Input Sources</li>
+<li>Click the &quot;+&quot; button</li>
+<li>Find your language in the left panel</li>
+<li>Select keyboard layout (usually one main option)</li>
+<li>Click &quot;Add&quot;</li>
+<li>Tip: Check &quot;Show input menu in menu bar&quot;</li>
+<li>To switch: Control + Space, or click menu bar icon</li>
+</ol>
+<p><strong>Linux Settings (Ubuntu/GNOME):</strong></p>
+<ol>
+<li>Settings → Keyboard</li>
+<li>Input Sources section</li>
+<li>Click &quot;+&quot; button</li>
+<li>Find and select your language</li>
+<li>Choose keyboard layout</li>
+<li>Click &quot;Add&quot;</li>
+<li>To switch: Super + Space</li>
+</ol>
+<h3 id="activity-2-4a-add-an-input-language">Activity 2.4a: Add an Input Language</h3>
+<p><strong>Time:</strong> 7 minutes</p>
+<p>You&#39;re going to add a keyboard layout for a language you work with or support.</p>
+<p><strong>Part 1: Choose Your Language</strong></p>
+<p><strong>Instructions:</strong></p>
+<p>Think about the language work you do or support. Choose a language that:</p>
+<ul>
+<li>You actually work with (or users you support work with)</li>
+<li>Uses a different script than English (more useful for learning)</li>
+<li>You can test (even if you don&#39;t speak it fluently, you can verify input works)</li>
+</ul>
+<p><strong>Good choices:</strong> Amharic, Arabic, Hindi, Thai, Greek, Russian, Korean, Chinese, French</p>
+<p><strong>Part 2: Add the Input Language</strong></p>
+<p><strong>Instructions:</strong></p>
+<p>Follow the steps for your platform (above) to add your chosen language.</p>
+<p><strong>In your learning journal, note:</strong></p>
+<ul>
+<li>What language are you adding?</li>
+<li>Any difficulties during the process?</li>
+</ul>
+<p><strong>Part 3: Test Input Switching</strong></p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>Open a text editor (Notepad, TextEdit, gedit, or any word processor)</li>
+<li>Type a few words in English</li>
+<li>Use the keyboard shortcut to switch input languages<ol>
+<li>Watch the indicator change</li>
+</ol>
+</li>
+<li>Try typing in the new language<ol>
+<li>The keys will produce different characters</li>
+</ol>
+</li>
+<li>Switch back to English</li>
+<li>Type a few more English words to confirm switching works</li>
+</ol>
+<p><strong>In your learning journal, document:</strong></p>
+<ol>
+<li><strong>What language did you add?</strong></li>
+<li><strong>Can you switch between English and the new language?</strong></li>
+<li><strong>What keyboard shortcut switches on your system?</strong></li>
+<li><strong>Where is the input language indicator?</strong></li>
+<li><strong>Try typing a few characters - does input work as expected?</strong></li>
+</ol>
+<p><strong>Observations to note:</strong></p>
+<ul>
+<li>Is the keyboard layout intuitive or confusing?</li>
+<li>Can you see the characters you&#39;re typing (font issue if not)?</li>
+<li>How would you explain this process to a user?</li>
+</ul>
+<h3 id="teaching-users-to-manage-input-languages">Teaching Users to Manage Input Languages</h3>
+<p>Users need practical skills to work effectively with multiple input languages.</p>
+<p><strong>Essential skills to teach:</strong></p>
+<p><strong>1. How to switch input languages</strong></p>
+<ul>
+<li>Show the keyboard shortcut (have them practice)</li>
+<li>Show the visual indicator</li>
+<li>Practice switching back and forth several times</li>
+</ul>
+<p><strong>2. How to know which input is active</strong></p>
+<ul>
+<li>Point out the indicator location</li>
+<li>Explain why checking matters (avoid typing in wrong script)</li>
+<li>Show what happens if you type in the wrong input language</li>
+</ul>
+<p><strong>3. When to add more languages</strong></p>
+<ul>
+<li>Before starting work in a new language</li>
+<li>Better to set up ahead of time than mid-task</li>
+</ul>
+<p><strong>4. What can go wrong and how to fix it</strong></p>
+<ul>
+<li>Accidentally switched input (can&#39;t type normally) → switch back to English</li>
+<li>Removed a language by accident → re-add it</li>
+<li>Characters not displaying → font issue, not input issue</li>
+</ul>
+<h3 id="common-user-problems">Common User Problems</h3>
+<p><strong>Problem: &quot;I&#39;m typing but nothing makes sense&quot;</strong></p>
+<ul>
+<li>Likely typing in wrong input language</li>
+<li>Solution: Check indicator, switch to correct language</li>
+<li>Prevention: Always check indicator before typing</li>
+</ul>
+<p><strong>Problem: &quot;I can&#39;t type certain characters I need&quot;</strong></p>
+<ul>
+<li>Some keyboard layouts don&#39;t include all characters</li>
+<li>Solution: Learn the key combinations, or use a different keyboard layout</li>
+<li>Note: Custom keyboards (covered in later courses) can solve this</li>
+</ul>
+<p><strong>Problem: &quot;I accidentally removed my main language&quot;</strong></p>
+<ul>
+<li>Now can&#39;t type at all!</li>
+<li>Solution: Use on-screen keyboard to re-add the language</li>
+<li>Prevention: Be careful when managing input languages</li>
+</ul>
+<p><strong>Problem: &quot;The keyboard layout is confusing&quot;</strong></p>
+<ul>
+<li>Different languages have different keyboard arrangements</li>
+<li>Solution: Print a keyboard layout chart, practice</li>
+<li>Many layouts follow logical patterns once learned</li>
+</ul>
+<h3 id="input-languages-and-custom-keyboards">Input Languages and Custom Keyboards</h3>
+<p><strong>Note:</strong> This course covers standard keyboard layouts provided by operating systems. Custom keyboard layouts (created specifically for languages with unique needs) are covered in later courses in the Language Technology Consultant training.</p>
+<p><strong>Standard layouts work well for:</strong></p>
+<ul>
+<li>Major languages with OS support</li>
+<li>Languages with established keyboard standards</li>
+<li>Initial setup and basic needs</li>
+</ul>
+<p><strong>Custom keyboards are needed for:</strong></p>
+<ul>
+<li>Minority languages without OS support</li>
+<li>Languages requiring special character combinations</li>
+<li>Optimized layouts for specific linguistic needs</li>
+</ul>
+<p>As you encounter languages that need custom keyboards, you&#39;ll learn those tools later in your training.</p>
+<h3 id="key-takeaways-from-section-2-4">Key Takeaways from Section 2.4</h3>
+<ul>
+<li>Input languages determine what you type, separate from display language</li>
+<li>Multiple input languages can be installed and switched between easily</li>
+<li>Visual indicators show which input is currently active</li>
+<li>Keyboard shortcuts enable quick switching</li>
+<li>Users need practice and clear instructions for managing input languages</li>
+<li>Standard keyboard layouts work for many languages; custom keyboards (later course) handle others</li>
+</ul>
+<h2 id="section-2-5-display-optimization-and-wrap-up">Section 2.5: Display Optimization and Wrap-Up</h2>
+<p><strong>Time:</strong> 10 minutes</p>
+<h3 id="introduction">Introduction</h3>
+<p>You&#39;ve configured fonts and input languages. Now let&#39;s optimize how text displays on screen. Proper display settings reduce eye strain and ensure text is clear and readable, especially important for language workers who spend hours reading and analyzing text.</p>
+<h3 id="why-display-settings-matter">Why Display Settings Matter</h3>
+<p><strong>For any computer user:</strong></p>
+<ul>
+<li>Reduces eye strain during extended use</li>
+<li>Improves productivity (faster reading)</li>
+<li>More comfortable work experience</li>
+</ul>
+<p><strong>For language work specifically:</strong></p>
+<ul>
+<li>Complex scripts require clear rendering</li>
+<li>Diacritics and combining marks must be visible</li>
+<li>Small details matter for linguistic analysis</li>
+<li>Extended reading sessions are common</li>
+</ul>
+<p>Poor display settings make language work difficult or impossible.</p>
+<h3 id="key-display-settings">Key Display Settings</h3>
+<p><strong>Display scaling (size):</strong></p>
+<ul>
+<li>Makes everything on screen larger or smaller</li>
+<li>100% = native size</li>
+<li>125%, 150%, 175% = progressively larger</li>
+<li>Choose based on monitor size, your eyesight, and comfort</li>
+</ul>
+<p><strong>Font rendering (clarity):</strong></p>
+<ul>
+<li>How the OS draws text on screen</li>
+<li>Affects sharpness and readability</li>
+<li>Can be optimized for your specific monitor</li>
+<li>Windows: ClearType technology</li>
+<li>macOS: Automatic, generally excellent</li>
+<li>Linux: Configurable font hinting and anti-aliasing</li>
+</ul>
+<p><strong>Resolution:</strong></p>
+<ul>
+<li>Native resolution is usually best (sharpest)</li>
+<li>Lower resolution makes things bigger but blurrier</li>
+<li>Scaling is better than changing resolution</li>
+</ul>
+<h3 id="platform-specific-display-settings">Platform-Specific Display Settings</h3>
+<p><strong>Windows Display Settings:</strong></p>
+<p><strong>Basic settings:</strong></p>
+<ol>
+<li>Settings → System → Display</li>
+<li>Scale: Choose 100%, 125%, 150%, etc.</li>
+<li>Resolution: Use recommended (native) resolution</li>
+<li>Requires sign-out to fully apply</li>
+</ol>
+<p><strong>ClearType tuning (important for text clarity):</strong></p>
+<ol>
+<li>Search &quot;ClearType&quot; in Start menu</li>
+<li>Run &quot;Adjust ClearType text&quot;</li>
+<li>Ensure ClearType is turned on</li>
+<li>Follow wizard, choosing clearest text samples</li>
+<li>Makes text noticeably sharper</li>
+</ol>
+<p><strong>macOS Display Settings:</strong></p>
+<ol>
+<li>System Settings → Displays</li>
+<li>Resolution: Default recommended (or Scaled for options)</li>
+<li>Brightness: Adjust for comfort</li>
+<li>True Tone: Adjusts colors based on ambient light (if available)</li>
+<li>Night Shift: Reduces blue light in evening</li>
+</ol>
+<p>Text rendering is automatic and generally excellent, especially on Retina displays.</p>
+<p><strong>Linux Display Settings:</strong></p>
+<ol>
+<li>Settings → Displays</li>
+<li>Resolution and scale</li>
+<li>For font rendering:<ol>
+<li>Settings → Appearance (or similar)</li>
+<li>Font rendering options</li>
+<li>Hinting: slight or medium usually best</li>
+<li>Antialiasing: enabled</li>
+</ol>
+</li>
+</ol>
+<h3 id="activity-2-5a-optimize-your-display">Activity 2.5a: Optimize Your Display</h3>
+<p><strong>Time:</strong> 5 minutes</p>
+<p><strong>Part 1: Check Current Settings</strong></p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>Navigate to your display settings</li>
+<li>Note your current scaling percentage</li>
+<li>Note your current resolution</li>
+</ol>
+<p><strong>Part 2: Assess Readability</strong></p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>Open a document with text in a language you work with</li>
+<li>Ask yourself:<ol>
+<li>Can I read this comfortably for 30+ minutes?</li>
+<li>Are small details (diacritics, combining marks) clear?</li>
+<li>Does text feel too small, too large, or just right?</li>
+</ol>
+</li>
+</ol>
+<p><strong>Part 3: Adjust if Needed</strong></p>
+<p><strong>If text is too small:</strong></p>
+<ul>
+<li>Try the next scaling level up</li>
+<li>On Windows, may need to sign out/in</li>
+<li>Test with your document again</li>
+</ul>
+<p><strong>If text appears blurry:</strong></p>
+<ul>
+<li>Verify you&#39;re using native/recommended resolution</li>
+<li>On Windows: Run ClearType tuner</li>
+<li>Adjust until text is sharp</li>
+</ul>
+<p><strong>For Windows users specifically:</strong></p>
+<p>If you haven&#39;t run ClearType tuner before, do it now:</p>
+<ol>
+<li>Search &quot;ClearType&quot; in Start menu</li>
+<li>Run the &quot;Adjust ClearType text&quot; wizard</li>
+<li>Choose the text samples that look clearest to you</li>
+<li>Complete all steps</li>
+<li>Notice the improvement in text sharpness</li>
+</ol>
+<p><strong>In your learning journal, document:</strong></p>
+<ol>
+<li><strong>Original scaling setting:</strong></li>
+<li><strong>Did you change it? To what?</strong></li>
+<li><strong>Original resolution:</strong></li>
+<li><strong>Did you run ClearType tuner (Windows)?</strong></li>
+<li><strong>How does text readability compare now?</strong></li>
+<li><strong>Is text clear for extended work, especially in non-Latin scripts?</strong></li>
+</ol>
+<h3 id="common-display-problems-and-quick-solutions">Common Display Problems and Quick Solutions</h3>
+<p><strong>Problem: Text appears blurry or fuzzy</strong></p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Use native/recommended resolution</li>
+<li>Run ClearType tuner (Windows)</li>
+<li>Adjust scaling (try one step different)</li>
+<li>Verify monitor cable is secure</li>
+</ul>
+<p><strong>Problem: Characters show as boxes</strong></p>
+<p><strong>This is a font problem, not display:</strong></p>
+<ul>
+<li>Install the correct font (Section 2.3)</li>
+<li>Select the font in your application</li>
+</ul>
+<p><strong>Problem: Text is too small to read comfortably</strong></p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Increase display scaling</li>
+<li>Increase font size in specific applications</li>
+<li>Sit closer to monitor (or get a larger monitor)</li>
+</ul>
+<p><strong>Problem: Eyes hurt after working</strong></p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Adjust monitor brightness to match room lighting</li>
+<li>Take regular breaks (20-20-20 rule: every 20 min, look 20 feet away for 20 sec)</li>
+<li>Enable night light/night shift (reduces blue light)</li>
+<li>Increase text size if straining to read</li>
+<li>Improve room lighting (reduce glare on screen)</li>
+</ul>
+<h3 id="best-practices-for-display-configuration">Best Practices for Display Configuration</h3>
+<p><strong>For initial setup:</strong></p>
+<ul>
+<li>Use native monitor resolution</li>
+<li>Optimize font rendering (ClearType on Windows)</li>
+<li>Set scaling appropriate for monitor size and user eyesight</li>
+<li>Test with actual language work content</li>
+</ul>
+<p><strong>For ongoing use:</strong></p>
+<ul>
+<li>Regular breaks more important than perfect settings</li>
+<li>Adequate room lighting reduces screen glare</li>
+<li>Clean monitor screen regularly</li>
+<li>Adjust brightness based on time of day</li>
+<li>Consider monitor position and viewing distance</li>
+</ul>
+<p><strong>For teaching users:</strong></p>
+<ul>
+<li>Show them where settings are</li>
+<li>Demonstrate with their actual work</li>
+<li>Explain why these settings matter</li>
+<li>Encourage them to adjust for their comfort</li>
+</ul>
+<h2 id="module-2-wrap-up">Module 2 Wrap-Up</h2>
+<h3 id="what-you-ve-learned">What You&#39;ve Learned</h3>
+<p>In Module 2, you&#39;ve gained practical configuration skills:</p>
+<p><strong>Installation fundamentals:</strong></p>
+<ul>
+<li>When reinstallation is necessary (and when it&#39;s not)</li>
+<li>How to prepare users so installation goes smoothly</li>
+<li>Your role: preparation and post-installation configuration</li>
+</ul>
+<p><strong>System information:</strong></p>
+<ul>
+<li>How to quickly gather the specs needed for troubleshooting</li>
+<li>Where to find system information on each platform</li>
+<li>What details matter for compatibility and diagnosis</li>
+</ul>
+<p><strong>Font installation:</strong></p>
+<ul>
+<li>Why SIL fonts are your first choice for language work</li>
+<li>How to download and install fonts</li>
+<li>Testing fonts and troubleshooting problems</li>
+</ul>
+<p><strong>Input language configuration:</strong></p>
+<ul>
+<li>How to add keyboard layouts for different languages</li>
+<li>How to switch between input languages</li>
+<li>Teaching users to manage their input languages</li>
+</ul>
+<p><strong>Display optimization:</strong></p>
+<ul>
+<li>Adjusting scaling for comfortable reading</li>
+<li>Optimizing font rendering (especially ClearType on Windows)</li>
+<li>Common display problems and solutions</li>
+</ul>
+<h3 id="your-configuration-reference">Your Configuration Reference</h3>
+<p>Your learning journal now contains:</p>
+<p><strong>Documentation:</strong></p>
+<ul>
+<li>Your system specifications</li>
+<li>Fonts you&#39;ve installed</li>
+<li>Input languages configured</li>
+<li>Display settings optimized</li>
+</ul>
+<p><strong>Hands-on experience:</strong></p>
+<ul>
+<li>Installing fonts</li>
+<li>Adding input languages</li>
+<li>Adjusting display settings</li>
+<li>Testing configurations</li>
+</ul>
+<p><strong>Troubleshooting knowledge:</strong></p>
+<ul>
+<li>Common problems</li>
+<li>Quick solutions</li>
+<li>When to escalate</li>
+</ul>
+<p>This becomes your reference as you support users.</p>
+<h3 id="how-module-2-prepares-you-for-module-3">How Module 2 Prepares You for Module 3</h3>
+<p>Module 3 teaches troubleshooting and maintenance. The skills you learned in Module 2 are what you&#39;ll be:</p>
+<ul>
+<li>Restoring when things go wrong</li>
+<li>Adjusting when performance problems arise</li>
+<li>Verifying when diagnosing issues</li>
+</ul>
+<p>Understanding proper configuration makes diagnosis much easier - you know what &quot;right&quot; looks like.</p>
+<h3 id="before-module-3">Before Module 3</h3>
+<p><strong>Practice these skills:</strong></p>
+<ul>
+<li>Install another SIL font you haven&#39;t tried</li>
+<li>Add a second input language</li>
+<li>Help someone with their display settings</li>
+<li>Create a one-page quick reference for users</li>
+</ul>
+<p><strong>Review your journal:</strong></p>
+<ul>
+<li>Make sure all activities are documented</li>
+<li>Note any questions for your mentor</li>
+<li>Add any insights from your practice</li>
+</ul>
+<p><strong>Optional deeper exploration:</strong></p>
+<ul>
+<li>Explore other SIL fonts at software.sil.org/fonts</li>
+<li>Try different keyboard layouts for a language</li>
+<li>Research font rendering in more depth</li>
+<li>Test configurations with different applications</li>
+</ul>
+<h3 id="assessment-preparation">Assessment Preparation</h3>
+<p>Module 3 will include assessment scenarios where you apply knowledge from all three modules. To prepare:</p>
+<p><strong>Make sure you can:</strong></p>
+<ul>
+<li>Quickly document system specifications</li>
+<li>Install a font and verify it works</li>
+<li>Add an input language and teach someone to use it</li>
+<li>Optimize display settings for readability</li>
+<li>Explain when reinstallation is needed</li>
+</ul>
+<p><strong>Areas to clarify:</strong></p>
+<ul>
+<li>Any steps you&#39;re uncertain about</li>
+<li>Platform-specific differences you&#39;re unclear on</li>
+<li>How to handle problems you encountered</li>
+</ul>
+<p>Discuss these with your mentor before Module 3.</p>
+<h3 id="practical-application">Practical Application</h3>
+<p><strong>Your homework:</strong></p>
+<ol>
+<li><strong>Configure one user&#39;s system:</strong><ol>
+<li>Could be a colleague, friend, family member</li>
+<li>Apply what you learned (fonts, input, display)</li>
+<li>Practice teaching, not just doing</li>
+<li>Document what worked and what was difficult</li>
+</ol>
+</li>
+<li><strong>Create a quick reference guide:</strong><ol>
+<li>One page for users</li>
+<li>How to switch input languages</li>
+<li>Where to adjust display settings</li>
+<li>Top 3 problems and solutions</li>
+</ol>
+</li>
+<li><strong>Reflect in your journal:</strong><ol>
+<li>What felt comfortable?</li>
+<li>What needs more practice?</li>
+<li>What questions do you still have?</li>
+</ol>
+</li>
+</ol>
+<p><strong>You&#39;ve completed Module 2!</strong> Take a break before continuing to Module 3: Troubleshooting and Maintenance.</p>
+</body>
+</html>
