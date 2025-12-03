@@ -1,0 +1,2935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODULE 3</title>
+</head>
+<body>
+
+<h1 id="module-3-troubleshooting-and-maintenance">MODULE 3: TROUBLESHOOTING AND MAINTENANCE</h1>
+<p><strong>Duration:</strong> 40-45 minutes<br><strong>Format:</strong> Asynchronous self-paced learning</p>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this module, you will be able to:</p>
+<ul>
+<li>Use a systematic framework to diagnose OS problems</li>
+<li>Identify and resolve common operating system issues</li>
+<li>Use built-in diagnostic tools effectively</li>
+<li>Perform basic OS maintenance tasks</li>
+<li>Make informed decisions about repair, reinstall, or escalation</li>
+<li>Apply troubleshooting skills to realistic scenarios</li>
+</ul>
+<h2 id="section-3-1-module-3-introduction">Section 3.1: Module 3 Introduction</h2>
+<p><strong>Time:</strong> 3 minutes</p>
+<h3 id="welcome-to-module-3">Welcome to Module 3</h3>
+<p>In Modules 1 and 2, you learned how operating systems work and how to configure them properly for language work. Now you&#39;re ready for the most practical skill: troubleshooting when things go wrong.</p>
+<h3 id="why-troubleshooting-skills-matter">Why Troubleshooting Skills Matter</h3>
+<p>As a language technology consultant, you&#39;ll regularly encounter:</p>
+<p><strong>Users with problems:</strong></p>
+<ul>
+<li>&quot;My computer is really slow&quot;</li>
+<li>&quot;I can&#39;t connect to the internet&quot;</li>
+<li>&quot;The system won&#39;t start&quot;</li>
+<li>&quot;Everything keeps freezing&quot;</li>
+</ul>
+<p><strong>Your challenge:</strong></p>
+<ul>
+<li>User might be anywhere in the world</li>
+<li>You&#39;re supporting them remotely</li>
+<li>They need to get back to work quickly</li>
+<li>You need to diagnose accurately without seeing the computer</li>
+</ul>
+<p><strong>Your value:</strong></p>
+<ul>
+<li>Systematic diagnosis (not random guessing)</li>
+<li>Knowing what to check and in what order</li>
+<li>Understanding when problems are fixable vs. when to escalate</li>
+<li>Keeping language workers productive</li>
+</ul>
+<h3 id="what-makes-os-troubleshooting-different">What Makes OS Troubleshooting Different</h3>
+<p>Operating system problems affect everything on the computer. Unlike application problems (affecting one program), OS problems can:</p>
+<p><strong>Block all work:</strong></p>
+<ul>
+<li>Computer won&#39;t start</li>
+<li>Display doesn&#39;t work</li>
+<li>Input devices not responding</li>
+</ul>
+<p><strong>Slow everything down:</strong></p>
+<ul>
+<li>All programs run slowly</li>
+<li>System freezes frequently</li>
+<li>Takes forever to start up</li>
+</ul>
+<p><strong>Create cascading failures:</strong></p>
+<ul>
+<li>One problem triggers others</li>
+<li>Hard to identify the root cause</li>
+<li>Symptoms appear in multiple places</li>
+</ul>
+<p>This is why systematic troubleshooting matters - you need a framework, not just trial and error.</p>
+<h3 id="the-troubleshooting-mindset">The Troubleshooting Mindset</h3>
+<p>Good troubleshooting requires a specific approach:</p>
+<p><strong>Be systematic:</strong></p>
+<ul>
+<li>Follow a diagnostic framework</li>
+<li>Check common causes first</li>
+<li>Document what you try</li>
+<li>Don&#39;t skip steps</li>
+</ul>
+<p><strong>Ask good questions:</strong></p>
+<ul>
+<li>What changed recently?</li>
+<li>When did this start?</li>
+<li>Does it happen all the time or sometimes?</li>
+<li>Can you reproduce it?</li>
+</ul>
+<p><strong>Think like a detective:</strong></p>
+<ul>
+<li>Gather evidence before conclusions</li>
+<li>Test hypotheses</li>
+<li>Eliminate possibilities methodically</li>
+<li>Keep notes</li>
+</ul>
+<p><strong>Know your limits:</strong></p>
+<ul>
+<li>Some problems need specialists</li>
+<li>Recognize when to escalate</li>
+<li>It&#39;s okay to say &quot;I don&#39;t know, let me research this&quot;</li>
+</ul>
+<h3 id="what-you-ll-learn-in-module-3">What You&#39;ll Learn in Module 3</h3>
+<p>This module teaches practical troubleshooting skills:</p>
+<p><strong>Diagnostic framework</strong> - A systematic approach to diagnosing any OS problem, with tools to gather information and narrow down causes.</p>
+<p><strong>Common problems and solutions</strong> - The issues you&#39;ll encounter most often and how to fix them efficiently.</p>
+<p><strong>Maintenance practices</strong> - Preventing problems through regular maintenance, and what users can do themselves.</p>
+<p><strong>Decision-making</strong> - When to repair, when to reinstall, when to escalate to specialists.</p>
+<h3 id="module-structure">Module Structure</h3>
+<ul>
+<li><strong>Section 3.2 (12 min):</strong> Diagnostic framework and tools</li>
+<li><strong>Section 3.3 (15 min):</strong> Common OS problems and solutions</li>
+<li><strong>Section 3.4 (8 min):</strong> Maintenance and prevention</li>
+<li><strong>Section 3.5 (10 min):</strong> Making decisions and assessment scenarios</li>
+</ul>
+<h3 id="before-you-begin">Before You Begin</h3>
+<p>For this module, you&#39;ll need:</p>
+<ul>
+<li>Your learning journal with system information from Module 1</li>
+<li>Access to your computer to explore diagnostic tools</li>
+<li>Willingness to experiment safely with troubleshooting tools</li>
+</ul>
+<p>Don&#39;t worry - we won&#39;t break anything. The tools we&#39;ll use are designed to diagnose, not fix, so they&#39;re very safe.</p>
+<h2 id="section-3-2-diagnostic-framework-and-tools">Section 3.2: Diagnostic Framework and Tools</h2>
+<p><strong>Time:</strong> 12 minutes</p>
+<h3 id="introduction">Introduction</h3>
+<p>Random troubleshooting wastes time and often makes problems worse. A systematic framework helps you diagnose efficiently and accurately.</p>
+<h3 id="the-diagnostic-framework">The Diagnostic Framework</h3>
+<p>This framework works for almost any OS problem:</p>
+<p><strong>Step 1: Gather Information</strong></p>
+<ul>
+<li>What exactly is the problem? (specific symptoms)</li>
+<li>When did it start? (timeline)</li>
+<li>What changed recently? (updates, new software, hardware changes)</li>
+<li>Does it happen consistently or intermittently? (pattern)</li>
+<li>Can you reproduce it? (repeatability)</li>
+</ul>
+<p><strong>Step 2: Isolate the Problem</strong></p>
+<ul>
+<li>Is it hardware or software?</li>
+<li>Is it system-wide or just one application?</li>
+<li>Does it affect all users or just one?</li>
+<li>Does it happen in safe mode? (isolates third-party software)</li>
+</ul>
+<p><strong>Step 3: Check the Obvious First</strong></p>
+<ul>
+<li>Is it plugged in and powered on?</li>
+<li>Are cables connected properly?</li>
+<li>Has the system been restarted recently?</li>
+<li>Are there error messages? (read them carefully!)</li>
+<li>Is disk space full?</li>
+</ul>
+<p><strong>Step 4: Research and Hypothesize</strong></p>
+<ul>
+<li>Search for error messages online</li>
+<li>Check if this is a known issue</li>
+<li>Form a theory about the cause</li>
+<li>Identify what you can test</li>
+</ul>
+<p><strong>Step 5: Test and Verify</strong></p>
+<ul>
+<li>Test your hypothesis systematically</li>
+<li>Change one thing at a time</li>
+<li>Document what you try</li>
+<li>Verify the problem is actually fixed</li>
+</ul>
+<p><strong>Step 6: Document and Follow Up</strong></p>
+<ul>
+<li>Record the problem and solution</li>
+<li>Monitor to ensure problem doesn&#39;t return</li>
+<li>Update your troubleshooting notes</li>
+</ul>
+<h3 id="key-principle-one-change-at-a-time">Key Principle: One Change at a Time</h3>
+<p><strong>Critical rule:</strong> When testing solutions, change only one thing at a time.</p>
+<p><strong>Why this matters:</strong></p>
+<p>If you make multiple changes and the problem is fixed, you won&#39;t know which change actually worked. Worse, if the problem persists, you won&#39;t know if any of your changes helped or if they made things worse.</p>
+<p><strong>Example - Wrong approach:</strong></p>
+<ul>
+<li>Computer is slow</li>
+<li>Update all drivers, install antivirus, uninstall 5 programs, change power settings, defragment disk</li>
+<li>Computer still slow</li>
+<li>Which change helped? Which hurt? You don&#39;t know.</li>
+</ul>
+<p><strong>Example - Right approach:</strong></p>
+<ul>
+<li>Computer is slow</li>
+<li>Check Task Manager - see high CPU usage</li>
+<li>Identify specific program causing high CPU</li>
+<li>Close that program</li>
+<li>Computer faster - problem identified</li>
+<li>Research why that program was using so much CPU</li>
+</ul>
+<h3 id="built-in-diagnostic-tools">Built-in Diagnostic Tools</h3>
+<p>Every operating system includes tools for diagnosing problems. Learning to use them is essential.</p>
+<p><strong>Windows Diagnostic Tools:</strong></p>
+<p><strong>Task Manager</strong> (Ctrl + Shift + Esc):</p>
+<ul>
+<li>Shows running processes and resource usage</li>
+<li>See what&#39;s using CPU, memory, disk</li>
+<li>End unresponsive programs</li>
+<li>Check startup programs</li>
+</ul>
+<p><strong>Resource Monitor</strong> (from Task Manager → Performance tab):</p>
+<ul>
+<li>More detailed than Task Manager</li>
+<li>Real-time monitoring of CPU, memory, disk, network</li>
+<li>See which processes use which resources</li>
+</ul>
+<p><strong>Event Viewer</strong>:</p>
+<ul>
+<li>System logs of errors and warnings</li>
+<li>Can identify recurring problems</li>
+<li>Technical but very informative</li>
+<li>Search Start menu for &quot;Event Viewer&quot;</li>
+</ul>
+<p><strong>Windows Memory Diagnostic</strong>:</p>
+<ul>
+<li>Tests RAM for problems</li>
+<li>Run from Start menu search</li>
+<li>Requires restart</li>
+<li>Use when suspecting memory issues</li>
+</ul>
+<p><strong>System File Checker</strong> (Command line):</p>
+<ul>
+<li>Checks and repairs system files</li>
+<li>Run: <code>sfc /scannow</code> in administrator command prompt</li>
+<li>Takes time but can fix corruption</li>
+</ul>
+<p><strong>macOS Diagnostic Tools:</strong></p>
+<p><strong>Activity Monitor</strong> (Applications → Utilities):</p>
+<ul>
+<li>Like Windows Task Manager</li>
+<li>Shows CPU, memory, energy, disk, network usage</li>
+<li>Force quit unresponsive apps</li>
+</ul>
+<p><strong>Console</strong> (Applications → Utilities):</p>
+<ul>
+<li>System logs and messages</li>
+<li>See errors and warnings</li>
+<li>Technical but helpful for diagnosis</li>
+</ul>
+<p><strong>Disk Utility</strong>:</p>
+<ul>
+<li>Check and repair disk problems</li>
+<li>First Aid function</li>
+<li>Run from Applications → Utilities</li>
+</ul>
+<p><strong>Apple Diagnostics</strong> (Hardware):</p>
+<ul>
+<li>Hold D key during startup</li>
+<li>Tests hardware components</li>
+<li>Gives error codes if problems found</li>
+</ul>
+<p><strong>Linux Diagnostic Tools:</strong></p>
+<p><strong>System Monitor</strong> (varies by desktop):</p>
+<ul>
+<li>Ubuntu: Search for &quot;System Monitor&quot;</li>
+<li>Shows processes, resources, file systems</li>
+<li>Similar to Windows Task Manager</li>
+</ul>
+<p><strong>Command line tools</strong>:</p>
+<pre><code>top               # Real-time process monitor
+htop              # Better version <span class="hljs-keyword">of</span> top (may need install)
+df -h             # Disk space usage
+free -h           # Memory usage
+dmesg             # System messages and errors
+journalctl        # System logs (systemd)
+</code></pre><p><strong>Disk utilities</strong>:</p>
+<ul>
+<li>GNOME Disks (graphical)</li>
+<li>fsck (command line, checks file systems)</li>
+</ul>
+<h3 id="activity-3-2a-explore-diagnostic-tools">Activity 3.2a: Explore Diagnostic Tools</h3>
+<p><strong>Time:</strong> 7 minutes</p>
+<p>Now you&#39;ll explore the diagnostic tools on your system.</p>
+<p><strong>Part 1: Resource Monitor</strong></p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>Open your system&#39;s resource monitor:<ol>
+<li>Windows: Task Manager (Ctrl + Shift + Esc)</li>
+<li>macOS: Activity Monitor</li>
+<li>Linux: System Monitor</li>
+</ol>
+</li>
+<li>Look at the current state of your system:<ol>
+<li>What percentage of CPU is being used?</li>
+<li>What percentage of memory (RAM) is being used?</li>
+<li>How much disk space is available?</li>
+</ol>
+</li>
+<li>Sort by CPU usage (click the CPU column header)<ol>
+<li>What process is using the most CPU right now?</li>
+</ol>
+</li>
+<li>Sort by memory usage<ol>
+<li>What process is using the most memory?</li>
+</ol>
+</li>
+</ol>
+<p><strong>In your learning journal, document:</strong></p>
+<ol>
+<li><strong>Current resource usage:</strong><ol>
+<li>CPU: ____%</li>
+<li>Memory: ____%</li>
+<li>Free disk space: _<em>__\</em></li>
+</ol>
+</li>
+<li><strong>Top CPU user:</strong> (process name)</li>
+<li><strong>Top memory user:</strong> (process name)</li>
+<li><strong>Observations:</strong><ol>
+<li>Does your system seem to have resources available, or is it heavily loaded?</li>
+<li>Are there processes you don&#39;t recognize?</li>
+<li>Would this information help diagnose a &quot;slow computer&quot; problem?</li>
+</ol>
+</li>
+</ol>
+<p><strong>Part 2: Explore System Logs (Optional)</strong></p>
+<p><strong>If you want to go deeper:</strong></p>
+<p><strong>Windows users:</strong></p>
+<ul>
+<li>Search &quot;Event Viewer&quot;</li>
+<li>Open it</li>
+<li>Look at Windows Logs → System</li>
+<li>Notice the list of events (Information, Warning, Error)</li>
+<li>Don&#39;t worry about understanding everything - just observe</li>
+</ul>
+<p><strong>macOS users:</strong></p>
+<ul>
+<li>Open Console (Applications → Utilities → Console)</li>
+<li>Look at system messages</li>
+<li>Notice types: Error, Fault, Default</li>
+</ul>
+<p><strong>Linux users:</strong></p>
+<ul>
+<li>Open terminal</li>
+<li>Run: <code>journalctl -b</code> (shows log for current boot)</li>
+<li>Or run: <code>dmesg | tail</code> (shows recent system messages)</li>
+</ul>
+<p><strong>In your learning journal:</strong></p>
+<ul>
+<li>Were you able to find system logs?</li>
+<li>Do you see any error messages?</li>
+<li>Would this be useful for troubleshooting? When?</li>
+</ul>
+<p><strong>Note:</strong> Understanding logs takes practice and isn&#39;t always necessary. Knowing they exist and where to find them is the important first step.</p>
+<h3 id="information-gathering-questions">Information Gathering Questions</h3>
+<p>When users report problems, asking the right questions is critical. Here&#39;s your checklist:</p>
+<p><strong>About the problem:</strong></p>
+<ul>
+<li>What exactly is happening? (be specific - &quot;slow&quot; could mean many things)</li>
+<li>What were you doing when it started?</li>
+<li>Is there an error message? (ask user to read it exactly or take a photo)</li>
+</ul>
+<p><strong>About timing:</strong></p>
+<ul>
+<li>When did this start? (today? last week? after an update?)</li>
+<li>Does it happen all the time or only sometimes?</li>
+<li>If sometimes, what&#39;s different when it happens vs. doesn&#39;t happen?</li>
+</ul>
+<p><strong>About changes:</strong></p>
+<ul>
+<li>What changed recently? (This is often the key question!)<ul>
+<li>Software installed or updated?</li>
+<li>Operating system update?</li>
+<li>New hardware connected?</li>
+<li>Settings changed?</li>
+<li>Power outage or unexpected shutdown?</li>
+</ul>
+</li>
+</ul>
+<p><strong>About scope:</strong></p>
+<ul>
+<li>Does this affect everything or just one program?</li>
+<li>Does it happen for all users or just one?</li>
+<li>Does it happen in safe mode? (advanced question)</li>
+</ul>
+<p><strong>About attempts:</strong></p>
+<ul>
+<li>Have you tried anything already?</li>
+<li>What happened when you tried that?</li>
+<li>Has this problem happened before?</li>
+</ul>
+<h3 id="common-diagnostic-patterns">Common Diagnostic Patterns</h3>
+<p>Certain patterns of symptoms point to common causes:</p>
+<p><strong>Gradual slowdown over time:</strong></p>
+<ul>
+<li>Likely: Disk space filling up, too many startup programs, fragmented disk (on HDD), malware</li>
+<li>Check: Disk space, startup programs list, run antivirus scan</li>
+</ul>
+<p><strong>Sudden slowdown after update:</strong></p>
+<ul>
+<li>Likely: Update caused problem, driver incompatibility, new background service</li>
+<li>Check: Recent updates, can you roll back? Device Manager for driver issues</li>
+</ul>
+<p><strong>Won&#39;t start at all:</strong></p>
+<ul>
+<li>Likely: Hardware failure, corrupted system files, failed update</li>
+<li>Check: Does hardware POST (beep/logo appear)? Safe mode work? Hardware diagnostics</li>
+</ul>
+<p><strong>Frequent freezing:</strong></p>
+<ul>
+<li>Likely: Bad RAM, overheating, driver problem, disk failure</li>
+<li>Check: Memory diagnostic, temperature, Event Viewer for errors</li>
+</ul>
+<p><strong>Specific program crashes:</strong></p>
+<ul>
+<li>Likely: Program problem, not OS (unless affecting many programs)</li>
+<li>Check: Reinstall program, check for updates, verify system requirements</li>
+</ul>
+<h3 id="key-takeaways-from-section-3-2">Key Takeaways from Section 3.2</h3>
+<ul>
+<li>Systematic troubleshooting beats random guessing</li>
+<li>Gather information before trying solutions</li>
+<li>Ask good questions about what, when, what changed</li>
+<li>Built-in diagnostic tools help identify problems</li>
+<li>Change one thing at a time when testing solutions</li>
+<li>Document what you learn for future reference</li>
+</ul>
+<h2 id="section-3-3-common-os-problems-and-solutions">Section 3.3: Common OS Problems and Solutions</h2>
+<p><strong>Time:</strong> 15 minutes</p>
+<h3 id="introduction">Introduction</h3>
+<p>While every problem is unique, certain issues appear repeatedly. Learning to recognize and fix these common problems makes you efficient and effective.</p>
+<h3 id="startup-and-boot-problems">Startup and Boot Problems</h3>
+<p><strong>Problem: Computer won&#39;t start at all</strong></p>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>No lights, no sounds, completely dead</li>
+<li>Or: Lights on but no display</li>
+</ul>
+<p><strong>Common causes and solutions:</strong></p>
+<p>If completely dead:</p>
+<ul>
+<li>Check power connections (plug, battery)</li>
+<li>Try different power outlet</li>
+<li>Check if power adapter is working (test with meter or try another if available)</li>
+<li><strong>This is likely hardware</strong> - may need specialist</li>
+</ul>
+<p>If lights/sounds but no display:</p>
+<ul>
+<li>Check monitor connections</li>
+<li>Check monitor power</li>
+<li>Try different monitor if available</li>
+<li>Listen for beep codes (can indicate hardware failure)</li>
+<li><strong>May be hardware (display or graphics)</strong> - escalate if not simple connection issue</li>
+</ul>
+<p><strong>Problem: Computer starts but OS won&#39;t load</strong></p>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Manufacturer logo appears but then error message</li>
+<li>Blue screen (Windows)</li>
+<li>Kernel panic (Mac/Linux)</li>
+<li>Spinning circle forever</li>
+</ul>
+<p><strong>Common causes and solutions:</strong></p>
+<p>Try Safe Mode:</p>
+<ul>
+<li><strong>Windows:</strong> Hold Shift while clicking Restart, choose Troubleshoot → Advanced → Startup Settings → Safe Mode</li>
+<li><strong>macOS:</strong> Hold Shift during startup</li>
+<li><strong>Linux:</strong> Select recovery mode from GRUB menu</li>
+</ul>
+<p>If Safe Mode works:</p>
+<ul>
+<li>Recent update or software may be the problem</li>
+<li>Uninstall recently installed software</li>
+<li>Roll back recent updates if possible</li>
+<li>System file corruption - may need repair</li>
+</ul>
+<p>If Safe Mode doesn&#39;t work:</p>
+<ul>
+<li>More serious problem</li>
+<li>Potential disk failure</li>
+<li>Corrupted system files</li>
+<li>May need reinstallation or specialist help</li>
+</ul>
+<h3 id="performance-problems">Performance Problems</h3>
+<p><strong>Problem: Computer is very slow</strong></p>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Takes long time to start</li>
+<li>Programs slow to open</li>
+<li>Everything feels sluggish</li>
+</ul>
+<p><strong>Diagnostic steps:</strong></p>
+<ol>
+<li><strong>Check disk space:</strong><ol>
+<li>Less than 10% free space causes slowness</li>
+<li>Solution: Delete unnecessary files, empty recycle bin, remove old downloads</li>
+</ol>
+</li>
+<li><strong>Check Task Manager/Activity Monitor:</strong><ol>
+<li>Is CPU at 100%? What process?</li>
+<li>Is memory (RAM) at 100%?</li>
+<li>Is disk at 100%? (Windows Task Manager)</li>
+</ol>
+</li>
+<li><strong>Too many startup programs:</strong><ol>
+<li>Windows: Task Manager → Startup tab</li>
+<li>macOS: System Settings → General → Login Items</li>
+<li>Disable unnecessary startup programs</li>
+</ol>
+</li>
+<li><strong>Background updates or scans:</strong><ol>
+<li>Windows Update running?</li>
+<li>Antivirus scanning?</li>
+<li>Cloud sync running (OneDrive, Dropbox)?</li>
+<li>Wait for completion or schedule for different time</li>
+</ol>
+</li>
+<li><strong>Malware possibility:</strong><ol>
+<li>Run full antivirus scan</li>
+<li>Check for unfamiliar programs in installed programs list</li>
+<li>Look for unknown processes using lots of resources</li>
+</ol>
+</li>
+</ol>
+<p><strong>Solutions by cause:</strong></p>
+<p><strong>Low disk space:</strong></p>
+<ul>
+<li>Delete files, empty trash, remove old downloads</li>
+<li>Uninstall unused programs</li>
+<li>Move files to external drive</li>
+</ul>
+<p><strong>Too many startup programs:</strong></p>
+<ul>
+<li>Disable unnecessary ones (keep antivirus, important tools only)</li>
+<li>Restart to apply changes</li>
+</ul>
+<p><strong>Insufficient RAM for workload:</strong></p>
+<ul>
+<li>Close unnecessary programs</li>
+<li>Consider RAM upgrade if possible</li>
+<li>Work with fewer programs open simultaneously</li>
+</ul>
+<p><strong>Disk drive failing (HDD):</strong></p>
+<ul>
+<li>BACKUP IMMEDIATELY</li>
+<li>Check disk health with diagnostic tools</li>
+<li>May need drive replacement</li>
+</ul>
+<p><strong>Problem: System freezes frequently</strong></p>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Mouse cursor stops moving</li>
+<li>Can&#39;t click anything</li>
+<li>Must force restart</li>
+</ul>
+<p><strong>Common causes:</strong></p>
+<p><strong>Bad RAM:</strong></p>
+<ul>
+<li>Run memory diagnostic (Windows Memory Diagnostic, memtest86)</li>
+<li>If errors found, RAM needs replacement</li>
+</ul>
+<p><strong>Overheating:</strong></p>
+<ul>
+<li>Feel if computer is very hot</li>
+<li>Check vents aren&#39;t blocked</li>
+<li>May need cleaning or fan repair</li>
+<li>Laptops: Use on hard surface, not soft surfaces that block vents</li>
+</ul>
+<p><strong>Driver problems:</strong></p>
+<ul>
+<li>Check Event Viewer for driver errors</li>
+<li>Update drivers, especially graphics</li>
+<li>Roll back recent driver updates</li>
+</ul>
+<p><strong>Disk problems:</strong></p>
+<ul>
+<li>Run disk check utility</li>
+<li>Check SMART status if possible</li>
+<li>May indicate failing drive</li>
+</ul>
+<h3 id="network-and-connectivity-problems">Network and Connectivity Problems</h3>
+<p><strong>Problem: Can&#39;t connect to internet</strong></p>
+<p><strong>Diagnostic steps:</strong></p>
+<ol>
+<li><strong>Check physical connections:</strong><ol>
+<li>Ethernet cable plugged in?</li>
+<li>WiFi turned on?</li>
+<li>Router powered on?</li>
+</ol>
+</li>
+<li><strong>Is it just this computer or everything?</strong><ol>
+<li>Check other devices</li>
+<li>If all devices affected: router problem</li>
+<li>If just this computer: computer problem</li>
+</ol>
+</li>
+<li><strong>Try basic fixes:</strong><ol>
+<li>Restart computer</li>
+<li>Restart router (unplug 30 seconds, plug back in)</li>
+<li>Toggle WiFi off and on</li>
+</ol>
+</li>
+<li><strong>Check settings:</strong><ol>
+<li>Airplane mode off?</li>
+<li>WiFi connected to correct network?</li>
+<li>Correct password entered?</li>
+</ol>
+</li>
+<li><strong>Advanced checks:</strong><ol>
+<li>Can you see WiFi networks? (If not: WiFi hardware problem)</li>
+<li>Connected but no internet? (Network settings or ISP problem)</li>
+<li>Try wired connection if WiFi doesn&#39;t work (isolates WiFi from general network)</li>
+</ol>
+</li>
+</ol>
+<p><strong>Solutions:</strong></p>
+<p><strong>WiFi problems:</strong></p>
+<ul>
+<li>Forget network and reconnect (re-enter password)</li>
+<li>Update WiFi drivers (Windows)</li>
+<li>Reset network settings (last resort)</li>
+</ul>
+<p><strong>DNS problems:</strong></p>
+<ul>
+<li>Try using Google DNS (8.8.8.8 and 8.8.4.4)</li>
+<li>Or Cloudflare DNS (1.1.1.1)</li>
+<li>Change in network adapter settings</li>
+</ul>
+<p><strong>ISP/router problems:</strong></p>
+<ul>
+<li>Contact internet provider</li>
+<li>Check if service outage in area</li>
+<li>May need router restart or reset</li>
+</ul>
+<h3 id="display-and-graphics-problems">Display and Graphics Problems</h3>
+<p><strong>Problem: Display looks wrong</strong></p>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Resolution too low (everything looks big and blocky)</li>
+<li>Colors look strange</li>
+<li>Text blurry</li>
+<li>Screen flickers</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<p><strong>Wrong resolution:</strong></p>
+<ul>
+<li>Set to native/recommended resolution</li>
+<li>Windows: Settings → System → Display</li>
+<li>macOS: System Settings → Displays</li>
+<li>Should be set to maximum available (usually has &quot;(Recommended)&quot; next to it)</li>
+</ul>
+<p><strong>Blurry text:</strong></p>
+<ul>
+<li>Check scaling settings</li>
+<li>Run ClearType tuner (Windows)</li>
+<li>Verify using native resolution</li>
+</ul>
+<p><strong>Driver problems:</strong></p>
+<ul>
+<li>Update graphics drivers</li>
+<li>Windows: Device Manager → Display adapters</li>
+<li>Can cause display issues, flickering, poor performance</li>
+</ul>
+<p><strong>Multiple monitor problems:</strong></p>
+<ul>
+<li>Check physical connections</li>
+<li>Detect displays in settings</li>
+<li>Set correct primary monitor</li>
+<li>Arrange monitors to match physical layout</li>
+</ul>
+<h3 id="update-and-software-problems">Update and Software Problems</h3>
+<p><strong>Problem: Update failed or caused problems</strong></p>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Update won&#39;t install</li>
+<li>System problems started after update</li>
+<li>Constant restart loop</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<p><strong>Update won&#39;t install:</strong></p>
+<ul>
+<li>Check disk space (needs space for update files)</li>
+<li>Run Windows Update troubleshooter (Windows)</li>
+<li>Check if antivirus blocking</li>
+<li>Download update manually if automatic fails</li>
+</ul>
+<p><strong>Problems after update:</strong></p>
+<ul>
+<li>Roll back update if possible (Windows: Settings → Update &amp; Security → View Update History → Uninstall updates)</li>
+<li>Restore from system restore point (if enabled)</li>
+<li>Check if known issues for that update (search online)</li>
+<li>Wait for fix update from Microsoft/Apple</li>
+</ul>
+<p><strong>Stuck in restart loop:</strong></p>
+<ul>
+<li>Try Safe Mode</li>
+<li>Roll back problematic update</li>
+<li>May need system restore or reinstall if can&#39;t boot normally</li>
+</ul>
+<h3 id="activity-3-3-diagnose-scenarios">Activity 3.3: Diagnose Scenarios</h3>
+<p><strong>Time:</strong> 7 minutes</p>
+<p>Practice applying your troubleshooting framework to realistic scenarios.</p>
+<p><strong>Scenario 1: Slow Performance</strong></p>
+<p>Maria contacts you: &quot;My computer has become really slow over the last week. It takes forever to start up and programs are slow to open. I haven&#39;t installed anything new.&quot;</p>
+<p><strong>In your learning journal, write:</strong></p>
+<ol>
+<li><strong>What questions would you ask Maria to gather more information?</strong></li>
+<li><strong>What are 3 possible causes for this problem?</strong></li>
+<li><strong>What would you check first? (in order)</strong></li>
+<li><strong>If you found disk space at 98% full, what would you tell Maria to do?</strong></li>
+</ol>
+<p><strong>Scenario 2: Can&#39;t Type in Language</strong></p>
+<p>John reports: &quot;I was working on a translation yesterday and everything was fine. Today I tried to type in Amharic but I just get English letters no matter what I do. I can still type in English fine.&quot;</p>
+<p><strong>In your learning journal, write:</strong></p>
+<ol>
+<li><strong>What do you think is the most likely cause?</strong></li>
+<li><strong>What would you ask John to check first?</strong></li>
+<li><strong>If the Amharic input language is still listed in his settings, what would you tell him to try?</strong></li>
+<li><strong>What if the Amharic input language is missing from the list?</strong></li>
+</ol>
+<p><strong>Scenario 3: Won&#39;t Start</strong></p>
+<p>Sarah emails: &quot;My laptop won&#39;t start this morning. When I press the power button, the lights come on for a second and then it goes off again. It was working fine yesterday.&quot;</p>
+<p><strong>In your learning journal, write:</strong></p>
+<ol>
+<li><strong>Is this likely a hardware or software problem?</strong></li>
+<li><strong>What would you tell Sarah to check first?</strong></li>
+<li><strong>What might have caused this sudden problem?</strong></li>
+<li><strong>Should you try to troubleshoot this remotely or escalate to a hardware specialist?</strong></li>
+</ol>
+<h3 id="when-to-suspect-hardware-vs-software">When to Suspect Hardware vs. Software</h3>
+<p><strong>Hardware problems usually:</strong></p>
+<ul>
+<li>Appear suddenly (were fine, now broken)</li>
+<li>Happen consistently (not intermittent)</li>
+<li>Aren&#39;t fixed by restart or reinstall</li>
+<li>Show physical symptoms (strange sounds, heat, won&#39;t power on)</li>
+<li>May show in hardware diagnostics</li>
+</ul>
+<p><strong>Software problems usually:</strong></p>
+<ul>
+<li>Develop gradually or after changes (update, new software)</li>
+<li>May be intermittent (sometimes works, sometimes doesn&#39;t)</li>
+<li>Often fixed by restart</li>
+<li>Related to specific programs or functions</li>
+<li>Show in system logs or Event Viewer</li>
+</ul>
+<p><strong>Hybrid problems:</strong></p>
+<ul>
+<li>Overheating (hardware stress causes software crashes)</li>
+<li>Failing hard drive (hardware failing, causes data corruption)</li>
+<li>Bad RAM (hardware fault, causes random crashes)</li>
+<li>Driver issues (software talking to hardware incorrectly)</li>
+</ul>
+<h3 id="key-takeaways-from-section-3-3">Key Takeaways from Section 3.3</h3>
+<ul>
+<li>Common problems have recognizable patterns</li>
+<li>Check simple things first (disk space, connections, restarts)</li>
+<li>Systematic diagnosis beats random fixing</li>
+<li>Hardware vs. software distinction guides troubleshooting</li>
+<li>Document solutions that work for future reference</li>
+<li>Some problems need specialist help - recognize when to escalate</li>
+</ul>
+<h2 id="section-3-4-maintenance-and-prevention">Section 3.4: Maintenance and Prevention</h2>
+<p><strong>Time:</strong> 8 minutes</p>
+<h3 id="introduction">Introduction</h3>
+<p>Preventing problems is better than fixing them. Regular maintenance keeps systems running smoothly and prevents many common issues.</p>
+<h3 id="why-maintenance-matters">Why Maintenance Matters</h3>
+<p><strong>For language workers specifically:</strong></p>
+<ul>
+<li>Downtime during critical project phases is costly</li>
+<li>Lost work due to crashes or corruption</li>
+<li>Slow systems reduce productivity</li>
+<li>Problems compound over time if ignored</li>
+</ul>
+<p><strong>Your role:</strong></p>
+<ul>
+<li>Teach users basic maintenance they can do themselves</li>
+<li>Schedule and perform deeper maintenance</li>
+<li>Catch small problems before they become big ones</li>
+</ul>
+<h3 id="regular-maintenance-tasks">Regular Maintenance Tasks</h3>
+<p><strong>Daily (user responsibility):</strong></p>
+<ul>
+<li>Shut down properly (don&#39;t just close laptop lid if doing updates)</li>
+<li>Notice unusual behavior (new sounds, slowness, errors)</li>
+<li>Save work frequently</li>
+<li>Report problems promptly</li>
+</ul>
+<p><strong>Weekly:</strong></p>
+<ul>
+<li>Clear browser cache and downloads folder</li>
+<li>Empty recycle bin/trash</li>
+<li>Close unused programs</li>
+<li>Check for critical updates</li>
+</ul>
+<p><strong>Monthly:</strong></p>
+<ul>
+<li>Check available disk space</li>
+<li>Review installed programs (remove unused)</li>
+<li>Check backup is working</li>
+<li>Update important software</li>
+<li>Restart computer (if not done recently)</li>
+</ul>
+<p><strong>Quarterly:</strong></p>
+<ul>
+<li>Install OS updates</li>
+<li>Review startup programs</li>
+<li>Check for driver updates (especially graphics)</li>
+<li>Scan for malware</li>
+<li>Review and clean up files</li>
+</ul>
+<p><strong>Annually:</strong></p>
+<ul>
+<li>Full system backup</li>
+<li>Review system performance</li>
+<li>Consider if upgrade needed</li>
+<li>Clean computer physically (dust in vents)</li>
+<li>Verify recovery methods work</li>
+</ul>
+<h3 id="disk-space-management">Disk Space Management</h3>
+<p><strong>Why disk space matters:</strong></p>
+<p>Systems slow dramatically when disk space is low (less than 10-15% free). The OS needs space for temporary files, updates, and virtual memory.</p>
+<p><strong>Where space goes:</strong></p>
+<p><strong>Common space hogs:</strong></p>
+<ul>
+<li>Downloads folder (files accumulate)</li>
+<li>Temporary files (system and browser)</li>
+<li>Old installers (no longer needed after installation)</li>
+<li>Duplicate files</li>
+<li>Old email attachments</li>
+<li>Cache files</li>
+<li>Recycle bin/trash not emptied</li>
+</ul>
+<p><strong>How to free space:</strong></p>
+<ol>
+<li><strong>Empty recycle bin/trash</strong></li>
+<li><strong>Clear downloads folder</strong> (move keepers to proper location, delete rest)</li>
+<li><strong>Use Disk Cleanup</strong> (Windows) or similar tools</li>
+<li><strong>Remove unused programs</strong></li>
+<li><strong>Clear browser cache</strong> (in browser settings)</li>
+<li><strong>Delete old files you no longer need</strong></li>
+<li><strong>Move large files to external storage</strong> (videos, old projects)</li>
+</ol>
+<p><strong>Setting expectations with users:</strong></p>
+<p>Tell them: &quot;Keep at least 20% of your disk free for best performance. Check monthly.&quot;</p>
+<h3 id="update-management">Update Management</h3>
+<p><strong>Types of updates:</strong></p>
+<p><strong>Security updates:</strong></p>
+<ul>
+<li>Fix vulnerabilities</li>
+<li>Should be installed promptly</li>
+<li>Usually safe</li>
+</ul>
+<p><strong>Feature updates:</strong></p>
+<ul>
+<li>Add new features</li>
+<li>Can wait if system working well</li>
+<li>Test on non-critical system first if possible</li>
+</ul>
+<p><strong>Driver updates:</strong></p>
+<ul>
+<li>Update hardware support</li>
+<li>Only update if having problems or new feature needed</li>
+<li>&quot;If it ain&#39;t broke, don&#39;t fix it&quot; applies here</li>
+</ul>
+<p><strong>Application updates:</strong></p>
+<ul>
+<li>Keep language software updated</li>
+<li>Check release notes for important fixes</li>
+<li>Test before deploying to all users</li>
+</ul>
+<p><strong>Update best practices:</strong></p>
+<p><strong>For consultants:</strong></p>
+<ul>
+<li>Know what updates are available</li>
+<li>Plan update timing (not during critical project phases)</li>
+<li>Backup before major updates</li>
+<li>Test updates on one system before rolling out widely</li>
+</ul>
+<p><strong>For users:</strong></p>
+<ul>
+<li>Enable automatic security updates</li>
+<li>Approve feature updates when convenient</li>
+<li>Don&#39;t ignore update notifications indefinitely</li>
+<li>Report problems after updates promptly</li>
+</ul>
+<h3 id="backup-importance">Backup Importance</h3>
+<p><strong>Critical reality:</strong> Hard drives fail. Computers get lost or stolen. Accidents happen.</p>
+<p><strong>What to backup:</strong></p>
+<ul>
+<li>All user-created files (documents, translations, data)</li>
+<li>Email (if stored locally)</li>
+<li>Browser bookmarks</li>
+<li>Application data and settings</li>
+<li>License keys and installation files for critical software</li>
+</ul>
+<p><strong>Backup strategies:</strong></p>
+<p><strong>The 3-2-1 rule:</strong></p>
+<ul>
+<li><strong>3</strong> copies of important data</li>
+<li>On <strong>2</strong> different types of media</li>
+<li>With <strong>1</strong> copy off-site</li>
+</ul>
+<p><strong>Practical for language workers:</strong></p>
+<ul>
+<li>Original data on computer</li>
+<li>Backup on external hard drive</li>
+<li>Cloud backup (OneDrive, Google Drive, Dropbox) or second external drive kept elsewhere</li>
+</ul>
+<p><strong>Backup frequency:</strong></p>
+<ul>
+<li>Daily for active project files (automatic cloud sync works well)</li>
+<li>Weekly for full system</li>
+<li>Before major changes (OS update, reinstall, etc.)</li>
+</ul>
+<p><strong>Testing backups:</strong></p>
+<ul>
+<li>Periodically try restoring a file</li>
+<li>Verify backup is actually working</li>
+<li>Untested backup = no backup</li>
+</ul>
+<h3 id="activity-3-4-create-a-maintenance-checklist">Activity 3.4: Create a Maintenance Checklist</h3>
+<p><strong>Time:</strong> 4 minutes</p>
+<p>Create a practical maintenance checklist for users you support.</p>
+<p><strong>Instructions:</strong></p>
+<p>In your learning journal, create a simple checklist that users can follow.</p>
+<p><strong>Your checklist should include:</strong></p>
+<p><strong>Monthly Maintenance (15 minutes):</strong></p>
+<ul>
+<li>[ ] Check disk space (should have 20%+ free)</li>
+<li>[ ] Clear downloads folder</li>
+<li>[ ] Empty recycle bin/trash</li>
+<li>[ ] Check for OS updates</li>
+<li>[ ] Restart computer if not done recently</li>
+</ul>
+<p><strong>Quarterly Maintenance (30 minutes):</strong></p>
+<ul>
+<li>[ ] Review and remove unused programs</li>
+<li>[ ] Check backup is working</li>
+<li>[ ] Scan for malware</li>
+<li>[ ] Update important software</li>
+<li>[ ] Check startup programs (disable unnecessary ones)</li>
+</ul>
+<p><strong>Warning Signs - Report Immediately:</strong></p>
+<ul>
+<li>[ ] Strange noises from computer</li>
+<li>[ ] Computer unusually hot</li>
+<li>[ ] Frequent freezing or crashes</li>
+<li>[ ] Disk space warning</li>
+<li>[ ] Persistent error messages</li>
+</ul>
+<p><strong>Add to this checklist:</strong></p>
+<ul>
+<li>Specific items for your context</li>
+<li>Links to tools they need</li>
+<li>Your contact information for support</li>
+</ul>
+<p><strong>Why create this:</strong></p>
+<ul>
+<li>Gives users clear actionable steps</li>
+<li>Prevents many common problems</li>
+<li>Creates shared responsibility for system health</li>
+<li>Reduces emergency support calls</li>
+</ul>
+<h3 id="preventing-common-problems">Preventing Common Problems</h3>
+<p><strong>Problem prevention strategies:</strong></p>
+<p><strong>To prevent slowness:</strong></p>
+<ul>
+<li>Keep disk space available</li>
+<li>Limit startup programs</li>
+<li>Restart regularly</li>
+<li>Don&#39;t run too many programs simultaneously</li>
+</ul>
+<p><strong>To prevent crashes:</strong></p>
+<ul>
+<li>Install updates</li>
+<li>Use good power supply (surge protector)</li>
+<li>Keep system cool (good ventilation)</li>
+<li>Don&#39;t force shutdown unless necessary</li>
+</ul>
+<p><strong>To prevent data loss:</strong></p>
+<ul>
+<li>Backup regularly</li>
+<li>Use save/autosave features</li>
+<li>Don&#39;t work directly from external drives (copy to computer first)</li>
+<li>Verify backups work</li>
+</ul>
+<p><strong>To prevent malware:</strong></p>
+<ul>
+<li>Keep antivirus updated and running</li>
+<li>Don&#39;t click suspicious links</li>
+<li>Download only from trusted sources</li>
+<li>Be skeptical of too-good-to-be-true offers</li>
+</ul>
+<p><strong>To prevent configuration problems:</strong></p>
+<ul>
+<li>Document settings before changing them</li>
+<li>Change one thing at a time</li>
+<li>Know how to undo changes</li>
+<li>Don&#39;t change things you don&#39;t understand</li>
+</ul>
+<h3 id="teaching-users-about-maintenance">Teaching Users About Maintenance</h3>
+<p><strong>What users need to understand:</strong></p>
+<p><strong>Maintenance is normal:</strong></p>
+<ul>
+<li>Like changing oil in a car</li>
+<li>Prevents bigger problems</li>
+<li>Takes time but saves time later</li>
+</ul>
+<p><strong>They can do basic maintenance themselves:</strong></p>
+<ul>
+<li>Not all computer problems need a specialist</li>
+<li>Following checklist keeps system healthy</li>
+<li>Builds confidence and independence</li>
+</ul>
+<p><strong>When to ask for help:</strong></p>
+<ul>
+<li>Warning signs (checklist above)</li>
+<li>Problems beyond their skill level</li>
+<li>Before making major changes</li>
+<li>When unsure what to do</li>
+</ul>
+<p><strong>Create learning opportunities:</strong></p>
+<ul>
+<li>Walk through maintenance with user once</li>
+<li>Have them do it while you watch second time</li>
+<li>Check in monthly: &quot;Did you do maintenance?&quot;</li>
+<li>Praise them for preventing problems</li>
+</ul>
+<h3 id="key-takeaways-from-section-3-4">Key Takeaways from Section 3.4</h3>
+<ul>
+<li>Regular maintenance prevents most common problems</li>
+<li>Users can handle basic maintenance themselves</li>
+<li>Disk space and updates are critical</li>
+<li>Backup is essential - test it regularly</li>
+<li>Teach maintenance, don&#39;t just do it for users</li>
+<li>Prevention is easier than repair</li>
+</ul>
+<h2 id="section-3-5-making-decisions-and-assessment">Section 3.5: Making Decisions and Assessment</h2>
+<p><strong>Time:</strong> 10 minutes</p>
+<h3 id="introduction">Introduction</h3>
+<p>Troubleshooting isn&#39;t just technical skills - it&#39;s also making good decisions about what to do when you can&#39;t fix something yourself, when reinstallation is worth it, and when to bring in specialists.</p>
+<h3 id="the-decision-framework">The Decision Framework</h3>
+<p>When facing a problem, you have several options:</p>
+<p><strong>1. Fix it yourself (remotely or hands-on)</strong></p>
+<ul>
+<li>Appropriate when: Problem is within your skill level, you have necessary access, risk is low, user can work with your guidance</li>
+</ul>
+<p><strong>2. Guide the user to fix it</strong></p>
+<ul>
+<li>Appropriate when: User is capable, problem is straightforward, good learning opportunity, you can provide clear instructions</li>
+</ul>
+<p><strong>3. Escalate to local IT support</strong></p>
+<ul>
+<li>Appropriate when: Problem needs hands-on access, hardware diagnosis needed, beyond your expertise, local support available and capable</li>
+</ul>
+<p><strong>4. Escalate to specialist</strong></p>
+<ul>
+<li>Appropriate when: Complex hardware problem, data recovery needed, problem is critical and you&#39;re uncertain, specialist knowledge required</li>
+</ul>
+<p><strong>5. Work around the problem temporarily</strong></p>
+<ul>
+<li>Appropriate when: Immediate fix not possible, user needs to keep working, permanent solution requires time/resources not immediately available</li>
+</ul>
+<p><strong>6. Accept and adapt</strong></p>
+<ul>
+<li>Appropriate when: &quot;Problem&quot; is actually a limitation, fixing would cost more than benefit, workaround is acceptable long-term</li>
+</ul>
+<h3 id="repair-vs-reinstall-decision">Repair vs. Reinstall Decision</h3>
+<p>One of the most common decisions: spend time troubleshooting or just reinstall?</p>
+<p><strong>Consider reinstalling when:</strong></p>
+<p><strong>Time factor:</strong></p>
+<ul>
+<li>Troubleshooting has taken 2+ hours with no resolution</li>
+<li>Reinstall would be faster than continued diagnosis</li>
+<li>User needs system working urgently</li>
+</ul>
+<p><strong>Severity factor:</strong></p>
+<ul>
+<li>Multiple serious problems (not just one issue)</li>
+<li>System corruption suspected</li>
+<li>Malware that can&#39;t be fully cleaned</li>
+<li>System has deteriorated over years</li>
+</ul>
+<p><strong>Cost-benefit:</strong></p>
+<ul>
+<li>User&#39;s time very valuable</li>
+<li>You have good backup</li>
+<li>System needs fresh start anyway</li>
+<li>Troubleshooting risk is high</li>
+</ul>
+<p><strong>Consider troubleshooting longer when:</strong></p>
+<p><strong>Time factor:</strong></p>
+<ul>
+<li>Problem clearly diagnosed, just need to apply fix</li>
+<li>Reinstall would take longer (special software, complex configuration)</li>
+<li>Not urgent - can take time to investigate</li>
+</ul>
+<p><strong>Uniqueness factor:</strong></p>
+<ul>
+<li>Custom configuration difficult to recreate</li>
+<li>Specialized software hard to reinstall</li>
+<li>Licenses or activation complicated</li>
+</ul>
+<p><strong>Learning factor:</strong></p>
+<ul>
+<li>You want to learn from this problem</li>
+<li>Diagnosis will help prevent future issues</li>
+<li>Curious what caused it</li>
+</ul>
+<p><strong>Risk factor:</strong></p>
+<ul>
+<li>Backup uncertain or incomplete</li>
+<li>Reinstall itself is risky (driver availability concerns)</li>
+<li>Might lose important data</li>
+</ul>
+<h3 id="hardware-vs-software-when-to-escalate">Hardware vs. Software: When to Escalate</h3>
+<p><strong>Definitely escalate hardware problems:</strong></p>
+<ul>
+<li>Physical damage (broken screen, keys, ports)</li>
+<li>Liquid damage</li>
+<li>Strange noises, burning smell</li>
+<li>Won&#39;t power on at all</li>
+<li>System overheating despite cleaning vents</li>
+</ul>
+<p><strong>Maybe escalate (depends on your skills/access):</strong></p>
+<ul>
+<li>Hard drive replacement</li>
+<li>RAM upgrade or replacement</li>
+<li>Battery replacement</li>
+<li>Cleaning dust from inside</li>
+<li>Peripheral problems (if clearly hardware)</li>
+</ul>
+<p><strong>Usually handle yourself (software):</strong></p>
+<ul>
+<li>OS configuration and settings</li>
+<li>Software installation and updates</li>
+<li>Performance optimization</li>
+<li>User account issues</li>
+<li>Most network connectivity issues</li>
+</ul>
+<h3 id="cost-benefit-analysis">Cost-Benefit Analysis</h3>
+<p>Sometimes the &quot;best&quot; technical solution isn&#39;t the right practical solution.</p>
+<p><strong>Factors to consider:</strong></p>
+<p><strong>User downtime cost:</strong></p>
+<ul>
+<li>Is this their only computer?</li>
+<li>Is project deadline approaching?</li>
+<li>How critical is their work?</li>
+<li>Can they use another computer temporarily?</li>
+</ul>
+<p><strong>Repair cost vs. replacement cost:</strong></p>
+<ul>
+<li>Expensive repair on old computer?</li>
+<li>Might be better to replace</li>
+<li>&quot;Throw good money after bad&quot;</li>
+<li>Consider age and expected remaining life</li>
+</ul>
+<p><strong>Data value:</strong></p>
+<ul>
+<li>How valuable is the data?</li>
+<li>Is backup available?</li>
+<li>Is data recovery needed?</li>
+<li>Worth spending more to recover data?</li>
+</ul>
+<p><strong>Learning vs. efficiency:</strong></p>
+<ul>
+<li>Is this a learning opportunity?</li>
+<li>Or is efficiency more important?</li>
+<li>Balance your professional development with user needs</li>
+</ul>
+<h3 id="communicating-uncertainty">Communicating Uncertainty</h3>
+<p>You won&#39;t always know the answer. That&#39;s okay. How you handle uncertainty matters.</p>
+<p><strong>Good approaches:</strong></p>
+<p><strong>Honest about limits:</strong></p>
+<ul>
+<li>&quot;I&#39;m not certain what&#39;s causing this, but here&#39;s what I think...&quot;</li>
+<li>&quot;This is outside my experience, but let me research it&quot;</li>
+<li>&quot;I could keep trying, but we might want to bring in a specialist&quot;</li>
+</ul>
+<p><strong>Collaborative problem-solving:</strong></p>
+<ul>
+<li>&quot;Let&#39;s try this and see what happens&quot;</li>
+<li>&quot;I want to test something - are you okay if we experiment?&quot;</li>
+<li>&quot;I&#39;m learning about this too - let&#39;s figure it out together&quot;</li>
+</ul>
+<p><strong>Manage expectations:</strong></p>
+<ul>
+<li>&quot;This might take a few tries&quot;</li>
+<li>&quot;I&#39;ll need some time to research this&quot;</li>
+<li>&quot;There&#39;s a chance we might not be able to fix this without reinstalling&quot;</li>
+</ul>
+<p><strong>Bad approaches:</strong></p>
+<p><strong>Pretending to know:</strong></p>
+<ul>
+<li>&quot;Oh yeah, I know exactly what this is&quot; (when you don&#39;t)</li>
+<li>Making up explanations</li>
+<li>Trying random things without explaining uncertainty</li>
+</ul>
+<p><strong>Blaming the user:</strong></p>
+<ul>
+<li>&quot;What did you do to break this?&quot;</li>
+<li>&quot;You must have clicked something you shouldn&#39;t have&quot;</li>
+<li>Implying they caused the problem (even if they did)</li>
+</ul>
+<p><strong>Being defensive:</strong></p>
+<ul>
+<li>&quot;Well, I&#39;ve never seen this before&quot;</li>
+<li>&quot;This isn&#39;t supposed to happen&quot;</li>
+<li>Getting frustrated or giving up</li>
+</ul>
+<h3 id="assessment-scenarios">Assessment Scenarios</h3>
+<p>Now apply everything you&#39;ve learned from all three modules.</p>
+<h3 id="scenario-1-complete-diagnostic-challenge">Scenario 1: Complete Diagnostic Challenge</h3>
+<p><strong>Context:</strong> Pastor David in rural Uganda contacts you. He&#39;s translating using Paratext on a Windows 10 laptop. The computer has become very slow over the past week. He reports that when he opens Paratext, it takes several minutes to load, and typing has a noticeable delay.</p>
+<p><strong>Your system information request reveals:</strong></p>
+<ul>
+<li>Windows 10, 64-bit</li>
+<li>Intel Core i3, 4 GB RAM</li>
+<li>500 GB hard drive, 30 GB free (6% free)</li>
+<li>Computer is 5 years old</li>
+<li>Working from a location with intermittent electricity</li>
+</ul>
+<p><strong>Additional information from questions:</strong></p>
+<ul>
+<li>Slowness started about a week ago</li>
+<li>Nothing new installed recently</li>
+<li>Windows Update ran a few days ago</li>
+<li>He works with a 2 GB Paratext project</li>
+<li>Has external hard drive but hasn&#39;t backed up in 2 months</li>
+</ul>
+<p><strong>In your learning journal, write a complete response:</strong></p>
+<ol>
+<li><strong>Initial diagnosis:</strong><ol>
+<li>What do you think is the primary cause of the slowness?</li>
+<li>What other factors might be contributing?</li>
+<li>What additional questions would you ask?</li>
+</ol>
+</li>
+<li><strong>Immediate action plan:</strong><ol>
+<li>What would you tell Pastor David to do first?</li>
+<li>What order would you try solutions?</li>
+<li>What should he do while troubleshooting?</li>
+</ol>
+</li>
+<li><strong>Short-term solutions:</strong><ol>
+<li>What can be fixed quickly to get him working again?</li>
+<li>What is good enough for now?</li>
+</ol>
+</li>
+<li><strong>Long-term recommendations:</strong><ol>
+<li>What should be done to prevent this recurring?</li>
+<li>Should any hardware be upgraded?</li>
+<li>What maintenance plan would you suggest?</li>
+</ol>
+</li>
+<li><strong>Risk management:</strong><ol>
+<li>What are the risks in this situation?</li>
+<li>What should be done to protect his work?</li>
+<li>What&#39;s your backup plan if your solutions don&#39;t work?</li>
+</ol>
+</li>
+</ol>
+<h3 id="scenario-2-decision-making-challenge">Scenario 2: Decision-Making Challenge</h3>
+<p><strong>Context:</strong> Sarah runs a literacy program and has a laptop that&#39;s having multiple problems:</p>
+<ul>
+<li>Frequent crashes (2-3 times per day)</li>
+<li>Slow startup (10+ minutes)</li>
+<li>Can&#39;t install Windows updates (error message)</li>
+<li>Some fonts not displaying correctly</li>
+</ul>
+<p>She has:</p>
+<ul>
+<li>Good backup from yesterday</li>
+<li>Windows 10 product key</li>
+<li>All installation files for her language software</li>
+<li>No IT support locally</li>
+<li>Important workshop in 3 days where she needs the laptop</li>
+</ul>
+<p><strong>In your learning journal, analyze:</strong></p>
+<ol>
+<li><strong>Options analysis:</strong><ol>
+<li>List at least 3 different approaches you could take</li>
+<li>For each approach, list pros and cons</li>
+<li>Estimate time required for each approach</li>
+</ol>
+</li>
+<li><strong>Your recommendation:</strong><ol>
+<li>What would you recommend and why?</li>
+<li>What factors were most important in your decision?</li>
+<li>What would you tell Sarah about timeline and expectations?</li>
+</ol>
+</li>
+<li><strong>Risk mitigation:</strong><ol>
+<li>What could go wrong with your chosen approach?</li>
+<li>What&#39;s your backup plan?</li>
+<li>How would you ensure she can do her workshop regardless?</li>
+</ol>
+</li>
+<li><strong>Reflection:</strong><ol>
+<li>Is this a repair, reinstall, or workaround situation?</li>
+<li>Would your answer be different if the workshop was in 1 week? 1 day?</li>
+<li>What if she had no backup?</li>
+</ol>
+</li>
+</ol>
+<h3 id="scenario-3-escalation-decision">Scenario 3: Escalation Decision</h3>
+<p><strong>Context:</strong> Thomas reports his laptop &quot;making a clicking noise&quot; and sometimes the screen &quot;goes black for a few seconds then comes back.&quot; He&#39;s in the middle of translation checking and can&#39;t afford downtime. The computer is 2 years old.</p>
+<p><strong>In your learning journal, write:</strong></p>
+<ol>
+<li><strong>Problem assessment:</strong><ol>
+<li>What do these symptoms suggest?</li>
+<li>Is this software or hardware?</li>
+<li>How serious is this?</li>
+</ol>
+</li>
+<li><strong>Escalation decision:</strong><ol>
+<li>Should this be escalated? To whom?</li>
+<li>What&#39;s urgent about this situation?</li>
+<li>What should Thomas do immediately?</li>
+</ol>
+</li>
+<li><strong>Communication:</strong><ol>
+<li>What would you tell Thomas about his situation?</li>
+<li>How would you explain the risk?</li>
+<li>What temporary solution might help him finish his current work?</li>
+</ol>
+</li>
+<li><strong>Preventive lesson:</strong><ol>
+<li>What should Thomas have done differently?</li>
+<li>What should he do after this is resolved?</li>
+<li>How could this have been prevented?</li>
+</ol>
+</li>
+</ol>
+<h3 id="module-3-completion">Module 3 Completion</h3>
+<h3 id="what-you-ve-learned">What You&#39;ve Learned</h3>
+<p>In Module 3, you&#39;ve developed practical troubleshooting and maintenance skills:</p>
+<p><strong>Diagnostic framework:</strong></p>
+<ul>
+<li>Systematic approach to any OS problem</li>
+<li>Information gathering questions</li>
+<li>Built-in diagnostic tools</li>
+<li>One-change-at-a-time testing</li>
+<li>Hardware vs. software distinction</li>
+</ul>
+<p><strong>Common problems and solutions:</strong></p>
+<ul>
+<li>Startup and boot problems</li>
+<li>Performance issues (slow, freezing)</li>
+<li>Network connectivity problems</li>
+<li>Display and graphics issues</li>
+<li>Update-related problems</li>
+<li>Pattern recognition for quick diagnosis</li>
+</ul>
+<p><strong>Maintenance and prevention:</strong></p>
+<ul>
+<li>Regular maintenance tasks</li>
+<li>Disk space management</li>
+<li>Update management</li>
+<li>Backup strategies</li>
+<li>Teaching users self-maintenance</li>
+<li>Preventing common problems</li>
+</ul>
+<p><strong>Decision-making:</strong></p>
+<ul>
+<li>Repair vs. reinstall decision framework</li>
+<li>When to escalate</li>
+<li>Cost-benefit analysis</li>
+<li>Communicating uncertainty</li>
+<li>Managing user expectations</li>
+</ul>
+<h3 id="your-troubleshooting-portfolio">Your Troubleshooting Portfolio</h3>
+<p>Your learning journal now contains:</p>
+<p><strong>Reference materials:</strong></p>
+<ul>
+<li>System specifications (Module 1)</li>
+<li>Configuration notes (Module 2)</li>
+<li>Troubleshooting framework</li>
+<li>Common problems and solutions</li>
+<li>Maintenance checklist</li>
+</ul>
+<p><strong>Practical experience:</strong></p>
+<ul>
+<li>Using diagnostic tools</li>
+<li>Analyzing scenarios</li>
+<li>Making decisions</li>
+<li>Creating user documentation</li>
+</ul>
+<p><strong>Assessment responses:</strong></p>
+<ul>
+<li>Three complete scenario analyses</li>
+<li>Decision-making practice</li>
+<li>Your reasoning documented</li>
+</ul>
+<h3 id="applying-your-skills">Applying Your Skills</h3>
+<p>You now have the complete skill set for OS fundamentals:</p>
+<p><strong>Module 1:</strong> Understanding operating systems and identifying what you&#39;re working with</p>
+<p><strong>Module 2:</strong> Configuring systems properly for language work</p>
+<p><strong>Module 3:</strong> Troubleshooting problems and maintaining systems</p>
+<p><strong>Together, these skills enable you to:</strong></p>
+<ul>
+<li>Support language workers effectively</li>
+<li>Diagnose and fix common problems</li>
+<li>Make informed decisions about complex situations</li>
+<li>Teach users to maintain their own systems</li>
+<li>Know when to escalate to specialists</li>
+<li>Keep language work productive</li>
+</ul>
+<h3 id="next-steps-in-your-development">Next Steps in Your Development</h3>
+<p><strong>&quot;Has Knowledge&quot; → &quot;With Assistance&quot; → &quot;Independent&quot;</strong></p>
+<p>This course built your &quot;Has Knowledge&quot; level competency. Moving forward:</p>
+<p><strong>For &quot;With Assistance&quot; development:</strong></p>
+<ul>
+<li>Work with experienced consultants</li>
+<li>Shadow IT professionals during installations</li>
+<li>Handle problems with mentor backup</li>
+<li>Build experience with diverse scenarios</li>
+<li>Learn from mistakes in low-risk situations</li>
+</ul>
+<p><strong>For &quot;Independent&quot; development:</strong></p>
+<ul>
+<li>Handle problems on your own</li>
+<li>Mentor others</li>
+<li>Develop specialised expertise in your region</li>
+<li>Create resources for your community</li>
+<li>Contribute to knowledge sharing</li>
+</ul>
+<p><strong>Continue learning:</strong></p>
+<ul>
+<li>Technology changes constantly</li>
+<li>New OS versions bring new challenges</li>
+<li>Stay current through practice and professional development</li>
+<li>Learn from every problem you encounter</li>
+</ul>
+<h3 id="mentor-review">Mentor Review</h3>
+<p>Before completing this course, schedule time with your mentor to review:</p>
+<p><strong>Your learning journal:</strong></p>
+<ul>
+<li>System documentation</li>
+<li>Configuration notes</li>
+<li>Scenario responses</li>
+<li>Maintenance checklist</li>
+</ul>
+<p><strong>Your understanding:</strong></p>
+<ul>
+<li>Discuss scenario decisions</li>
+<li>Explain your reasoning</li>
+<li>Ask questions about unclear areas</li>
+<li>Get feedback on your approach</li>
+</ul>
+<p><strong>Your next steps:</strong></p>
+<ul>
+<li>Identify areas needing more practice</li>
+<li>Plan supervised hands-on experience</li>
+<li>Set goals for skill development</li>
+<li>Arrange ongoing mentorship</li>
+</ul>
+<h3 id="final-reflection">Final Reflection</h3>
+<p>In your learning journal, write a final reflection:</p>
+<ol>
+<li><strong>What was most valuable in this course?</strong></li>
+<li><strong>What feels comfortable in your skill set?</strong></li>
+<li><strong>What needs more practice?</strong></li>
+<li><strong>How will you apply this in your work?</strong></li>
+<li><strong>What questions remain?</strong></li>
+</ol>
+<h3 id="course-completion">Course Completion</h3>
+<p><strong>You&#39;ve completed the Operating Systems for Language Technology Consultants course!</strong></p>
+<p>You&#39;ve learned to:</p>
+<ul>
+<li>Understand how operating systems work</li>
+<li>Identify and document system information</li>
+<li>Configure systems for language work</li>
+<li>Install fonts and input languages</li>
+<li>Optimize display settings</li>
+<li>Troubleshoot common problems</li>
+<li>Perform regular maintenance</li>
+<li>Make informed decisions about complex issues</li>
+<li>Know when to escalate to specialists</li>
+</ul>
+<p><strong>These foundational skills support everything else you&#39;ll learn in the Language Technology Consultant training program.</strong></p>
+<p>Continue developing through practice, mentorship, and real-world experience.</p>
+<p>Well done!</p>
+<h1 id="module-3-troubleshooting-and-maintenance">MODULE 3: TROUBLESHOOTING AND MAINTENANCE</h1>
+<p><strong>Duration:</strong> 40-45 minutes<br><strong>Format:</strong> Asynchronous self-paced learning</p>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this module, you will be able to:</p>
+<ul>
+<li>Use a systematic framework to diagnose OS problems</li>
+<li>Identify and resolve common operating system issues</li>
+<li>Use built-in diagnostic tools effectively</li>
+<li>Perform basic OS maintenance tasks</li>
+<li>Make informed decisions about repair, reinstall, or escalation</li>
+<li>Apply troubleshooting skills to realistic scenarios</li>
+</ul>
+<h2 id="section-3-1-module-3-introduction">Section 3.1: Module 3 Introduction</h2>
+<p><strong>Time:</strong> 3 minutes</p>
+<h3 id="welcome-to-module-3">Welcome to Module 3</h3>
+<p>In Modules 1 and 2, you learned how operating systems work and how to configure them properly for language work. Now you&#39;re ready for the most practical skill: troubleshooting when things go wrong.</p>
+<h3 id="why-troubleshooting-skills-matter">Why Troubleshooting Skills Matter</h3>
+<p>As a language technology consultant, you&#39;ll regularly encounter:</p>
+<p><strong>Users with problems:</strong></p>
+<ul>
+<li>&quot;My computer is really slow&quot;</li>
+<li>&quot;I can&#39;t connect to the internet&quot;</li>
+<li>&quot;The system won&#39;t start&quot;</li>
+<li>&quot;Everything keeps freezing&quot;</li>
+</ul>
+<p><strong>Your challenge:</strong></p>
+<ul>
+<li>User might be anywhere in the world</li>
+<li>You&#39;re supporting them remotely</li>
+<li>They need to get back to work quickly</li>
+<li>You need to diagnose accurately without seeing the computer</li>
+</ul>
+<p><strong>Your value:</strong></p>
+<ul>
+<li>Systematic diagnosis (not random guessing)</li>
+<li>Knowing what to check and in what order</li>
+<li>Understanding when problems are fixable vs. when to escalate</li>
+<li>Keeping language workers productive</li>
+</ul>
+<h3 id="what-makes-os-troubleshooting-different">What Makes OS Troubleshooting Different</h3>
+<p>Operating system problems affect everything on the computer. Unlike application problems (affecting one program), OS problems can:</p>
+<p><strong>Block all work:</strong></p>
+<ul>
+<li>Computer won&#39;t start</li>
+<li>Display doesn&#39;t work</li>
+<li>Input devices not responding</li>
+</ul>
+<p><strong>Slow everything down:</strong></p>
+<ul>
+<li>All programs run slowly</li>
+<li>System freezes frequently</li>
+<li>Takes forever to start up</li>
+</ul>
+<p><strong>Create cascading failures:</strong></p>
+<ul>
+<li>One problem triggers others</li>
+<li>Hard to identify the root cause</li>
+<li>Symptoms appear in multiple places</li>
+</ul>
+<p>This is why systematic troubleshooting matters - you need a framework, not just trial and error.</p>
+<h3 id="the-troubleshooting-mindset">The Troubleshooting Mindset</h3>
+<p>Good troubleshooting requires a specific approach:</p>
+<p><strong>Be systematic:</strong></p>
+<ul>
+<li>Follow a diagnostic framework</li>
+<li>Check common causes first</li>
+<li>Document what you try</li>
+<li>Don&#39;t skip steps</li>
+</ul>
+<p><strong>Ask good questions:</strong></p>
+<ul>
+<li>What changed recently?</li>
+<li>When did this start?</li>
+<li>Does it happen all the time or sometimes?</li>
+<li>Can you reproduce it?</li>
+</ul>
+<p><strong>Think like a detective:</strong></p>
+<ul>
+<li>Gather evidence before conclusions</li>
+<li>Test hypotheses</li>
+<li>Eliminate possibilities methodically</li>
+<li>Keep notes</li>
+</ul>
+<p><strong>Know your limits:</strong></p>
+<ul>
+<li>Some problems need specialists</li>
+<li>Recognize when to escalate</li>
+<li>It&#39;s okay to say &quot;I don&#39;t know, let me research this&quot;</li>
+</ul>
+<h3 id="what-you-ll-learn-in-module-3">What You&#39;ll Learn in Module 3</h3>
+<p>This module teaches practical troubleshooting skills:</p>
+<p><strong>Diagnostic framework</strong> - A systematic approach to diagnosing any OS problem, with tools to gather information and narrow down causes.</p>
+<p><strong>Common problems and solutions</strong> - The issues you&#39;ll encounter most often and how to fix them efficiently.</p>
+<p><strong>Maintenance practices</strong> - Preventing problems through regular maintenance, and what users can do themselves.</p>
+<p><strong>Decision-making</strong> - When to repair, when to reinstall, when to escalate to specialists.</p>
+<h3 id="module-structure">Module Structure</h3>
+<ul>
+<li><strong>Section 3.2 (12 min):</strong> Diagnostic framework and tools</li>
+<li><strong>Section 3.3 (15 min):</strong> Common OS problems and solutions</li>
+<li><strong>Section 3.4 (8 min):</strong> Maintenance and prevention</li>
+<li><strong>Section 3.5 (10 min):</strong> Making decisions and assessment scenarios</li>
+</ul>
+<h3 id="before-you-begin">Before You Begin</h3>
+<p>For this module, you&#39;ll need:</p>
+<ul>
+<li>Your learning journal with system information from Module 1</li>
+<li>Access to your computer to explore diagnostic tools</li>
+<li>Willingness to experiment safely with troubleshooting tools</li>
+</ul>
+<p>Don&#39;t worry - we won&#39;t break anything. The tools we&#39;ll use are designed to diagnose, not fix, so they&#39;re very safe.</p>
+<h2 id="section-3-2-diagnostic-framework-and-tools">Section 3.2: Diagnostic Framework and Tools</h2>
+<p><strong>Time:</strong> 12 minutes</p>
+<h3 id="introduction">Introduction</h3>
+<p>Random troubleshooting wastes time and often makes problems worse. A systematic framework helps you diagnose efficiently and accurately.</p>
+<h3 id="the-diagnostic-framework">The Diagnostic Framework</h3>
+<p>This framework works for almost any OS problem:</p>
+<p><strong>Step 1: Gather Information</strong></p>
+<ul>
+<li>What exactly is the problem? (specific symptoms)</li>
+<li>When did it start? (timeline)</li>
+<li>What changed recently? (updates, new software, hardware changes)</li>
+<li>Does it happen consistently or intermittently? (pattern)</li>
+<li>Can you reproduce it? (repeatability)</li>
+</ul>
+<p><strong>Step 2: Isolate the Problem</strong></p>
+<ul>
+<li>Is it hardware or software?</li>
+<li>Is it system-wide or just one application?</li>
+<li>Does it affect all users or just one?</li>
+<li>Does it happen in safe mode? (isolates third-party software)</li>
+</ul>
+<p><strong>Step 3: Check the Obvious First</strong></p>
+<ul>
+<li>Is it plugged in and powered on?</li>
+<li>Are cables connected properly?</li>
+<li>Has the system been restarted recently?</li>
+<li>Are there error messages? (read them carefully!)</li>
+<li>Is disk space full?</li>
+</ul>
+<p><strong>Step 4: Research and Hypothesize</strong></p>
+<ul>
+<li>Search for error messages online</li>
+<li>Check if this is a known issue</li>
+<li>Form a theory about the cause</li>
+<li>Identify what you can test</li>
+</ul>
+<p><strong>Step 5: Test and Verify</strong></p>
+<ul>
+<li>Test your hypothesis systematically</li>
+<li>Change one thing at a time</li>
+<li>Document what you try</li>
+<li>Verify the problem is actually fixed</li>
+</ul>
+<p><strong>Step 6: Document and Follow Up</strong></p>
+<ul>
+<li>Record the problem and solution</li>
+<li>Monitor to ensure problem doesn&#39;t return</li>
+<li>Update your troubleshooting notes</li>
+</ul>
+<h3 id="key-principle-one-change-at-a-time">Key Principle: One Change at a Time</h3>
+<p><strong>Critical rule:</strong> When testing solutions, change only one thing at a time.</p>
+<p><strong>Why this matters:</strong></p>
+<p>If you make multiple changes and the problem is fixed, you won&#39;t know which change actually worked. Worse, if the problem persists, you won&#39;t know if any of your changes helped or if they made things worse.</p>
+<p><strong>Example - Wrong approach:</strong></p>
+<ul>
+<li>Computer is slow</li>
+<li>Update all drivers, install antivirus, uninstall 5 programs, change power settings, defragment disk</li>
+<li>Computer still slow</li>
+<li>Which change helped? Which hurt? You don&#39;t know.</li>
+</ul>
+<p><strong>Example - Right approach:</strong></p>
+<ul>
+<li>Computer is slow</li>
+<li>Check Task Manager - see high CPU usage</li>
+<li>Identify specific program causing high CPU</li>
+<li>Close that program</li>
+<li>Computer faster - problem identified</li>
+<li>Research why that program was using so much CPU</li>
+</ul>
+<h3 id="built-in-diagnostic-tools">Built-in Diagnostic Tools</h3>
+<p>Every operating system includes tools for diagnosing problems. Learning to use them is essential.</p>
+<p><strong>Windows Diagnostic Tools:</strong></p>
+<p><strong>Task Manager</strong> (Ctrl + Shift + Esc):</p>
+<ul>
+<li>Shows running processes and resource usage</li>
+<li>See what&#39;s using CPU, memory, disk</li>
+<li>End unresponsive programs</li>
+<li>Check startup programs</li>
+</ul>
+<p><strong>Resource Monitor</strong> (from Task Manager → Performance tab):</p>
+<ul>
+<li>More detailed than Task Manager</li>
+<li>Real-time monitoring of CPU, memory, disk, network</li>
+<li>See which processes use which resources</li>
+</ul>
+<p><strong>Event Viewer</strong>:</p>
+<ul>
+<li>System logs of errors and warnings</li>
+<li>Can identify recurring problems</li>
+<li>Technical but very informative</li>
+<li>Search Start menu for &quot;Event Viewer&quot;</li>
+</ul>
+<p><strong>Windows Memory Diagnostic</strong>:</p>
+<ul>
+<li>Tests RAM for problems</li>
+<li>Run from Start menu search</li>
+<li>Requires restart</li>
+<li>Use when suspecting memory issues</li>
+</ul>
+<p><strong>System File Checker</strong> (Command line):</p>
+<ul>
+<li>Checks and repairs system files</li>
+<li>Run: <code>sfc /scannow</code> in administrator command prompt</li>
+<li>Takes time but can fix corruption</li>
+</ul>
+<p><strong>macOS Diagnostic Tools:</strong></p>
+<p><strong>Activity Monitor</strong> (Applications → Utilities):</p>
+<ul>
+<li>Like Windows Task Manager</li>
+<li>Shows CPU, memory, energy, disk, network usage</li>
+<li>Force quit unresponsive apps</li>
+</ul>
+<p><strong>Console</strong> (Applications → Utilities):</p>
+<ul>
+<li>System logs and messages</li>
+<li>See errors and warnings</li>
+<li>Technical but helpful for diagnosis</li>
+</ul>
+<p><strong>Disk Utility</strong>:</p>
+<ul>
+<li>Check and repair disk problems</li>
+<li>First Aid function</li>
+<li>Run from Applications → Utilities</li>
+</ul>
+<p><strong>Apple Diagnostics</strong> (Hardware):</p>
+<ul>
+<li>Hold D key during startup</li>
+<li>Tests hardware components</li>
+<li>Gives error codes if problems found</li>
+</ul>
+<p><strong>Linux Diagnostic Tools:</strong></p>
+<p><strong>System Monitor</strong> (varies by desktop):</p>
+<ul>
+<li>Ubuntu: Search for &quot;System Monitor&quot;</li>
+<li>Shows processes, resources, file systems</li>
+<li>Similar to Windows Task Manager</li>
+</ul>
+<p><strong>Command line tools</strong>:</p>
+<pre><code>top               # Real-time process monitor
+htop              # Better version <span class="hljs-keyword">of</span> top (may need install)
+df -h             # Disk space usage
+free -h           # Memory usage
+dmesg             # System messages and errors
+journalctl        # System logs (systemd)
+</code></pre><p><strong>Disk utilities</strong>:</p>
+<ul>
+<li>GNOME Disks (graphical)</li>
+<li>fsck (command line, checks file systems)</li>
+</ul>
+<h3 id="activity-3-2a-explore-diagnostic-tools">Activity 3.2a: Explore Diagnostic Tools</h3>
+<p><strong>Time:</strong> 7 minutes</p>
+<p>Now you&#39;ll explore the diagnostic tools on your system.</p>
+<p><strong>Part 1: Resource Monitor</strong></p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>Open your system&#39;s resource monitor:<ol>
+<li>Windows: Task Manager (Ctrl + Shift + Esc)</li>
+<li>macOS: Activity Monitor</li>
+<li>Linux: System Monitor</li>
+</ol>
+</li>
+<li>Look at the current state of your system:<ol>
+<li>What percentage of CPU is being used?</li>
+<li>What percentage of memory (RAM) is being used?</li>
+<li>How much disk space is available?</li>
+</ol>
+</li>
+<li>Sort by CPU usage (click the CPU column header)<ol>
+<li>What process is using the most CPU right now?</li>
+</ol>
+</li>
+<li>Sort by memory usage<ol>
+<li>What process is using the most memory?</li>
+</ol>
+</li>
+</ol>
+<p><strong>In your learning journal, document:</strong></p>
+<ol>
+<li><strong>Current resource usage:</strong><ol>
+<li>CPU: ____%</li>
+<li>Memory: ____%</li>
+<li>Free disk space: _<em>__\</em></li>
+</ol>
+</li>
+<li><strong>Top CPU user:</strong> (process name)</li>
+<li><strong>Top memory user:</strong> (process name)</li>
+<li><strong>Observations:</strong><ol>
+<li>Does your system seem to have resources available, or is it heavily loaded?</li>
+<li>Are there processes you don&#39;t recognize?</li>
+<li>Would this information help diagnose a &quot;slow computer&quot; problem?</li>
+</ol>
+</li>
+</ol>
+<p><strong>Part 2: Explore System Logs (Optional)</strong></p>
+<p><strong>If you want to go deeper:</strong></p>
+<p><strong>Windows users:</strong></p>
+<ul>
+<li>Search &quot;Event Viewer&quot;</li>
+<li>Open it</li>
+<li>Look at Windows Logs → System</li>
+<li>Notice the list of events (Information, Warning, Error)</li>
+<li>Don&#39;t worry about understanding everything - just observe</li>
+</ul>
+<p><strong>macOS users:</strong></p>
+<ul>
+<li>Open Console (Applications → Utilities → Console)</li>
+<li>Look at system messages</li>
+<li>Notice types: Error, Fault, Default</li>
+</ul>
+<p><strong>Linux users:</strong></p>
+<ul>
+<li>Open terminal</li>
+<li>Run: <code>journalctl -b</code> (shows log for current boot)</li>
+<li>Or run: <code>dmesg | tail</code> (shows recent system messages)</li>
+</ul>
+<p><strong>In your learning journal:</strong></p>
+<ul>
+<li>Were you able to find system logs?</li>
+<li>Do you see any error messages?</li>
+<li>Would this be useful for troubleshooting? When?</li>
+</ul>
+<p><strong>Note:</strong> Understanding logs takes practice and isn&#39;t always necessary. Knowing they exist and where to find them is the important first step.</p>
+<h3 id="information-gathering-questions">Information Gathering Questions</h3>
+<p>When users report problems, asking the right questions is critical. Here&#39;s your checklist:</p>
+<p><strong>About the problem:</strong></p>
+<ul>
+<li>What exactly is happening? (be specific - &quot;slow&quot; could mean many things)</li>
+<li>What were you doing when it started?</li>
+<li>Is there an error message? (ask user to read it exactly or take a photo)</li>
+</ul>
+<p><strong>About timing:</strong></p>
+<ul>
+<li>When did this start? (today? last week? after an update?)</li>
+<li>Does it happen all the time or only sometimes?</li>
+<li>If sometimes, what&#39;s different when it happens vs. doesn&#39;t happen?</li>
+</ul>
+<p><strong>About changes:</strong></p>
+<ul>
+<li>What changed recently? (This is often the key question!)<ul>
+<li>Software installed or updated?</li>
+<li>Operating system update?</li>
+<li>New hardware connected?</li>
+<li>Settings changed?</li>
+<li>Power outage or unexpected shutdown?</li>
+</ul>
+</li>
+</ul>
+<p><strong>About scope:</strong></p>
+<ul>
+<li>Does this affect everything or just one program?</li>
+<li>Does it happen for all users or just one?</li>
+<li>Does it happen in safe mode? (advanced question)</li>
+</ul>
+<p><strong>About attempts:</strong></p>
+<ul>
+<li>Have you tried anything already?</li>
+<li>What happened when you tried that?</li>
+<li>Has this problem happened before?</li>
+</ul>
+<h3 id="common-diagnostic-patterns">Common Diagnostic Patterns</h3>
+<p>Certain patterns of symptoms point to common causes:</p>
+<p><strong>Gradual slowdown over time:</strong></p>
+<ul>
+<li>Likely: Disk space filling up, too many startup programs, fragmented disk (on HDD), malware</li>
+<li>Check: Disk space, startup programs list, run antivirus scan</li>
+</ul>
+<p><strong>Sudden slowdown after update:</strong></p>
+<ul>
+<li>Likely: Update caused problem, driver incompatibility, new background service</li>
+<li>Check: Recent updates, can you roll back? Device Manager for driver issues</li>
+</ul>
+<p><strong>Won&#39;t start at all:</strong></p>
+<ul>
+<li>Likely: Hardware failure, corrupted system files, failed update</li>
+<li>Check: Does hardware POST (beep/logo appear)? Safe mode work? Hardware diagnostics</li>
+</ul>
+<p><strong>Frequent freezing:</strong></p>
+<ul>
+<li>Likely: Bad RAM, overheating, driver problem, disk failure</li>
+<li>Check: Memory diagnostic, temperature, Event Viewer for errors</li>
+</ul>
+<p><strong>Specific program crashes:</strong></p>
+<ul>
+<li>Likely: Program problem, not OS (unless affecting many programs)</li>
+<li>Check: Reinstall program, check for updates, verify system requirements</li>
+</ul>
+<h3 id="key-takeaways-from-section-3-2">Key Takeaways from Section 3.2</h3>
+<ul>
+<li>Systematic troubleshooting beats random guessing</li>
+<li>Gather information before trying solutions</li>
+<li>Ask good questions about what, when, what changed</li>
+<li>Built-in diagnostic tools help identify problems</li>
+<li>Change one thing at a time when testing solutions</li>
+<li>Document what you learn for future reference</li>
+</ul>
+<h2 id="section-3-3-common-os-problems-and-solutions">Section 3.3: Common OS Problems and Solutions</h2>
+<p><strong>Time:</strong> 15 minutes</p>
+<h3 id="introduction">Introduction</h3>
+<p>While every problem is unique, certain issues appear repeatedly. Learning to recognize and fix these common problems makes you efficient and effective.</p>
+<h3 id="startup-and-boot-problems">Startup and Boot Problems</h3>
+<p><strong>Problem: Computer won&#39;t start at all</strong></p>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>No lights, no sounds, completely dead</li>
+<li>Or: Lights on but no display</li>
+</ul>
+<p><strong>Common causes and solutions:</strong></p>
+<p>If completely dead:</p>
+<ul>
+<li>Check power connections (plug, battery)</li>
+<li>Try different power outlet</li>
+<li>Check if power adapter is working (test with meter or try another if available)</li>
+<li><strong>This is likely hardware</strong> - may need specialist</li>
+</ul>
+<p>If lights/sounds but no display:</p>
+<ul>
+<li>Check monitor connections</li>
+<li>Check monitor power</li>
+<li>Try different monitor if available</li>
+<li>Listen for beep codes (can indicate hardware failure)</li>
+<li><strong>May be hardware (display or graphics)</strong> - escalate if not simple connection issue</li>
+</ul>
+<p><strong>Problem: Computer starts but OS won&#39;t load</strong></p>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Manufacturer logo appears but then error message</li>
+<li>Blue screen (Windows)</li>
+<li>Kernel panic (Mac/Linux)</li>
+<li>Spinning circle forever</li>
+</ul>
+<p><strong>Common causes and solutions:</strong></p>
+<p>Try Safe Mode:</p>
+<ul>
+<li><strong>Windows:</strong> Hold Shift while clicking Restart, choose Troubleshoot → Advanced → Startup Settings → Safe Mode</li>
+<li><strong>macOS:</strong> Hold Shift during startup</li>
+<li><strong>Linux:</strong> Select recovery mode from GRUB menu</li>
+</ul>
+<p>If Safe Mode works:</p>
+<ul>
+<li>Recent update or software may be the problem</li>
+<li>Uninstall recently installed software</li>
+<li>Roll back recent updates if possible</li>
+<li>System file corruption - may need repair</li>
+</ul>
+<p>If Safe Mode doesn&#39;t work:</p>
+<ul>
+<li>More serious problem</li>
+<li>Potential disk failure</li>
+<li>Corrupted system files</li>
+<li>May need reinstallation or specialist help</li>
+</ul>
+<h3 id="performance-problems">Performance Problems</h3>
+<p><strong>Problem: Computer is very slow</strong></p>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Takes long time to start</li>
+<li>Programs slow to open</li>
+<li>Everything feels sluggish</li>
+</ul>
+<p><strong>Diagnostic steps:</strong></p>
+<ol>
+<li><strong>Check disk space:</strong><ol>
+<li>Less than 10% free space causes slowness</li>
+<li>Solution: Delete unnecessary files, empty recycle bin, remove old downloads</li>
+</ol>
+</li>
+<li><strong>Check Task Manager/Activity Monitor:</strong><ol>
+<li>Is CPU at 100%? What process?</li>
+<li>Is memory (RAM) at 100%?</li>
+<li>Is disk at 100%? (Windows Task Manager)</li>
+</ol>
+</li>
+<li><strong>Too many startup programs:</strong><ol>
+<li>Windows: Task Manager → Startup tab</li>
+<li>macOS: System Settings → General → Login Items</li>
+<li>Disable unnecessary startup programs</li>
+</ol>
+</li>
+<li><strong>Background updates or scans:</strong><ol>
+<li>Windows Update running?</li>
+<li>Antivirus scanning?</li>
+<li>Cloud sync running (OneDrive, Dropbox)?</li>
+<li>Wait for completion or schedule for different time</li>
+</ol>
+</li>
+<li><strong>Malware possibility:</strong><ol>
+<li>Run full antivirus scan</li>
+<li>Check for unfamiliar programs in installed programs list</li>
+<li>Look for unknown processes using lots of resources</li>
+</ol>
+</li>
+</ol>
+<p><strong>Solutions by cause:</strong></p>
+<p><strong>Low disk space:</strong></p>
+<ul>
+<li>Delete files, empty trash, remove old downloads</li>
+<li>Uninstall unused programs</li>
+<li>Move files to external drive</li>
+</ul>
+<p><strong>Too many startup programs:</strong></p>
+<ul>
+<li>Disable unnecessary ones (keep antivirus, important tools only)</li>
+<li>Restart to apply changes</li>
+</ul>
+<p><strong>Insufficient RAM for workload:</strong></p>
+<ul>
+<li>Close unnecessary programs</li>
+<li>Consider RAM upgrade if possible</li>
+<li>Work with fewer programs open simultaneously</li>
+</ul>
+<p><strong>Disk drive failing (HDD):</strong></p>
+<ul>
+<li>BACKUP IMMEDIATELY</li>
+<li>Check disk health with diagnostic tools</li>
+<li>May need drive replacement</li>
+</ul>
+<p><strong>Problem: System freezes frequently</strong></p>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Mouse cursor stops moving</li>
+<li>Can&#39;t click anything</li>
+<li>Must force restart</li>
+</ul>
+<p><strong>Common causes:</strong></p>
+<p><strong>Bad RAM:</strong></p>
+<ul>
+<li>Run memory diagnostic (Windows Memory Diagnostic, memtest86)</li>
+<li>If errors found, RAM needs replacement</li>
+</ul>
+<p><strong>Overheating:</strong></p>
+<ul>
+<li>Feel if computer is very hot</li>
+<li>Check vents aren&#39;t blocked</li>
+<li>May need cleaning or fan repair</li>
+<li>Laptops: Use on hard surface, not soft surfaces that block vents</li>
+</ul>
+<p><strong>Driver problems:</strong></p>
+<ul>
+<li>Check Event Viewer for driver errors</li>
+<li>Update drivers, especially graphics</li>
+<li>Roll back recent driver updates</li>
+</ul>
+<p><strong>Disk problems:</strong></p>
+<ul>
+<li>Run disk check utility</li>
+<li>Check SMART status if possible</li>
+<li>May indicate failing drive</li>
+</ul>
+<h3 id="network-and-connectivity-problems">Network and Connectivity Problems</h3>
+<p><strong>Problem: Can&#39;t connect to internet</strong></p>
+<p><strong>Diagnostic steps:</strong></p>
+<ol>
+<li><strong>Check physical connections:</strong><ol>
+<li>Ethernet cable plugged in?</li>
+<li>WiFi turned on?</li>
+<li>Router powered on?</li>
+</ol>
+</li>
+<li><strong>Is it just this computer or everything?</strong><ol>
+<li>Check other devices</li>
+<li>If all devices affected: router problem</li>
+<li>If just this computer: computer problem</li>
+</ol>
+</li>
+<li><strong>Try basic fixes:</strong><ol>
+<li>Restart computer</li>
+<li>Restart router (unplug 30 seconds, plug back in)</li>
+<li>Toggle WiFi off and on</li>
+</ol>
+</li>
+<li><strong>Check settings:</strong><ol>
+<li>Airplane mode off?</li>
+<li>WiFi connected to correct network?</li>
+<li>Correct password entered?</li>
+</ol>
+</li>
+<li><strong>Advanced checks:</strong><ol>
+<li>Can you see WiFi networks? (If not: WiFi hardware problem)</li>
+<li>Connected but no internet? (Network settings or ISP problem)</li>
+<li>Try wired connection if WiFi doesn&#39;t work (isolates WiFi from general network)</li>
+</ol>
+</li>
+</ol>
+<p><strong>Solutions:</strong></p>
+<p><strong>WiFi problems:</strong></p>
+<ul>
+<li>Forget network and reconnect (re-enter password)</li>
+<li>Update WiFi drivers (Windows)</li>
+<li>Reset network settings (last resort)</li>
+</ul>
+<p><strong>DNS problems:</strong></p>
+<ul>
+<li>Try using Google DNS (8.8.8.8 and 8.8.4.4)</li>
+<li>Or Cloudflare DNS (1.1.1.1)</li>
+<li>Change in network adapter settings</li>
+</ul>
+<p><strong>ISP/router problems:</strong></p>
+<ul>
+<li>Contact internet provider</li>
+<li>Check if service outage in area</li>
+<li>May need router restart or reset</li>
+</ul>
+<h3 id="display-and-graphics-problems">Display and Graphics Problems</h3>
+<p><strong>Problem: Display looks wrong</strong></p>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Resolution too low (everything looks big and blocky)</li>
+<li>Colors look strange</li>
+<li>Text blurry</li>
+<li>Screen flickers</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<p><strong>Wrong resolution:</strong></p>
+<ul>
+<li>Set to native/recommended resolution</li>
+<li>Windows: Settings → System → Display</li>
+<li>macOS: System Settings → Displays</li>
+<li>Should be set to maximum available (usually has &quot;(Recommended)&quot; next to it)</li>
+</ul>
+<p><strong>Blurry text:</strong></p>
+<ul>
+<li>Check scaling settings</li>
+<li>Run ClearType tuner (Windows)</li>
+<li>Verify using native resolution</li>
+</ul>
+<p><strong>Driver problems:</strong></p>
+<ul>
+<li>Update graphics drivers</li>
+<li>Windows: Device Manager → Display adapters</li>
+<li>Can cause display issues, flickering, poor performance</li>
+</ul>
+<p><strong>Multiple monitor problems:</strong></p>
+<ul>
+<li>Check physical connections</li>
+<li>Detect displays in settings</li>
+<li>Set correct primary monitor</li>
+<li>Arrange monitors to match physical layout</li>
+</ul>
+<h3 id="update-and-software-problems">Update and Software Problems</h3>
+<p><strong>Problem: Update failed or caused problems</strong></p>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Update won&#39;t install</li>
+<li>System problems started after update</li>
+<li>Constant restart loop</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<p><strong>Update won&#39;t install:</strong></p>
+<ul>
+<li>Check disk space (needs space for update files)</li>
+<li>Run Windows Update troubleshooter (Windows)</li>
+<li>Check if antivirus blocking</li>
+<li>Download update manually if automatic fails</li>
+</ul>
+<p><strong>Problems after update:</strong></p>
+<ul>
+<li>Roll back update if possible (Windows: Settings → Update &amp; Security → View Update History → Uninstall updates)</li>
+<li>Restore from system restore point (if enabled)</li>
+<li>Check if known issues for that update (search online)</li>
+<li>Wait for fix update from Microsoft/Apple</li>
+</ul>
+<p><strong>Stuck in restart loop:</strong></p>
+<ul>
+<li>Try Safe Mode</li>
+<li>Roll back problematic update</li>
+<li>May need system restore or reinstall if can&#39;t boot normally</li>
+</ul>
+<h3 id="activity-3-3-diagnose-scenarios">Activity 3.3: Diagnose Scenarios</h3>
+<p><strong>Time:</strong> 7 minutes</p>
+<p>Practice applying your troubleshooting framework to realistic scenarios.</p>
+<p><strong>Scenario 1: Slow Performance</strong></p>
+<p>Maria contacts you: &quot;My computer has become really slow over the last week. It takes forever to start up and programs are slow to open. I haven&#39;t installed anything new.&quot;</p>
+<p><strong>In your learning journal, write:</strong></p>
+<ol>
+<li><strong>What questions would you ask Maria to gather more information?</strong></li>
+<li><strong>What are 3 possible causes for this problem?</strong></li>
+<li><strong>What would you check first? (in order)</strong></li>
+<li><strong>If you found disk space at 98% full, what would you tell Maria to do?</strong></li>
+</ol>
+<p><strong>Scenario 2: Can&#39;t Type in Language</strong></p>
+<p>John reports: &quot;I was working on a translation yesterday and everything was fine. Today I tried to type in Amharic but I just get English letters no matter what I do. I can still type in English fine.&quot;</p>
+<p><strong>In your learning journal, write:</strong></p>
+<ol>
+<li><strong>What do you think is the most likely cause?</strong></li>
+<li><strong>What would you ask John to check first?</strong></li>
+<li><strong>If the Amharic input language is still listed in his settings, what would you tell him to try?</strong></li>
+<li><strong>What if the Amharic input language is missing from the list?</strong></li>
+</ol>
+<p><strong>Scenario 3: Won&#39;t Start</strong></p>
+<p>Sarah emails: &quot;My laptop won&#39;t start this morning. When I press the power button, the lights come on for a second and then it goes off again. It was working fine yesterday.&quot;</p>
+<p><strong>In your learning journal, write:</strong></p>
+<ol>
+<li><strong>Is this likely a hardware or software problem?</strong></li>
+<li><strong>What would you tell Sarah to check first?</strong></li>
+<li><strong>What might have caused this sudden problem?</strong></li>
+<li><strong>Should you try to troubleshoot this remotely or escalate to a hardware specialist?</strong></li>
+</ol>
+<h3 id="when-to-suspect-hardware-vs-software">When to Suspect Hardware vs. Software</h3>
+<p><strong>Hardware problems usually:</strong></p>
+<ul>
+<li>Appear suddenly (were fine, now broken)</li>
+<li>Happen consistently (not intermittent)</li>
+<li>Aren&#39;t fixed by restart or reinstall</li>
+<li>Show physical symptoms (strange sounds, heat, won&#39;t power on)</li>
+<li>May show in hardware diagnostics</li>
+</ul>
+<p><strong>Software problems usually:</strong></p>
+<ul>
+<li>Develop gradually or after changes (update, new software)</li>
+<li>May be intermittent (sometimes works, sometimes doesn&#39;t)</li>
+<li>Often fixed by restart</li>
+<li>Related to specific programs or functions</li>
+<li>Show in system logs or Event Viewer</li>
+</ul>
+<p><strong>Hybrid problems:</strong></p>
+<ul>
+<li>Overheating (hardware stress causes software crashes)</li>
+<li>Failing hard drive (hardware failing, causes data corruption)</li>
+<li>Bad RAM (hardware fault, causes random crashes)</li>
+<li>Driver issues (software talking to hardware incorrectly)</li>
+</ul>
+<h3 id="key-takeaways-from-section-3-3">Key Takeaways from Section 3.3</h3>
+<ul>
+<li>Common problems have recognizable patterns</li>
+<li>Check simple things first (disk space, connections, restarts)</li>
+<li>Systematic diagnosis beats random fixing</li>
+<li>Hardware vs. software distinction guides troubleshooting</li>
+<li>Document solutions that work for future reference</li>
+<li>Some problems need specialist help - recognize when to escalate</li>
+</ul>
+<h2 id="section-3-4-maintenance-and-prevention">Section 3.4: Maintenance and Prevention</h2>
+<p><strong>Time:</strong> 8 minutes</p>
+<h3 id="introduction">Introduction</h3>
+<p>Preventing problems is better than fixing them. Regular maintenance keeps systems running smoothly and prevents many common issues.</p>
+<h3 id="why-maintenance-matters">Why Maintenance Matters</h3>
+<p><strong>For language workers specifically:</strong></p>
+<ul>
+<li>Downtime during critical project phases is costly</li>
+<li>Lost work due to crashes or corruption</li>
+<li>Slow systems reduce productivity</li>
+<li>Problems compound over time if ignored</li>
+</ul>
+<p><strong>Your role:</strong></p>
+<ul>
+<li>Teach users basic maintenance they can do themselves</li>
+<li>Schedule and perform deeper maintenance</li>
+<li>Catch small problems before they become big ones</li>
+</ul>
+<h3 id="regular-maintenance-tasks">Regular Maintenance Tasks</h3>
+<p><strong>Daily (user responsibility):</strong></p>
+<ul>
+<li>Shut down properly (don&#39;t just close laptop lid if doing updates)</li>
+<li>Notice unusual behavior (new sounds, slowness, errors)</li>
+<li>Save work frequently</li>
+<li>Report problems promptly</li>
+</ul>
+<p><strong>Weekly:</strong></p>
+<ul>
+<li>Clear browser cache and downloads folder</li>
+<li>Empty recycle bin/trash</li>
+<li>Close unused programs</li>
+<li>Check for critical updates</li>
+</ul>
+<p><strong>Monthly:</strong></p>
+<ul>
+<li>Check available disk space</li>
+<li>Review installed programs (remove unused)</li>
+<li>Check backup is working</li>
+<li>Update important software</li>
+<li>Restart computer (if not done recently)</li>
+</ul>
+<p><strong>Quarterly:</strong></p>
+<ul>
+<li>Install OS updates</li>
+<li>Review startup programs</li>
+<li>Check for driver updates (especially graphics)</li>
+<li>Scan for malware</li>
+<li>Review and clean up files</li>
+</ul>
+<p><strong>Annually:</strong></p>
+<ul>
+<li>Full system backup</li>
+<li>Review system performance</li>
+<li>Consider if upgrade needed</li>
+<li>Clean computer physically (dust in vents)</li>
+<li>Verify recovery methods work</li>
+</ul>
+<h3 id="disk-space-management">Disk Space Management</h3>
+<p><strong>Why disk space matters:</strong></p>
+<p>Systems slow dramatically when disk space is low (less than 10-15% free). The OS needs space for temporary files, updates, and virtual memory.</p>
+<p><strong>Where space goes:</strong></p>
+<p><strong>Common space hogs:</strong></p>
+<ul>
+<li>Downloads folder (files accumulate)</li>
+<li>Temporary files (system and browser)</li>
+<li>Old installers (no longer needed after installation)</li>
+<li>Duplicate files</li>
+<li>Old email attachments</li>
+<li>Cache files</li>
+<li>Recycle bin/trash not emptied</li>
+</ul>
+<p><strong>How to free space:</strong></p>
+<ol>
+<li><strong>Empty recycle bin/trash</strong></li>
+<li><strong>Clear downloads folder</strong> (move keepers to proper location, delete rest)</li>
+<li><strong>Use Disk Cleanup</strong> (Windows) or similar tools</li>
+<li><strong>Remove unused programs</strong></li>
+<li><strong>Clear browser cache</strong> (in browser settings)</li>
+<li><strong>Delete old files you no longer need</strong></li>
+<li><strong>Move large files to external storage</strong> (videos, old projects)</li>
+</ol>
+<p><strong>Setting expectations with users:</strong></p>
+<p>Tell them: &quot;Keep at least 20% of your disk free for best performance. Check monthly.&quot;</p>
+<h3 id="update-management">Update Management</h3>
+<p><strong>Types of updates:</strong></p>
+<p><strong>Security updates:</strong></p>
+<ul>
+<li>Fix vulnerabilities</li>
+<li>Should be installed promptly</li>
+<li>Usually safe</li>
+</ul>
+<p><strong>Feature updates:</strong></p>
+<ul>
+<li>Add new features</li>
+<li>Can wait if system working well</li>
+<li>Test on non-critical system first if possible</li>
+</ul>
+<p><strong>Driver updates:</strong></p>
+<ul>
+<li>Update hardware support</li>
+<li>Only update if having problems or new feature needed</li>
+<li>&quot;If it ain&#39;t broke, don&#39;t fix it&quot; applies here</li>
+</ul>
+<p><strong>Application updates:</strong></p>
+<ul>
+<li>Keep language software updated</li>
+<li>Check release notes for important fixes</li>
+<li>Test before deploying to all users</li>
+</ul>
+<p><strong>Update best practices:</strong></p>
+<p><strong>For consultants:</strong></p>
+<ul>
+<li>Know what updates are available</li>
+<li>Plan update timing (not during critical project phases)</li>
+<li>Backup before major updates</li>
+<li>Test updates on one system before rolling out widely</li>
+</ul>
+<p><strong>For users:</strong></p>
+<ul>
+<li>Enable automatic security updates</li>
+<li>Approve feature updates when convenient</li>
+<li>Don&#39;t ignore update notifications indefinitely</li>
+<li>Report problems after updates promptly</li>
+</ul>
+<h3 id="backup-importance">Backup Importance</h3>
+<p><strong>Critical reality:</strong> Hard drives fail. Computers get lost or stolen. Accidents happen.</p>
+<p><strong>What to backup:</strong></p>
+<ul>
+<li>All user-created files (documents, translations, data)</li>
+<li>Email (if stored locally)</li>
+<li>Browser bookmarks</li>
+<li>Application data and settings</li>
+<li>License keys and installation files for critical software</li>
+</ul>
+<p><strong>Backup strategies:</strong></p>
+<p><strong>The 3-2-1 rule:</strong></p>
+<ul>
+<li><strong>3</strong> copies of important data</li>
+<li>On <strong>2</strong> different types of media</li>
+<li>With <strong>1</strong> copy off-site</li>
+</ul>
+<p><strong>Practical for language workers:</strong></p>
+<ul>
+<li>Original data on computer</li>
+<li>Backup on external hard drive</li>
+<li>Cloud backup (OneDrive, Google Drive, Dropbox) or second external drive kept elsewhere</li>
+</ul>
+<p><strong>Backup frequency:</strong></p>
+<ul>
+<li>Daily for active project files (automatic cloud sync works well)</li>
+<li>Weekly for full system</li>
+<li>Before major changes (OS update, reinstall, etc.)</li>
+</ul>
+<p><strong>Testing backups:</strong></p>
+<ul>
+<li>Periodically try restoring a file</li>
+<li>Verify backup is actually working</li>
+<li>Untested backup = no backup</li>
+</ul>
+<h3 id="activity-3-4-create-a-maintenance-checklist">Activity 3.4: Create a Maintenance Checklist</h3>
+<p><strong>Time:</strong> 4 minutes</p>
+<p>Create a practical maintenance checklist for users you support.</p>
+<p><strong>Instructions:</strong></p>
+<p>In your learning journal, create a simple checklist that users can follow.</p>
+<p><strong>Your checklist should include:</strong></p>
+<p><strong>Monthly Maintenance (15 minutes):</strong></p>
+<ul>
+<li>[ ] Check disk space (should have 20%+ free)</li>
+<li>[ ] Clear downloads folder</li>
+<li>[ ] Empty recycle bin/trash</li>
+<li>[ ] Check for OS updates</li>
+<li>[ ] Restart computer if not done recently</li>
+</ul>
+<p><strong>Quarterly Maintenance (30 minutes):</strong></p>
+<ul>
+<li>[ ] Review and remove unused programs</li>
+<li>[ ] Check backup is working</li>
+<li>[ ] Scan for malware</li>
+<li>[ ] Update important software</li>
+<li>[ ] Check startup programs (disable unnecessary ones)</li>
+</ul>
+<p><strong>Warning Signs - Report Immediately:</strong></p>
+<ul>
+<li>[ ] Strange noises from computer</li>
+<li>[ ] Computer unusually hot</li>
+<li>[ ] Frequent freezing or crashes</li>
+<li>[ ] Disk space warning</li>
+<li>[ ] Persistent error messages</li>
+</ul>
+<p><strong>Add to this checklist:</strong></p>
+<ul>
+<li>Specific items for your context</li>
+<li>Links to tools they need</li>
+<li>Your contact information for support</li>
+</ul>
+<p><strong>Why create this:</strong></p>
+<ul>
+<li>Gives users clear actionable steps</li>
+<li>Prevents many common problems</li>
+<li>Creates shared responsibility for system health</li>
+<li>Reduces emergency support calls</li>
+</ul>
+<h3 id="preventing-common-problems">Preventing Common Problems</h3>
+<p><strong>Problem prevention strategies:</strong></p>
+<p><strong>To prevent slowness:</strong></p>
+<ul>
+<li>Keep disk space available</li>
+<li>Limit startup programs</li>
+<li>Restart regularly</li>
+<li>Don&#39;t run too many programs simultaneously</li>
+</ul>
+<p><strong>To prevent crashes:</strong></p>
+<ul>
+<li>Install updates</li>
+<li>Use good power supply (surge protector)</li>
+<li>Keep system cool (good ventilation)</li>
+<li>Don&#39;t force shutdown unless necessary</li>
+</ul>
+<p><strong>To prevent data loss:</strong></p>
+<ul>
+<li>Backup regularly</li>
+<li>Use save/autosave features</li>
+<li>Don&#39;t work directly from external drives (copy to computer first)</li>
+<li>Verify backups work</li>
+</ul>
+<p><strong>To prevent malware:</strong></p>
+<ul>
+<li>Keep antivirus updated and running</li>
+<li>Don&#39;t click suspicious links</li>
+<li>Download only from trusted sources</li>
+<li>Be skeptical of too-good-to-be-true offers</li>
+</ul>
+<p><strong>To prevent configuration problems:</strong></p>
+<ul>
+<li>Document settings before changing them</li>
+<li>Change one thing at a time</li>
+<li>Know how to undo changes</li>
+<li>Don&#39;t change things you don&#39;t understand</li>
+</ul>
+<h3 id="teaching-users-about-maintenance">Teaching Users About Maintenance</h3>
+<p><strong>What users need to understand:</strong></p>
+<p><strong>Maintenance is normal:</strong></p>
+<ul>
+<li>Like changing oil in a car</li>
+<li>Prevents bigger problems</li>
+<li>Takes time but saves time later</li>
+</ul>
+<p><strong>They can do basic maintenance themselves:</strong></p>
+<ul>
+<li>Not all computer problems need a specialist</li>
+<li>Following checklist keeps system healthy</li>
+<li>Builds confidence and independence</li>
+</ul>
+<p><strong>When to ask for help:</strong></p>
+<ul>
+<li>Warning signs (checklist above)</li>
+<li>Problems beyond their skill level</li>
+<li>Before making major changes</li>
+<li>When unsure what to do</li>
+</ul>
+<p><strong>Create learning opportunities:</strong></p>
+<ul>
+<li>Walk through maintenance with user once</li>
+<li>Have them do it while you watch second time</li>
+<li>Check in monthly: &quot;Did you do maintenance?&quot;</li>
+<li>Praise them for preventing problems</li>
+</ul>
+<h3 id="key-takeaways-from-section-3-4">Key Takeaways from Section 3.4</h3>
+<ul>
+<li>Regular maintenance prevents most common problems</li>
+<li>Users can handle basic maintenance themselves</li>
+<li>Disk space and updates are critical</li>
+<li>Backup is essential - test it regularly</li>
+<li>Teach maintenance, don&#39;t just do it for users</li>
+<li>Prevention is easier than repair</li>
+</ul>
+<h2 id="section-3-5-making-decisions-and-assessment">Section 3.5: Making Decisions and Assessment</h2>
+<p><strong>Time:</strong> 10 minutes</p>
+<h3 id="introduction">Introduction</h3>
+<p>Troubleshooting isn&#39;t just technical skills - it&#39;s also making good decisions about what to do when you can&#39;t fix something yourself, when reinstallation is worth it, and when to bring in specialists.</p>
+<h3 id="the-decision-framework">The Decision Framework</h3>
+<p>When facing a problem, you have several options:</p>
+<p><strong>1. Fix it yourself (remotely or hands-on)</strong></p>
+<ul>
+<li>Appropriate when: Problem is within your skill level, you have necessary access, risk is low, user can work with your guidance</li>
+</ul>
+<p><strong>2. Guide the user to fix it</strong></p>
+<ul>
+<li>Appropriate when: User is capable, problem is straightforward, good learning opportunity, you can provide clear instructions</li>
+</ul>
+<p><strong>3. Escalate to local IT support</strong></p>
+<ul>
+<li>Appropriate when: Problem needs hands-on access, hardware diagnosis needed, beyond your expertise, local support available and capable</li>
+</ul>
+<p><strong>4. Escalate to specialist</strong></p>
+<ul>
+<li>Appropriate when: Complex hardware problem, data recovery needed, problem is critical and you&#39;re uncertain, specialist knowledge required</li>
+</ul>
+<p><strong>5. Work around the problem temporarily</strong></p>
+<ul>
+<li>Appropriate when: Immediate fix not possible, user needs to keep working, permanent solution requires time/resources not immediately available</li>
+</ul>
+<p><strong>6. Accept and adapt</strong></p>
+<ul>
+<li>Appropriate when: &quot;Problem&quot; is actually a limitation, fixing would cost more than benefit, workaround is acceptable long-term</li>
+</ul>
+<h3 id="repair-vs-reinstall-decision">Repair vs. Reinstall Decision</h3>
+<p>One of the most common decisions: spend time troubleshooting or just reinstall?</p>
+<p><strong>Consider reinstalling when:</strong></p>
+<p><strong>Time factor:</strong></p>
+<ul>
+<li>Troubleshooting has taken 2+ hours with no resolution</li>
+<li>Reinstall would be faster than continued diagnosis</li>
+<li>User needs system working urgently</li>
+</ul>
+<p><strong>Severity factor:</strong></p>
+<ul>
+<li>Multiple serious problems (not just one issue)</li>
+<li>System corruption suspected</li>
+<li>Malware that can&#39;t be fully cleaned</li>
+<li>System has deteriorated over years</li>
+</ul>
+<p><strong>Cost-benefit:</strong></p>
+<ul>
+<li>User&#39;s time very valuable</li>
+<li>You have good backup</li>
+<li>System needs fresh start anyway</li>
+<li>Troubleshooting risk is high</li>
+</ul>
+<p><strong>Consider troubleshooting longer when:</strong></p>
+<p><strong>Time factor:</strong></p>
+<ul>
+<li>Problem clearly diagnosed, just need to apply fix</li>
+<li>Reinstall would take longer (special software, complex configuration)</li>
+<li>Not urgent - can take time to investigate</li>
+</ul>
+<p><strong>Uniqueness factor:</strong></p>
+<ul>
+<li>Custom configuration difficult to recreate</li>
+<li>Specialized software hard to reinstall</li>
+<li>Licenses or activation complicated</li>
+</ul>
+<p><strong>Learning factor:</strong></p>
+<ul>
+<li>You want to learn from this problem</li>
+<li>Diagnosis will help prevent future issues</li>
+<li>Curious what caused it</li>
+</ul>
+<p><strong>Risk factor:</strong></p>
+<ul>
+<li>Backup uncertain or incomplete</li>
+<li>Reinstall itself is risky (driver availability concerns)</li>
+<li>Might lose important data</li>
+</ul>
+<h3 id="hardware-vs-software-when-to-escalate">Hardware vs. Software: When to Escalate</h3>
+<p><strong>Definitely escalate hardware problems:</strong></p>
+<ul>
+<li>Physical damage (broken screen, keys, ports)</li>
+<li>Liquid damage</li>
+<li>Strange noises, burning smell</li>
+<li>Won&#39;t power on at all</li>
+<li>System overheating despite cleaning vents</li>
+</ul>
+<p><strong>Maybe escalate (depends on your skills/access):</strong></p>
+<ul>
+<li>Hard drive replacement</li>
+<li>RAM upgrade or replacement</li>
+<li>Battery replacement</li>
+<li>Cleaning dust from inside</li>
+<li>Peripheral problems (if clearly hardware)</li>
+</ul>
+<p><strong>Usually handle yourself (software):</strong></p>
+<ul>
+<li>OS configuration and settings</li>
+<li>Software installation and updates</li>
+<li>Performance optimization</li>
+<li>User account issues</li>
+<li>Most network connectivity issues</li>
+</ul>
+<h3 id="cost-benefit-analysis">Cost-Benefit Analysis</h3>
+<p>Sometimes the &quot;best&quot; technical solution isn&#39;t the right practical solution.</p>
+<p><strong>Factors to consider:</strong></p>
+<p><strong>User downtime cost:</strong></p>
+<ul>
+<li>Is this their only computer?</li>
+<li>Is project deadline approaching?</li>
+<li>How critical is their work?</li>
+<li>Can they use another computer temporarily?</li>
+</ul>
+<p><strong>Repair cost vs. replacement cost:</strong></p>
+<ul>
+<li>Expensive repair on old computer?</li>
+<li>Might be better to replace</li>
+<li>&quot;Throw good money after bad&quot;</li>
+<li>Consider age and expected remaining life</li>
+</ul>
+<p><strong>Data value:</strong></p>
+<ul>
+<li>How valuable is the data?</li>
+<li>Is backup available?</li>
+<li>Is data recovery needed?</li>
+<li>Worth spending more to recover data?</li>
+</ul>
+<p><strong>Learning vs. efficiency:</strong></p>
+<ul>
+<li>Is this a learning opportunity?</li>
+<li>Or is efficiency more important?</li>
+<li>Balance your professional development with user needs</li>
+</ul>
+<h3 id="communicating-uncertainty">Communicating Uncertainty</h3>
+<p>You won&#39;t always know the answer. That&#39;s okay. How you handle uncertainty matters.</p>
+<p><strong>Good approaches:</strong></p>
+<p><strong>Honest about limits:</strong></p>
+<ul>
+<li>&quot;I&#39;m not certain what&#39;s causing this, but here&#39;s what I think...&quot;</li>
+<li>&quot;This is outside my experience, but let me research it&quot;</li>
+<li>&quot;I could keep trying, but we might want to bring in a specialist&quot;</li>
+</ul>
+<p><strong>Collaborative problem-solving:</strong></p>
+<ul>
+<li>&quot;Let&#39;s try this and see what happens&quot;</li>
+<li>&quot;I want to test something - are you okay if we experiment?&quot;</li>
+<li>&quot;I&#39;m learning about this too - let&#39;s figure it out together&quot;</li>
+</ul>
+<p><strong>Manage expectations:</strong></p>
+<ul>
+<li>&quot;This might take a few tries&quot;</li>
+<li>&quot;I&#39;ll need some time to research this&quot;</li>
+<li>&quot;There&#39;s a chance we might not be able to fix this without reinstalling&quot;</li>
+</ul>
+<p><strong>Bad approaches:</strong></p>
+<p><strong>Pretending to know:</strong></p>
+<ul>
+<li>&quot;Oh yeah, I know exactly what this is&quot; (when you don&#39;t)</li>
+<li>Making up explanations</li>
+<li>Trying random things without explaining uncertainty</li>
+</ul>
+<p><strong>Blaming the user:</strong></p>
+<ul>
+<li>&quot;What did you do to break this?&quot;</li>
+<li>&quot;You must have clicked something you shouldn&#39;t have&quot;</li>
+<li>Implying they caused the problem (even if they did)</li>
+</ul>
+<p><strong>Being defensive:</strong></p>
+<ul>
+<li>&quot;Well, I&#39;ve never seen this before&quot;</li>
+<li>&quot;This isn&#39;t supposed to happen&quot;</li>
+<li>Getting frustrated or giving up</li>
+</ul>
+<h3 id="assessment-scenarios">Assessment Scenarios</h3>
+<p>Now apply everything you&#39;ve learned from all three modules.</p>
+<h3 id="scenario-1-complete-diagnostic-challenge">Scenario 1: Complete Diagnostic Challenge</h3>
+<p><strong>Context:</strong> Pastor David in rural Uganda contacts you. He&#39;s translating using Paratext on a Windows 10 laptop. The computer has become very slow over the past week. He reports that when he opens Paratext, it takes several minutes to load, and typing has a noticeable delay.</p>
+<p><strong>Your system information request reveals:</strong></p>
+<ul>
+<li>Windows 10, 64-bit</li>
+<li>Intel Core i3, 4 GB RAM</li>
+<li>500 GB hard drive, 30 GB free (6% free)</li>
+<li>Computer is 5 years old</li>
+<li>Working from a location with intermittent electricity</li>
+</ul>
+<p><strong>Additional information from questions:</strong></p>
+<ul>
+<li>Slowness started about a week ago</li>
+<li>Nothing new installed recently</li>
+<li>Windows Update ran a few days ago</li>
+<li>He works with a 2 GB Paratext project</li>
+<li>Has external hard drive but hasn&#39;t backed up in 2 months</li>
+</ul>
+<p><strong>In your learning journal, write a complete response:</strong></p>
+<ol>
+<li><strong>Initial diagnosis:</strong><ol>
+<li>What do you think is the primary cause of the slowness?</li>
+<li>What other factors might be contributing?</li>
+<li>What additional questions would you ask?</li>
+</ol>
+</li>
+<li><strong>Immediate action plan:</strong><ol>
+<li>What would you tell Pastor David to do first?</li>
+<li>What order would you try solutions?</li>
+<li>What should he do while troubleshooting?</li>
+</ol>
+</li>
+<li><strong>Short-term solutions:</strong><ol>
+<li>What can be fixed quickly to get him working again?</li>
+<li>What is good enough for now?</li>
+</ol>
+</li>
+<li><strong>Long-term recommendations:</strong><ol>
+<li>What should be done to prevent this recurring?</li>
+<li>Should any hardware be upgraded?</li>
+<li>What maintenance plan would you suggest?</li>
+</ol>
+</li>
+<li><strong>Risk management:</strong><ol>
+<li>What are the risks in this situation?</li>
+<li>What should be done to protect his work?</li>
+<li>What&#39;s your backup plan if your solutions don&#39;t work?</li>
+</ol>
+</li>
+</ol>
+<h3 id="scenario-2-decision-making-challenge">Scenario 2: Decision-Making Challenge</h3>
+<p><strong>Context:</strong> Sarah runs a literacy program and has a laptop that&#39;s having multiple problems:</p>
+<ul>
+<li>Frequent crashes (2-3 times per day)</li>
+<li>Slow startup (10+ minutes)</li>
+<li>Can&#39;t install Windows updates (error message)</li>
+<li>Some fonts not displaying correctly</li>
+</ul>
+<p>She has:</p>
+<ul>
+<li>Good backup from yesterday</li>
+<li>Windows 10 product key</li>
+<li>All installation files for her language software</li>
+<li>No IT support locally</li>
+<li>Important workshop in 3 days where she needs the laptop</li>
+</ul>
+<p><strong>In your learning journal, analyze:</strong></p>
+<ol>
+<li><strong>Options analysis:</strong><ol>
+<li>List at least 3 different approaches you could take</li>
+<li>For each approach, list pros and cons</li>
+<li>Estimate time required for each approach</li>
+</ol>
+</li>
+<li><strong>Your recommendation:</strong><ol>
+<li>What would you recommend and why?</li>
+<li>What factors were most important in your decision?</li>
+<li>What would you tell Sarah about timeline and expectations?</li>
+</ol>
+</li>
+<li><strong>Risk mitigation:</strong><ol>
+<li>What could go wrong with your chosen approach?</li>
+<li>What&#39;s your backup plan?</li>
+<li>How would you ensure she can do her workshop regardless?</li>
+</ol>
+</li>
+<li><strong>Reflection:</strong><ol>
+<li>Is this a repair, reinstall, or workaround situation?</li>
+<li>Would your answer be different if the workshop was in 1 week? 1 day?</li>
+<li>What if she had no backup?</li>
+</ol>
+</li>
+</ol>
+<h3 id="scenario-3-escalation-decision">Scenario 3: Escalation Decision</h3>
+<p><strong>Context:</strong> Thomas reports his laptop &quot;making a clicking noise&quot; and sometimes the screen &quot;goes black for a few seconds then comes back.&quot; He&#39;s in the middle of translation checking and can&#39;t afford downtime. The computer is 2 years old.</p>
+<p><strong>In your learning journal, write:</strong></p>
+<ol>
+<li><strong>Problem assessment:</strong><ol>
+<li>What do these symptoms suggest?</li>
+<li>Is this software or hardware?</li>
+<li>How serious is this?</li>
+</ol>
+</li>
+<li><strong>Escalation decision:</strong><ol>
+<li>Should this be escalated? To whom?</li>
+<li>What&#39;s urgent about this situation?</li>
+<li>What should Thomas do immediately?</li>
+</ol>
+</li>
+<li><strong>Communication:</strong><ol>
+<li>What would you tell Thomas about his situation?</li>
+<li>How would you explain the risk?</li>
+<li>What temporary solution might help him finish his current work?</li>
+</ol>
+</li>
+<li><strong>Preventive lesson:</strong><ol>
+<li>What should Thomas have done differently?</li>
+<li>What should he do after this is resolved?</li>
+<li>How could this have been prevented?</li>
+</ol>
+</li>
+</ol>
+<h3 id="module-3-completion">Module 3 Completion</h3>
+<h3 id="what-you-ve-learned">What You&#39;ve Learned</h3>
+<p>In Module 3, you&#39;ve developed practical troubleshooting and maintenance skills:</p>
+<p><strong>Diagnostic framework:</strong></p>
+<ul>
+<li>Systematic approach to any OS problem</li>
+<li>Information gathering questions</li>
+<li>Built-in diagnostic tools</li>
+<li>One-change-at-a-time testing</li>
+<li>Hardware vs. software distinction</li>
+</ul>
+<p><strong>Common problems and solutions:</strong></p>
+<ul>
+<li>Startup and boot problems</li>
+<li>Performance issues (slow, freezing)</li>
+<li>Network connectivity problems</li>
+<li>Display and graphics issues</li>
+<li>Update-related problems</li>
+<li>Pattern recognition for quick diagnosis</li>
+</ul>
+<p><strong>Maintenance and prevention:</strong></p>
+<ul>
+<li>Regular maintenance tasks</li>
+<li>Disk space management</li>
+<li>Update management</li>
+<li>Backup strategies</li>
+<li>Teaching users self-maintenance</li>
+<li>Preventing common problems</li>
+</ul>
+<p><strong>Decision-making:</strong></p>
+<ul>
+<li>Repair vs. reinstall decision framework</li>
+<li>When to escalate</li>
+<li>Cost-benefit analysis</li>
+<li>Communicating uncertainty</li>
+<li>Managing user expectations</li>
+</ul>
+<h3 id="your-troubleshooting-portfolio">Your Troubleshooting Portfolio</h3>
+<p>Your learning journal now contains:</p>
+<p><strong>Reference materials:</strong></p>
+<ul>
+<li>System specifications (Module 1)</li>
+<li>Configuration notes (Module 2)</li>
+<li>Troubleshooting framework</li>
+<li>Common problems and solutions</li>
+<li>Maintenance checklist</li>
+</ul>
+<p><strong>Practical experience:</strong></p>
+<ul>
+<li>Using diagnostic tools</li>
+<li>Analyzing scenarios</li>
+<li>Making decisions</li>
+<li>Creating user documentation</li>
+</ul>
+<p><strong>Assessment responses:</strong></p>
+<ul>
+<li>Three complete scenario analyses</li>
+<li>Decision-making practice</li>
+<li>Your reasoning documented</li>
+</ul>
+<h3 id="applying-your-skills">Applying Your Skills</h3>
+<p>You now have the complete skill set for OS fundamentals:</p>
+<p><strong>Module 1:</strong> Understanding operating systems and identifying what you&#39;re working with</p>
+<p><strong>Module 2:</strong> Configuring systems properly for language work</p>
+<p><strong>Module 3:</strong> Troubleshooting problems and maintaining systems</p>
+<p><strong>Together, these skills enable you to:</strong></p>
+<ul>
+<li>Support language workers effectively</li>
+<li>Diagnose and fix common problems</li>
+<li>Make informed decisions about complex situations</li>
+<li>Teach users to maintain their own systems</li>
+<li>Know when to escalate to specialists</li>
+<li>Keep language work productive</li>
+</ul>
+<h3 id="next-steps-in-your-development">Next Steps in Your Development</h3>
+<p><strong>&quot;Has Knowledge&quot; → &quot;With Assistance&quot; → &quot;Independent&quot;</strong></p>
+<p>This course built your &quot;Has Knowledge&quot; level competency. Moving forward:</p>
+<p><strong>For &quot;With Assistance&quot; development:</strong></p>
+<ul>
+<li>Work with experienced consultants</li>
+<li>Shadow IT professionals during installations</li>
+<li>Handle problems with mentor backup</li>
+<li>Build experience with diverse scenarios</li>
+<li>Learn from mistakes in low-risk situations</li>
+</ul>
+<p><strong>For &quot;Independent&quot; development:</strong></p>
+<ul>
+<li>Handle problems on your own</li>
+<li>Mentor others</li>
+<li>Develop specialised expertise in your region</li>
+<li>Create resources for your community</li>
+<li>Contribute to knowledge sharing</li>
+</ul>
+<p><strong>Continue learning:</strong></p>
+<ul>
+<li>Technology changes constantly</li>
+<li>New OS versions bring new challenges</li>
+<li>Stay current through practice and professional development</li>
+<li>Learn from every problem you encounter</li>
+</ul>
+<h3 id="mentor-review">Mentor Review</h3>
+<p>Before completing this course, schedule time with your mentor to review:</p>
+<p><strong>Your learning journal:</strong></p>
+<ul>
+<li>System documentation</li>
+<li>Configuration notes</li>
+<li>Scenario responses</li>
+<li>Maintenance checklist</li>
+</ul>
+<p><strong>Your understanding:</strong></p>
+<ul>
+<li>Discuss scenario decisions</li>
+<li>Explain your reasoning</li>
+<li>Ask questions about unclear areas</li>
+<li>Get feedback on your approach</li>
+</ul>
+<p><strong>Your next steps:</strong></p>
+<ul>
+<li>Identify areas needing more practice</li>
+<li>Plan supervised hands-on experience</li>
+<li>Set goals for skill development</li>
+<li>Arrange ongoing mentorship</li>
+</ul>
+<h3 id="final-reflection">Final Reflection</h3>
+<p>In your learning journal, write a final reflection:</p>
+<ol>
+<li><strong>What was most valuable in this course?</strong></li>
+<li><strong>What feels comfortable in your skill set?</strong></li>
+<li><strong>What needs more practice?</strong></li>
+<li><strong>How will you apply this in your work?</strong></li>
+<li><strong>What questions remain?</strong></li>
+</ol>
+<h3 id="course-completion">Course Completion</h3>
+<p><strong>You&#39;ve completed the Operating Systems for Language Technology Consultants course!</strong></p>
+<p>You&#39;ve learned to:</p>
+<ul>
+<li>Understand how operating systems work</li>
+<li>Identify and document system information</li>
+<li>Configure systems for language work</li>
+<li>Install fonts and input languages</li>
+<li>Optimize display settings</li>
+<li>Troubleshoot common problems</li>
+<li>Perform regular maintenance</li>
+<li>Make informed decisions about complex issues</li>
+<li>Know when to escalate to specialists</li>
+</ul>
+<p><strong>These foundational skills support everything else you&#39;ll learn in the Language Technology Consultant training program.</strong></p>
+<p>Continue developing through practice, mentorship, and real-world experience.</p>
+<p>Well done!</p>
+</body>
+</html>
