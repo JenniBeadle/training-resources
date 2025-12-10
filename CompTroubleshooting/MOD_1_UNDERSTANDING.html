@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/course-style.css">
+    <link rel="stylesheet" href="../css/course-styles.css">
     <title>Module 1: Understanding</title>
 </head>
+<style>
+body {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h2, h3, h4 {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+</style>
 <body>
     
 <h1 id="-module-1-understanding-notebook-systems-"><strong>MODULE 1: UNDERSTANDING NOTEBOOK SYSTEMS</strong></h1>
@@ -59,31 +76,31 @@
 <ol>
 <li><p><strong>Go to iFixit.com</strong> - This site has detailed teardown guides for many laptop models</p>
 </li>
-<li><p><strong>Choose a teardown to view:</strong></p>
+<li> <h4 class="subsection-title">Choose a teardown to view:</h4>
 <ul>
 <li>Search for &quot;laptop teardown&quot; or pick any recent notebook model</li>
 <li>Good examples: &quot;Dell Latitude teardown&quot; or &quot;HP EliteBook teardown&quot; or &quot;Lenovo ThinkPad teardown&quot;</li>
 <li>Choose one with clear photos</li>
 </ul>
 </li>
-<li><p><strong>As you view the teardown, identify these key components:</strong></p>
+<li> <h4 class="subsection-title">As you view the teardown, identify these key components:</h4>
 <p>Take notes on what you see for each component:</p>
 <ul>
-<li><p><strong>Bottom cover/case</strong></p>
+<li> <h4 class="subsection-title">Bottom cover/case</h4>
 <ul>
 <li>Protects internal components</li>
 <li>Usually has screws and clips</li>
 <li>Note: Vents for airflow (look for these!)</li>
 </ul>
 </li>
-<li><p><strong>Battery</strong></p>
+<li> <h4 class="subsection-title">Battery</h4>
 <ul>
 <li>Often one of the largest components</li>
 <li>May be removable or built-in</li>
 <li>Powers computer when unplugged</li>
 </ul>
 </li>
-<li><p><strong>Storage drive (SSD or HDD)</strong></p>
+<li> <h4 class="subsection-title">Storage drive (SSD or HDD)</h4>
 <ul>
 <li>Small rectangular component</li>
 <li>SSD: thin, no moving parts, fast</li>
@@ -91,7 +108,7 @@
 <li>Stores all your files and operating system</li>
 </ul>
 </li>
-<li><p><strong>RAM (Memory modules)</strong></p>
+<li> <h4 class="subsection-title">RAM (Memory modules)</h4>
 <ul>
 <li>Small green circuit boards with chips</li>
 <li>Usually 1-2 modules that snap into slots</li>
@@ -99,7 +116,7 @@
 <li>Note: These can become unseated from shock/movement</li>
 </ul>
 </li>
-<li><p><strong>Cooling system (fan and heat sink)</strong></p>
+<li> <h4 class="subsection-title">Cooling system (fan and heat sink)</h4>
 <ul>
 <li>Fan: small propeller that moves air</li>
 <li>Heat sink: metal fins or pipes</li>
@@ -107,7 +124,7 @@
 <li>Note: This is where dust accumulates!</li>
 </ul>
 </li>
-<li><p><strong>Motherboard</strong></p>
+<li> <h4 class="subsection-title">Motherboard</h4>
 <ul>
 <li>Large circuit board everything connects to</li>
 <li>Brain of the computer</li>
@@ -115,7 +132,7 @@
 <li>All other components plug into this</li>
 </ul>
 </li>
-<li><p><strong>Ports and connections</strong></p>
+<li> <h4 class="subsection-title">Ports and connections</h4>
 <ul>
 <li>USB ports, power jack, display connector, etc.</li>
 <li>Connect to motherboard via cables</li>
@@ -213,21 +230,21 @@
 <li>CPU processes instructions from RAM</li>
 <li>Results may be saved back to storage</li>
 </ol>
-<p><strong>Why this matters for troubleshooting:</strong></p>
+ <h4 class="subsection-title">Why this matters for troubleshooting:</h4>
 <ul>
 <li>Slow performance could be: full storage (filing cabinet overstuffed), insufficient RAM (desk too small), or struggling CPU (brain overworked)</li>
 <li>&quot;Computer is slow&quot; isn&#39;t enough information - you need to know WHERE the bottleneck is</li>
 </ul>
 <h4 id="2-cooling-system-all-components-temperature-management-">2. Cooling System ↔ All Components (Temperature Management)</h4>
 <p>All electronic components generate heat. The cooling system keeps temperatures safe.</p>
-<p><strong>The heat cycle:</strong></p>
+ <h4 class="subsection-title">The heat cycle:</h4>
 <ol>
 <li>CPU/GPU generate most heat (they work hardest)</li>
 <li>Heat sink conducts heat away from chips</li>
 <li>Fan blows hot air out through vents</li>
 <li>Cool air enters through intake vents</li>
 </ol>
-<p><strong>Why this matters for troubleshooting:</strong></p>
+ <h4 class="subsection-title">Why this matters for troubleshooting:</h4>
 <ul>
 <li>If cooling fails → components overheat → computer shuts down (protective measure)</li>
 <li>Dust blocks vents → poor cooling → overheating → shutdowns, slowness, crashes</li>
@@ -240,7 +257,7 @@
 <li><strong>On battery:</strong> Battery → motherboard → components</li>
 <li>Charging: Power adapter → charging circuitry → battery</li>
 </ul>
-<p><strong>Why this matters for troubleshooting:</strong></p>
+ <h4 class="subsection-title">Why this matters for troubleshooting:</h4>
 <ul>
 <li>Power adapter failure can look like battery failure (and vice versa)</li>
 <li>Unstable power damages components over time</li>
@@ -250,38 +267,39 @@
 <p><strong>Time:</strong> 5 minutes</p>
 <p>For each symptom below, which component or system interaction is likely involved? (You&#39;ll learn more detail in Module 2, but try reasoning through it now)</p>
 <ol>
-<li><p><strong>Computer takes 10 minutes to start up, but runs fine once started</strong></p>
+<li> <h4 class="subsection-title">Computer takes 10 minutes to start up, but runs fine once started</h4>
 <ul>
 <li>Think: What happens during startup? What gets loaded from where?</li>
 <li>Likely component: <strong><strong><strong>___</strong></strong></strong></li>
 </ul>
 </li>
-<li><p><strong>Computer shuts down suddenly when running video editing software</strong></p>
+<li> <h4 class="subsection-title">Computer shuts down suddenly when running video editing software</h4>
 <ul>
 <li>Think: What does intensive software cause? What safety system triggers?</li>
 <li>Likely system: <strong><strong><strong>___</strong></strong></strong></li>
 </ul>
 </li>
-<li><p><strong>Files are corrupting or programs crash frequently</strong></p>
+<li> <h4 class="subsection-title">Files are corrupting or programs crash frequently</h4>
 <ul>
 <li>Think: Where are files stored? What happens if that component is failing?</li>
 <li>Likely component: <strong><strong><strong>___</strong></strong></strong></li>
 </ul>
 </li>
-<li><p><strong>Computer works fine plugged in, but battery dies in 30 minutes</strong></p>
+<li> <h4 class="subsection-title">Computer works fine plugged in, but battery dies in 30 minutes</h4>
 <ul>
 <li>Think: What&#39;s different between plugged in and battery operation?</li>
 <li>Likely component: <strong><strong><strong>___</strong></strong></strong></li>
 </ul>
 </li>
 </ol>
-<h4 id="answers">Answers</h4>
+<details><h4 id="answers">Answers</h4>
 <ol>
 <li>Storage (slow loading from storage to RAM)</li>
 <li>Cooling system (overheating from intensive work)</li>
 <li>Storage drive or RAM (data corruption)</li>
 <li>Battery (failing to hold charge)</li>
 </ol>
+</details>
 <p><strong>Reflection:</strong> The point isn&#39;t to always be right, but to think systematically about how components interact. &quot;Something&#39;s wrong&quot; becomes &quot;this specific component or interaction is failing.&quot;</p>
 <hr>
 <h2 id="-section-1-4-environmental-factors-"><strong>Section 1.4: Environmental Factors</strong></h2>
@@ -295,20 +313,20 @@
 </ul>
 <h3 id="major-environmental-challenges">Major Environmental Challenges</h3>
 <h4 id="1-heat">1. Heat</h4>
-<p><strong>Effects on hardware:</strong></p>
+ <h4 class="subsection-title">Effects on hardware:</h4>
 <ul>
 <li>Accelerates component aging (especially batteries)</li>
 <li>Causes thermal throttling (CPU slows down to reduce heat)</li>
 <li>Can cause solder joints to crack over time</li>
 <li>Thermal expansion/contraction stresses components</li>
 </ul>
-<p><strong>Components most affected:</strong></p>
+ <h4 class="subsection-title">Components most affected:</h4>
 <ul>
 <li>Battery (lifespan cut in half at high temperatures)</li>
 <li>Storage drives (especially HDDs)</li>
 <li>CPU/GPU (throttle performance when hot)</li>
 </ul>
-<p><strong>Signs of heat problems:</strong></p>
+ <h4 class="subsection-title">Signs of heat problems:</h4>
 <ul>
 <li>Unexpected shutdowns (thermal protection)</li>
 <li>Slowness during hot parts of day</li>
@@ -316,20 +334,20 @@
 <li>Hot to touch on bottom/sides</li>
 </ul>
 <h4 id="2-dust">2. Dust</h4>
-<p><strong>Effects on hardware:</strong></p>
+ <h4 class="subsection-title">Effects on hardware:</h4>
 <ul>
 <li>Clogs cooling vents (leads to overheating)</li>
 <li>Can cause static discharge</li>
 <li>Accumulates on components</li>
 <li>Can interfere with connections</li>
 </ul>
-<p><strong>Components most affected:</strong></p>
+ <h4 class="subsection-title">Components most affected:</h4>
 <ul>
 <li>Cooling system (fan, heat sink)</li>
 <li>Ports and connections</li>
 <li>Internal components over time</li>
 </ul>
-<p><strong>Signs of dust problems:</strong></p>
+ <h4 class="subsection-title">Signs of dust problems:</h4>
 <ul>
 <li>Overheating symptoms</li>
 <li>Loud fan noise (working harder)</li>
@@ -337,21 +355,21 @@
 <li>Unexplained crashes/instability</li>
 </ul>
 <h4 id="3-humidity">3. Humidity</h4>
-<p><strong>Effects on hardware:</strong></p>
+ <h4 class="subsection-title">Effects on hardware:</h4>
 <ul>
 <li>Causes corrosion of metal contacts</li>
 <li>Can create condensation (water + electronics = bad)</li>
 <li>Affects display (moisture between layers)</li>
 <li>Degrades adhesives</li>
 </ul>
-<p><strong>Components most affected:</strong></p>
+ <h4 class="subsection-title">Components most affected:</h4>
 <ul>
 <li>Electrical contacts (RAM slots, connectors)</li>
 <li>Display</li>
 <li>Keyboard</li>
 <li>Ports</li>
 </ul>
-<p><strong>Signs of humidity problems:</strong></p>
+ <h4 class="subsection-title">Signs of humidity problems:</h4>
 <ul>
 <li>Corrosion visible on ports</li>
 <li>Computer won&#39;t start after sitting overnight (condensation)</li>
@@ -359,14 +377,14 @@
 <li>Keys sticking</li>
 </ul>
 <h4 id="4-power-instability">4. Power Instability</h4>
-<p><strong>Effects on hardware:</strong></p>
+ <h4 class="subsection-title">Effects on hardware:</h4>
 <ul>
 <li>Voltage spikes damage power circuitry</li>
 <li>Frequent outages stress power adapter and battery</li>
 <li>Can corrupt data on storage drives</li>
 <li>Shortens component lifespan</li>
 </ul>
-<p><strong>Components most affected:</strong></p>
+ <h4 class="subsection-title">Components most affected:</h4>
 <ul>
 <li>Power adapter (often first to fail)</li>
 <li>Charging circuitry</li>
@@ -374,7 +392,7 @@
 <li>Motherboard</li>
 <li>Storage drive (data corruption)</li>
 </ul>
-<p><strong>Signs of power problems:</strong></p>
+ <h4 class="subsection-title">Signs of power problems:</h4>
 <ul>
 <li>Dead power adapters</li>
 <li>Won&#39;t charge or charges inconsistently</li>
@@ -395,7 +413,7 @@
 <p><strong>Time:</strong> 5 minutes</p>
 <p>Read this scenario and identify the environmental factor:</p>
 <p><strong>Scenario:</strong><br>Sarah works in a coastal area. She reports that sometimes when she arrives at her office in the morning and tries to turn on her computer, the screen stays black even though the power light comes on and she can hear the fan. She says this happens more often after particularly humid nights. Yesterday morning this happened, but by afternoon when she tried again, the computer worked fine.</p>
-<p><strong>Questions:</strong></p>
+ <h4 class="subsection-title">Questions:</h4>
 <ol>
 <li>What environmental factor is likely causing this?</li>
 <li>Why do symptoms improve by afternoon?</li>
