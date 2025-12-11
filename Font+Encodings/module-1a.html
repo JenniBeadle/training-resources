@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1A: Why Does Text Break? - Fonts & Encoding Course</title>
+    <link rel="stylesheet" href="..\css\course-styles.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="course-nav">
+    <div class="nav-container">
+        <div class="course-title">LT-FONT-101: Fonts & Encoding</div>
+        <div class="module-progress">
+            <span class="module-indicator active">1A</span>
+            <span class="module-indicator">1B</span>
+            <span class="module-indicator">1C</span>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main class="module-content">
+
+    <!-- Module Header -->
+    <header class="module-header">
+        <h1 class="module-title">Module 1A: Why Does Text Break?</h1>
+        <div class="module-meta">
+            <span class="meta-item">⏱️ Duration: 45-60 minutes</span>
+            <span class="meta-item">📊 Level: Has Knowledge</span>
+            <span class="meta-item">🎯 Goal: Recognize patterns in broken text and understand why display problems occur</span>
+        </div>
+    </header>
+
+    <!-- Connect Section -->
+    <section class="module-section">
+        <div class="section-header">
+            <h2 class="section-title">Connect</h2>
+            <span class="time-estimate">10 minutes</span>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">The Mystery of the Broken Lexicon</h3>
+            
+            <p>You've just received an email from Maria, a language consultant working with a community in Papua New Guinea. She's excited—the community has completed their first phonetic lexicon with 500 entries, all carefully transcribed in IPA. But there's a problem.</p>
+            
+            <p>When she opens the file on her computer, it looks like this:</p>
+            
+            <div class="code-block">
+                <pre>[ᵐb̪ɔ̃ː] → [▯b̪▯▯] 
+[ʈʂʰɤ] → [▯▯▯▯]
+[ɲɟa] → [▯▯a]</pre>
+            </div>
+            
+            <p>Half the symbols have turned into boxes. Maria can't send this to the print shop. She can't share it with the community. The work isn't wrong—but it's invisible.</p>
+            
+            <div class="key-point">
+                <strong>This happens all the time in language technology work.</strong>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Your Turn: Recognition Practice</h3>
+            
+            <p>Think about your own experience (or imagine if you're new to this):</p>
+            
+            <ul>
+                <li>Have you ever opened a document and seen boxes where letters should be?</li>
+                <li>Have you received a file where accent marks appeared in the wrong place?</li>
+                <li>Have you seen text that looked like scrambled nonsense: "Ã©tÃ©" instead of "été"?</li>
+            </ul>
+            
+            <div class="reflection-box">
+                <h4>Take 2 minutes:</h4>
+                <p>If you're working with others, share one example. If you're working alone, jot down what you've seen or what you worry about encountering.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="module-section">
+        <div class="section-header">
+            <h2 class="section-title">Content</h2>
+            <span class="time-estimate">25-30 minutes</span>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">The Three Layers of Text Display</h3>
+            
+            <p>When you see text on a screen, three things have to work together perfectly:</p>
+            
+            <ol>
+                <li><strong>The encoding</strong> tells the computer which character is which</li>
+                <li><strong>The font</strong> provides the shapes (glyphs) to draw those characters</li>
+                <li><strong>The rendering engine</strong> puts it all together and displays it</li>
+            </ol>
+            
+            <p>When text "breaks," one of these three layers has failed. Your job as a language technologist is to figure out <em>which one</em>.</p>
+            
+            <div class="analogy-box">
+                <h4>Think of it like a restaurant:</h4>
+                <ul>
+                    <li>The <strong>encoding</strong> is the menu (tells you what's available)</li>
+                    <li>The <strong>font</strong> is the kitchen (has the ingredients to make the dishes)</li>
+                    <li>The <strong>rendering engine</strong> is the chef (puts it all together)</li>
+                </ul>
+                <p>If the customer orders something not on the menu (encoding problem), or the kitchen doesn't have the ingredients (font problem), or the chef doesn't know the recipe (rendering problem)—the dish doesn't arrive correctly.</p>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Pattern 1: The Box (□ or ▯)</h3>
+            
+            <p><strong>What you see:</strong> Boxes, rectangles, or question marks where characters should be</p>
+            
+            <p><strong>What it usually means:</strong> The font doesn't have the glyph for that character</p>
+            
+            <div class="example-box">
+                <h4>Example:</h4>
+                <p>Maria's IPA symbols are turning into boxes because her default font (probably Arial or Times New Roman) doesn't include IPA characters like [ᵐ] or [ʈ] or [ɲ].</p>
+            </div>
+            
+            <div class="key-point">
+                <strong>The key insight:</strong> The computer <em>knows</em> which character it's supposed to display (the encoding is working), but the font can't draw it.
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Pattern 2: The Wrong Mark in the Wrong Place</h3>
+            
+            <p><strong>What you see:</strong> Accent marks floating above or below where they should be, diacritics on the wrong letter, or marks that look "stacked" incorrectly</p>
+            
+            <div class="example-box">
+                <h4>Example:</h4>
+                <div class="code-block">
+                    <pre>Intended: bɔ̃ː  
+Displayed: bɔ ̃ː (with the tilde floating separately)</pre>
+                </div>
+            </div>
+            
+            <p><strong>What it usually means:</strong> This is often an encoding issue—specifically, a problem with how combining characters are stored or how normalization is handled (we'll dig into this in Module 1B).</p>
+            
+            <div class="key-point">
+                <strong>The key insight:</strong> The font might be fine, but the way the characters are <em>encoded</em> in the file is causing them to display incorrectly.
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Pattern 3: Mojibake (Scrambled Nonsense)</h3>
+            
+            <p><strong>What you see:</strong> Text that looks like random gibberish, often with strange accented characters where normal letters should be</p>
+            
+            <div class="example-box">
+                <h4>Example:</h4>
+                <div class="code-block">
+                    <pre>Intended: "Hello"  
+Displayed: "H�llo" or "Hèllo" or "æäö▯"</pre>
+                </div>
+            </div>
+            
+            <p><strong>What it usually means:</strong> The file was saved in one encoding (like UTF-8) but opened in another (like Windows-1252), or vice versa. The computer is misinterpreting the data.</p>
+            
+            <div class="key-point">
+                <strong>The key insight:</strong> The <em>data</em> is fine—it's just being read with the wrong decoder. Like trying to read a French book with a Spanish dictionary.
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Activity: Pattern Recognition</h3>
+            
+            <div class="activity-box">
+                <div class="activity-header">
+                    <h4>Pattern Recognition Practice</h4>
+                    <span class="activity-time">10 minutes</span>
+                </div>
+                
+                <p>You're going to look at six broken text samples. For each one, identify which pattern you're seeing:</p>
+                
+                <ul>
+                    <li><strong>Box</strong> (font missing glyphs)</li>
+                    <li><strong>Wrong mark</strong> (encoding/combining character issue)</li>
+                    <li><strong>Mojibake</strong> (encoding mismatch)</li>
+                </ul>
+                
+                <div class="practice-examples">
+                    <div class="practice-item">
+                        <strong>Sample 1:</strong> <code>The café has good cof▯ee</code>
+                    </div>
+                    <div class="practice-item">
+                        <strong>Sample 2:</strong> <code>The café has good coffee</code> (but the é has a floating accent)
+                    </div>
+                    <div class="practice-item">
+                        <strong>Sample 3:</strong> <code>The cafÃ© has good coffee</code>
+                    </div>
+                    <div class="practice-item">
+                        <strong>Sample 4:</strong> <code>[ŋ] → [▯]</code>
+                    </div>
+                    <div class="practice-item">
+                        <strong>Sample 5:</strong> <code>naÃ¯ve</code>
+                    </div>
+                    <div class="practice-item">
+                        <strong>Sample 6:</strong> <code>n̪aː</code> (where the diacritic under the n is floating)
+                    </div>
+                </div>
+                
+                <div class="answer-reveal">
+                    <h4>Answers:</h4>
+                    <ol>
+                        <li>Box (font doesn't have that glyph)</li>
+                        <li>Wrong mark (combining character issue)</li>
+                        <li>Mojibake (UTF-8 read as Windows-1252)</li>
+                        <li>Box (IPA character missing from font)</li>
+                        <li>Mojibake (UTF-8 read as Windows-1252: "naïve")</li>
+                        <li>Wrong mark (combining diacritic not attached correctly)</li>
+                    </ol>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>How did you do?</strong> If you got 4 out of 6, you're building good pattern recognition. If you got fewer, that's fine—this skill develops with practice.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="module-section">
+        <div class="section-header">
+            <h2 class="section-title">Challenge</h2>
+            <span class="time-estimate">10 minutes</span>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Your Diagnostic Moment</h3>
+            
+            <p>Let's return to Maria's lexicon. Look at these three entries from her file:</p>
+            
+            <div class="code-block">
+                <pre>Entry 1: [ᵐb̪ɔ̃ː] → displays as [▯b̪▯▯]
+Entry 2: [ʈʂʰɤ] → displays as [▯▯▯▯]  
+Entry 3: [ɲɟa] → displays as [▯▯a]</pre>
+            </div>
+            
+            <div class="challenge-box">
+                <h4>Diagnostic Questions:</h4>
+                
+                <p><strong>Question 1:</strong> Which pattern is this? (Box, Wrong mark, or Mojibake?)</p>
+                
+                <p><strong>Question 2:</strong> Which of the three layers (encoding, font, rendering) is most likely the problem?</p>
+                
+                <p><strong>Question 3:</strong> What would you tell Maria to try first?</p>
+                
+                <div class="instruction-box">
+                    <p><strong>Take 5 minutes to think through your answers.</strong> If you're working with others, discuss. If you're alone, write down your reasoning.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Discussion</h3>
+            
+            <div class="answer-reveal">
+                <p><strong>Answer 1:</strong> This is the <strong>Box</strong> pattern—characters are turning into boxes/rectangles.</p>
+                
+                <p><strong>Answer 2:</strong> Most likely a <strong>font</strong> problem. The computer knows which characters these are (encoding is working), but the font can't draw them.</p>
+                
+                <p><strong>Answer 3:</strong> Tell Maria to try changing the font to one that supports IPA characters. SIL has several fonts designed specifically for linguistic work that include comprehensive IPA coverage.</p>
+            </div>
+            
+            <div class="example-response">
+                <h4>What you could say to Maria:</h4>
+                <blockquote>
+                    <p>"The good news is your data isn't corrupted—the computer knows which characters you've typed. The problem is your font doesn't have those shapes. Try switching to a font like Charis SIL or Doulos SIL, which are designed for phonetic transcription. You can download them free from software.sil.org/charis/"</p>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Change Section -->
+    <section class="module-section">
+        <div class="section-header">
+            <h2 class="section-title">Change</h2>
+            <span class="time-estimate">5-10 minutes</span>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Building Your Recognition Instinct</h3>
+            
+            <p>You've just learned to recognize three common patterns of broken text. This is your <strong>diagnostic foundation</strong>.</p>
+            
+            <p>In the next module (1B: The Three Culprits), we'll dig deeper into <em>why</em> these patterns happen—how encoding, fonts, and rendering actually work. But for now, you have the most important skill: <strong>pattern recognition</strong>.</p>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">What This Means for Your Work</h3>
+            
+            <p>Next time you encounter broken text:</p>
+            
+            <ol class="action-list">
+                <li><strong>Don't panic.</strong> Look for the pattern.</li>
+                <li><strong>Ask yourself:</strong> Is this boxes (font)? Wrong marks (encoding)? Mojibake (encoding mismatch)?</li>
+                <li><strong>Start your diagnosis</strong> from there.</li>
+            </ol>
+            
+            <div class="key-point">
+                This single skill—recognizing the pattern—will save you hours of random troubleshooting.
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Before Module 1B</h3>
+            
+            <div class="next-steps">
+                <p><strong>Quick reference bookmark:</strong> Go to <a href="https://software.sil.org/fonts/" target="_blank">https://software.sil.org/fonts/</a> and bookmark this page. In Module 1B, we'll explore these fonts in detail, but for now, just know where to find them.</p>
+                
+                <p><strong>Optional exploration:</strong> If you have files with IPA or other special characters, open them and look for these patterns. Can you identify which type of problem you're seeing?</p>
+            </div>
+            
+            <div class="reflection-box">
+                <h4>Reflection Question</h4>
+                <p>What's one situation in your current work where this pattern recognition would be helpful? (You don't need to answer this now—just keep it in mind as we move forward.)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module Footer -->
+    <footer class="module-footer">
+        <div class="module-navigation">
+            <a href="index.html" class="nav-button">← Course Home</a>
+            <a href="module-1b.html" class="nav-button nav-button-next">Module 1B: The Three Culprits →</a>
+        </div>
+    </footer>
+
+</main>
+
+</body>
+</html>

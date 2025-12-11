@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1C: Your Diagnostic Toolkit - Fonts & Encoding Course</title>
+    <link rel="stylesheet" href="..\css\course-styles.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="course-nav">
+    <div class="nav-container">
+        <div class="course-title">LT-FONT-101: Fonts & Encoding</div>
+        <div class="module-progress">
+            <span class="module-indicator">1A</span>
+            <span class="module-indicator">1B</span>
+            <span class="module-indicator active">1C</span>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main class="module-content">
+
+    <!-- Module Header -->
+    <header class="module-header">
+        <h1 class="module-title">Module 1C: Your Diagnostic Toolkit</h1>
+        <div class="module-meta">
+            <span class="meta-item">⏱️ Duration: 45-60 minutes</span>
+            <span class="meta-item">📊 Level: Has Knowledge</span>
+            <span class="meta-item">🎯 Goal: Develop practical diagnostic skills and prepare for Course 2's hands-on troubleshooting</span>
+        </div>
+    </header>
+
+    <!-- Connect Section -->
+    <section class="module-section">
+        <div class="section-header">
+            <h2 class="section-title">Connect</h2>
+            <span class="time-estimate">8-10 minutes</span>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">From Understanding to Action</h3>
+            
+            <p>In Module 1A, you learned to <strong>recognize</strong> broken text patterns.<br>
+            In Module 1B, you learned to <strong>understand</strong> why they happen.</p>
+            
+            <p>Now it's time to build your <strong>diagnostic toolkit</strong>—the practical skills and resources you need to investigate problems systematically.</p>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">The Confident Diagnosis</h3>
+            
+            <div class="example-box">
+                <p>Imagine this scenario:</p>
+                <p>A colleague messages you: "Help! I have a wordlist file that looks completely broken. Can you fix it?"</p>
+            </div>
+            
+            <p>With what you've learned so far, you might think: "Is it encoding? Font? Both?"</p>
+            
+            <p>But <strong>how do you actually check?</strong> How do you look "under the hood" to see what's really going on?</p>
+            
+            <div class="key-point">
+                That's what this module is about—moving from educated guesses to <strong>confident diagnosis</strong>.
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Your Current Toolkit</h3>
+            
+            <div class="reflection-box">
+                <h4>Take a moment to think:</h4>
+                <p><strong>What tools do you currently use when you encounter a file problem?</strong></p>
+                <ul>
+                    <li>Do you just try different fonts randomly?</li>
+                    <li>Do you open files in different programs hoping one works?</li>
+                    <li>Do you have a systematic approach?</li>
+                </ul>
+                <p><em>(2 minutes for reflection or discussion)</em></p>
+            </div>
+            
+            <p>Most people start by trial and error. That's fine for learning—but as a language technology consultant, you need <strong>diagnostic methods</strong> you can teach to others and apply consistently.</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="module-section">
+        <div class="section-header">
+            <h2 class="section-title">Content</h2>
+            <span class="time-estimate">30-35 minutes</span>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Tool 1: Inspecting File Encoding</h3>
+            
+            <h4>Why You Need This</h4>
+            
+            <p>When you see mojibake, you need to know: "What encoding is this file actually in?"</p>
+            
+            <p>You can't fix an encoding problem if you're just guessing.</p>
+        </div>
+
+        <div class="content-block">
+            <h4>How to Check Encoding</h4>
+            
+            <div class="info-box">
+                <h4>Method 1: Notepad++ (Windows)</h4>
+                
+                <p>Notepad++ is a free text editor that shows you the file's encoding:</p>
+                
+                <ol>
+                    <li>Open the file in Notepad++</li>
+                    <li>Look at the bottom right of the window</li>
+                    <li>You'll see: "UTF-8", "ANSI", "UTF-8-BOM", etc.</li>
+                </ol>
+                
+                <p><strong>What you're seeing:</strong> The encoding Notepad++ <em>detected</em> (not always what it <em>should</em> be)</p>
+                
+                <p>If the text looks broken, try:</p>
+                <ul>
+                    <li>Menu: Encoding → Convert to UTF-8</li>
+                    <li>Or: Encoding → Character sets → (try different ones to see if text becomes readable)</li>
+                </ul>
+            </div>
+            
+            <div class="info-box">
+                <h4>Method 2: File Command (Mac/Linux)</h4>
+                
+                <p>In Terminal:</p>
+                <div class="code-block">
+                    <pre>file -I filename.txt</pre>
+                </div>
+                
+                <p>This shows the detected encoding. Again, this is an educated guess by the system—not always correct if the file is misencoded.</p>
+            </div>
+            
+            <div class="info-box">
+                <h4>Method 3: Looking at the Raw Bytes</h4>
+                
+                <p>For advanced diagnosis, you can open a file in a hex editor to see the actual numbers stored. This is beyond "Has Knowledge" level, but it's good to know it exists.</p>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4>Activity: Encoding Detective Work</h4>
+            
+            <div class="activity-box">
+                <div class="activity-header">
+                    <h4>Encoding Detective Work</h4>
+                    <span class="activity-time">8 minutes</span>
+                </div>
+                
+                <div class="practice-section">
+                    <h4>If you have access to sample files:</h4>
+                    
+                    <ol>
+                        <li>Download these two sample files: [sample-utf8.txt] and [sample-windows1252.txt]<br>
+                        <em>(Implementation note: Course developers should provide these)</em></li>
+                        
+                        <li>Open each in Notepad++ (or your text editor)</li>
+                        
+                        <li>Check the encoding shown</li>
+                        
+                        <li>Try deliberately changing the encoding (Encoding menu → Character sets) and watch what happens to the text</li>
+                    </ol>
+                    
+                    <div class="tip-box">
+                        <h4>What you should notice:</h4>
+                        <ul>
+                            <li>UTF-8 files with non-ASCII characters will break if read as Windows-1252</li>
+                            <li>Windows-1252 files will show mojibake if read as UTF-8</li>
+                            <li>The <em>same file</em> looks completely different depending on which encoding you use to read it</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="practice-section">
+                    <h4>If you don't have sample files right now:</h4>
+                    
+                    <p>Think through this scenario: You receive a file that shows <code>cafÃ©</code> instead of <code>café</code>.</p>
+                    
+                    <ul>
+                        <li>What encoding was it probably saved in? (UTF-8)</li>
+                        <li>What encoding is it being read as? (Windows-1252)</li>
+                        <li>How would you fix it? (Open in editor that lets you choose encoding, select UTF-8)</li>
+                    </ul>
+                </div>
+                
+                <div class="key-point">
+                    <strong>Key insight:</strong> Encoding problems aren't about the <em>file being wrong</em>—they're about reading it with the wrong decoder.
+                </div>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Tool 2: Checking Font Coverage</h3>
+            
+            <h4>Why You Need This</h4>
+            
+            <p>When you see boxes, you need to know: "Does this font actually have these characters?"</p>
+            
+            <p>You can't assume—you need to check.</p>
+        </div>
+
+        <div class="content-block">
+            <h4>Method 1: SIL Font Documentation</h4>
+            
+            <p>Every SIL font has a documentation page that lists character coverage:</p>
+            
+            <div class="example-box">
+                <h4>Example: Charis SIL</h4>
+                <ol>
+                    <li>Go to <a href="https://software.sil.org/charis/" target="_blank">https://software.sil.org/charis/</a></li>
+                    <li>Click "Character Set Support" or "About"</li>
+                    <li>You'll see which Unicode blocks are included</li>
+                </ol>
+                
+                <p><strong>What you're looking for:</strong></p>
+                <ul>
+                    <li>"IPA Extensions" (for phonetic symbols)</li>
+                    <li>"Latin Extended-A, -B, -C, -D" (for diacritics and special Latin)</li>
+                    <li>Specific scripts (Cyrillic, Greek, etc.)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4>Method 2: Type and See</h4>
+            
+            <p>The simplest test:</p>
+            <ol>
+                <li>Open a text editor or word processor</li>
+                <li>Type (or paste) the problem characters</li>
+                <li>Change fonts and see which ones display them correctly</li>
+            </ol>
+            
+            <div class="tip-box">
+                <h4>Systematic testing:</h4>
+                <ul>
+                    <li>Try Arial (baseline—limited coverage)</li>
+                    <li>Try Times New Roman (slightly better)</li>
+                    <li>Try Charis SIL or Doulos SIL (comprehensive linguistic coverage)</li>
+                    <li>Try Gentium Plus (excellent for extended Latin)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4>Method 3: Character Map/Font Book</h4>
+            
+            <div class="info-box">
+                <p><strong>Windows:</strong> Character Map utility<br>
+                <strong>Mac:</strong> Font Book application<br>
+                <strong>Linux:</strong> GNOME Character Map</p>
+                
+                <p>These tools let you browse through a font and see every character it contains.</p>
+                
+                <h4>How to use:</h4>
+                <ol>
+                    <li>Open Character Map</li>
+                    <li>Select the font you're investigating</li>
+                    <li>Scroll through to see if your needed characters are present</li>
+                    <li>Look for the specific Unicode value if you know it</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4>Activity: Font Coverage Comparison</h4>
+            
+            <div class="activity-box">
+                <div class="activity-header">
+                    <h4>Font Coverage Comparison</h4>
+                    <span class="activity-time">10 minutes</span>
+                </div>
+                
+                <p><strong>Step 1:</strong> Go to <a href="https://software.sil.org/fonts/" target="_blank">https://software.sil.org/fonts/</a> and explore three fonts:</p>
+                <ul>
+                    <li>Charis SIL</li>
+                    <li>Doulos SIL</li>
+                    <li>Andika</li>
+                </ul>
+                
+                <p><strong>Step 2:</strong> For each one, look at the "Character Set Support" section</p>
+                
+                <p><strong>Step 3:</strong> Answer these questions:</p>
+                <ul>
+                    <li>Do all three include full IPA coverage?</li>
+                    <li>Which one is designed specifically for beginning readers? (Hint: Look at Andika's description)</li>
+                    <li>Which one would you recommend for:
+                        <ul>
+                            <li>(a) academic publications</li>
+                            <li>(b) literacy materials</li>
+                            <li>(c) screen display</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <p><strong>Step 4:</strong> If you have these fonts installed, type this string and see how each font displays it:</p>
+                <div class="code-block">
+                    <pre>[ŋ ʈ ɲ ɔ̃ː ṵ̂]</pre>
+                </div>
+                
+                <div class="answer-reveal">
+                    <h4>Answers to Step 3:</h4>
+                    <ul>
+                        <li>Yes, all three include full IPA</li>
+                        <li>Andika (designed for clarity in literacy contexts)</li>
+                        <li>Recommendations: (a) Charis or Doulos for academic, (b) Andika for literacy, (c) any work well on screen, but Charis is optimized for it</li>
+                    </ul>
+                </div>
+                
+                <div class="key-point">
+                    <strong>Key insight:</strong> Different fonts serve different purposes. It's not just "can it display the characters?"—it's also "is it appropriate for this use case?"
+                </div>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Tool 3: Understanding Unicode Values</h3>
+            
+            <h4>Why You Need This</h4>
+            
+            <p>Sometimes you need to identify <em>exactly</em> which character you're looking at—especially when:</p>
+            <ul>
+                <li>Two characters look identical but behave differently</li>
+                <li>You need to verify precomposed vs. decomposed forms</li>
+                <li>You're reporting a problem and need to be precise</li>
+            </ul>
+        </div>
+
+        <div class="content-block">
+            <h4>What Unicode Values Look Like</h4>
+            
+            <p>Every character has a unique code point written as: <strong>U+XXXX</strong></p>
+            
+            <div class="example-box">
+                <h4>Examples:</h4>
+                <ul>
+                    <li><code>a</code> = U+0061</li>
+                    <li><code>é</code> (precomposed) = U+00E9</li>
+                    <li><code>e</code> + combining acute = U+0065 + U+0301</li>
+                    <li><code>ŋ</code> (eng) = U+014B</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4>How to Find Unicode Values</h4>
+            
+            <div class="info-box">
+                <h4>Method 1: Unicode websites</h4>
+                <ul>
+                    <li>Go to <a href="https://unicode.org/charts/" target="_blank">https://unicode.org/charts/</a></li>
+                    <li>Find your character and see its code point</li>
+                    <li>Or search: "unicode latin small letter eng" → U+014B</li>
+                </ul>
+            </div>
+            
+            <div class="info-box">
+                <h4>Method 2: Unibook (SIL Tool)</h4>
+                <ul>
+                    <li>Free tool from SIL that shows Unicode info for any text</li>
+                    <li>Paste text and it shows you the exact code points</li>
+                    <li>Download at: <a href="https://scripts.sil.org/unibook" target="_blank">https://scripts.sil.org/unibook</a></li>
+                </ul>
+            </div>
+            
+            <div class="info-box">
+                <h4>Method 3: Your text editor</h4>
+                <ul>
+                    <li>Some editors (like Notepad++) show Unicode values when you hover over characters</li>
+                    <li>Or position cursor and check status bar</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4>Activity: Character Identity Check</h4>
+            
+            <div class="activity-box">
+                <div class="activity-header">
+                    <h4>Character Identity Check</h4>
+                    <span class="activity-time">5 minutes</span>
+                </div>
+                
+                <div class="challenge-box">
+                    <h4>Scenario:</h4>
+                    <p>A colleague shows you two files. In both files, you see what <em>looks</em> like the letter "a" with a tilde: "ã"</p>
+                    
+                    <p>But in File 1, it's one character (precomposed).<br>
+                    In File 2, it's two characters (base + combining).</p>
+                    
+                    <p><strong>How would you verify this?</strong></p>
+                </div>
+                
+                <div class="answer-reveal">
+                    <ol>
+                        <li>Copy-paste the character into a text editor</li>
+                        <li>Use arrow keys to move the cursor—does it take one keystroke or two to move past it?</li>
+                        <li>Use Unibook or a Unicode identifier tool to see the code points</li>
+                    </ol>
+                    
+                    <p><strong>File 1:</strong> U+00E3 (one code point = precomposed)<br>
+                    <strong>File 2:</strong> U+0061 + U+0303 (two code points = decomposed)</p>
+                    
+                    <p>Both should display the same, but they behave differently when:</p>
+                    <ul>
+                        <li>Searching</li>
+                        <li>Sorting</li>
+                        <li>Converting between programs</li>
+                        <li>Counting characters</li>
+                    </ul>
+                </div>
+                
+                <div class="key-point">
+                    <strong>Key insight:</strong> Visual appearance doesn't tell you everything. Sometimes you need to see the actual Unicode values to understand what's really in the file.
+                </div>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Tool 4: Documentation and Help Resources</h3>
+            
+            <h4>Building Your Reference Library</h4>
+            
+            <p>As a language technology consultant, you won't memorize everything—but you need to know <strong>where to find answers</strong>.</p>
+        </div>
+
+        <div class="content-block">
+            <h4>Essential Bookmarks</h4>
+            
+            <div class="resources-section">
+                <div class="resource-item">
+                    <h4>1. SIL Fonts</h4>
+                    <p><a href="https://software.sil.org/fonts/" target="_blank">https://software.sil.org/fonts/</a></p>
+                    <p>Your primary source for fonts with comprehensive linguistic character support</p>
+                </div>
+                
+                <div class="resource-item">
+                    <h4>2. SIL Scripts and Unicode</h4>
+                    <p><a href="https://scripts.sil.org/" target="_blank">https://scripts.sil.org/</a></p>
+                    <p>Technical documentation on Unicode, encoding, and script support</p>
+                </div>
+                
+                <div class="resource-item">
+                    <h4>3. Unicode Standard</h4>
+                    <p><a href="https://unicode.org/standard/standard.html" target="_blank">https://unicode.org/standard/standard.html</a></p>
+                    <p>The official specification (very technical, but authoritative)</p>
+                </div>
+                
+                <div class="resource-item">
+                    <h4>4. Unicode Charts</h4>
+                    <p><a href="https://unicode.org/charts/" target="_blank">https://unicode.org/charts/</a></p>
+                    <p>Visual reference for all Unicode characters organized by script/block</p>
+                </div>
+                
+                <div class="resource-item">
+                    <h4>5. SIL Language Technology Tools</h4>
+                    <p><a href="https://software.sil.org/" target="_blank">https://software.sil.org/</a></p>
+                    <p>Home page for all SIL's linguistic software tools</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4>When to Search vs. When to Know</h4>
+            
+            <div class="comparison-columns">
+                <div class="comparison-item success-box">
+                    <h4>You should know:</h4>
+                    <ul>
+                        <li>The three main culprits (encoding, font, rendering)</li>
+                        <li>Common patterns (boxes, wrong marks, mojibake)</li>
+                        <li>Where to find SIL fonts</li>
+                        <li>Basic troubleshooting sequence</li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-item info-box">
+                    <h4>You should know where to look up:</h4>
+                    <ul>
+                        <li>Specific Unicode values</li>
+                        <li>Whether a particular font supports a specific character</li>
+                        <li>How to convert between specific encodings</li>
+                        <li>Technical details about normalization forms</li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-item">
+                    <h4>You don't need to memorize:</h4>
+                    <ul>
+                        <li>Every Unicode block</li>
+                        <li>Every encoding standard</li>
+                        <li>Every font's complete character set</li>
+                        <li>Exact conversion procedures (that's what Course 2 will teach)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4>Activity: Build Your Quick Reference</h4>
+            
+            <div class="activity-box">
+                <div class="activity-header">
+                    <h4>Build Your Quick Reference</h4>
+                    <span class="activity-time">5 minutes</span>
+                </div>
+                
+                <p>Create a simple reference document (or bookmark collection) with:</p>
+                
+                <div class="checklist">
+                    <h4>1. Most Common Problems I'll Encounter</h4>
+                    <p>(Based on your language context—IPA? Specific scripts? Tone marks?)</p>
+                    
+                    <h4>2. Go-To Fonts</h4>
+                    <ul>
+                        <li>Default recommendation for Latin-based linguistic work: ___________</li>
+                        <li>For literacy materials: ___________</li>
+                        <li>For academic publications: ___________</li>
+                    </ul>
+                    
+                    <h4>3. When I'm Stuck</h4>
+                    <ul>
+                        <li>Check encoding in: ___________ (your preferred tool)</li>
+                        <li>Check font coverage at: https://software.sil.org/fonts/</li>
+                        <li>Identify characters at: https://unicode.org/charts/</li>
+                    </ul>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>This becomes your personal toolkit</strong> that you'll expand as you gain experience.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="module-section">
+        <div class="section-header">
+            <h2 class="section-title">Challenge</h2>
+            <span class="time-estimate">10-12 minutes</span>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">The Complete Diagnostic</h3>
+            
+            <p>Now let's put everything together with a realistic scenario.</p>
+        </div>
+
+        <div class="content-block">
+            <h4>Scenario: The Problematic Lexicon</h4>
+            
+            <div class="challenge-box">
+                <p>You receive this email:</p>
+                
+                <blockquote>
+                    <p>"Hi! I'm working on a lexicon for a language in Indonesia. The community gave me data in a Word file. When I open it:</p>
+                    <ul>
+                        <li>Some IPA symbols show as boxes: [▯]</li>
+                        <li>The word 'ñ' shows as 'Ã±'</li>
+                        <li>Tone marks like ǎ look fine in Word but break when I save as PDF</li>
+                    </ul>
+                    <p>Can you help me figure out what's wrong? I'm attaching the file."</p>
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4>Your Diagnostic Process</h4>
+            
+            <p>Work through this systematically:</p>
+            
+            <div class="diagnostic-steps">
+                <div class="diagnostic-step">
+                    <h4>Step 1: What patterns do you see?</h4>
+                    <ul>
+                        <li>Boxes → font problem</li>
+                        <li>'Ã±' → mojibake (encoding problem)</li>
+                        <li>Breaks in PDF → rendering problem</li>
+                    </ul>
+                    <div class="warning-box">
+                        <strong>Multiple problems!</strong> This file has all three culprits.
+                    </div>
+                </div>
+                
+                <div class="diagnostic-step">
+                    <h4>Step 2: What would you check first?</h4>
+                    <p>Start with encoding (always fix data problems before display problems):</p>
+                    
+                    <div class="action-list">
+                        <h5>Actions:</h5>
+                        <ol>
+                            <li>Open file in Notepad++ or text editor that shows encoding</li>
+                            <li>Check: Is it UTF-8? Windows-1252? Something else?</li>
+                            <li>If it shows 'Ã±', it's probably UTF-8 being read as Windows-1252</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="diagnostic-step">
+                    <h4>Step 3: What would you check next?</h4>
+                    <p>After fixing encoding, address the font:</p>
+                    
+                    <div class="action-list">
+                        <h5>Actions:</h5>
+                        <ol>
+                            <li>What font is the document using?</li>
+                            <li>Does that font have IPA coverage?</li>
+                            <li>Recommend switching to Charis SIL or Doulos SIL</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="diagnostic-step">
+                    <h4>Step 4: What about the PDF problem?</h4>
+                    <p>This is a rendering issue—Word's rendering engine handles tone marks correctly, but the PDF export doesn't.</p>
+                    
+                    <div class="action-list">
+                        <h5>Actions:</h5>
+                        <ol>
+                            <li>Check if the tone marks are precomposed or decomposed (using Unicode values)</li>
+                            <li>Consider normalizing to NFC (precomposed) before PDF export</li>
+                            <li>Or use a different PDF export method that preserves complex characters</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="diagnostic-step">
+                    <h4>Step 5: What would you tell the colleague?</h4>
+                    <p>Write a brief response explaining:</p>
+                    <ul>
+                        <li>What's wrong (three separate issues)</li>
+                        <li>What to fix first (encoding)</li>
+                        <li>What to fix next (font)</li>
+                        <li>What needs further investigation (PDF rendering)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4>Your Turn</h4>
+            
+            <div class="activity-box">
+                <div class="activity-header">
+                    <h4>Draft Your Response</h4>
+                    <span class="activity-time">5 minutes</span>
+                </div>
+                
+                <p>Draft a response to the colleague. Keep it:</p>
+                <ul>
+                    <li>Clear and jargon-free (they're not a technologist)</li>
+                    <li>Actionable (specific steps they can take)</li>
+                    <li>Encouraging (they haven't broken anything permanently)</li>
+                </ul>
+                
+                <div class="answer-reveal">
+                    <h4>Sample response:</h4>
+                    <blockquote>
+                        <p>"Good news—your data isn't lost! You have three separate issues that we can fix:</p>
+                        
+                        <ol>
+                            <li><strong>Encoding mismatch</strong> (the 'Ã±' problem): Your file is UTF-8 but being opened as Windows-1252. Try opening it in Notepad++ and explicitly choosing UTF-8 encoding. This should fix the scrambled characters.</li>
+                            
+                            <li><strong>Font coverage</strong> (the boxes): Your current font doesn't include IPA symbols. Download Charis SIL from software.sil.org/charis/ and change your document to use that font. The boxes should become proper IPA characters.</li>
+                            
+                            <li><strong>PDF rendering</strong> (the tone marks): This is trickier. Word displays them correctly, but the PDF export doesn't handle complex diacritics well. Once we fix issues 1 and 2, let's troubleshoot the PDF export together.</li>
+                        </ol>
+                        
+                        <p>Start with #1 and #2, then let me know what you see. We'll tackle the PDF issue after that."</p>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Change Section -->
+    <section class="module-section">
+        <div class="section-header">
+            <h2 class="section-title">Change</h2>
+            <span class="time-estimate">5-8 minutes</span>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Your Diagnostic Competency</h3>
+            
+            <p>You now have a complete diagnostic toolkit:</p>
+            
+            <div class="summary-box">
+                <h4>Recognition</h4>
+                <p><em>(Module 1A)</em> Boxes, wrong marks, mojibake</p>
+                
+                <h4>Understanding</h4>
+                <p><em>(Module 1B)</em> Encoding, fonts, rendering/combining</p>
+                
+                <h4>Investigation</h4>
+                <p><em>(Module 1C)</em> Check encoding, check font coverage, identify characters, consult resources</p>
+            </div>
+            
+            <div class="success-box">
+                <p>This is your <strong>"Has Knowledge"</strong> foundation. You can:</p>
+                <ul>
+                    <li>✅ Identify what's wrong</li>
+                    <li>✅ Understand why it's happening</li>
+                    <li>✅ Investigate systematically</li>
+                    <li>✅ Explain problems to others</li>
+                    <li>✅ Know where to find help</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">What Comes Next: Course 2</h3>
+            
+            <p>In Course 2 (Troubleshooting & Conversion), you'll move from <strong>diagnosis</strong> to <strong>fixing</strong>:</p>
+            <ul>
+                <li>Actually converting files between encodings</li>
+                <li>Repairing damaged text</li>
+                <li>Setting up systems to prevent problems</li>
+                <li>Training others to use appropriate tools</li>
+            </ul>
+            
+            <div class="key-point">
+                But you can't fix what you can't diagnose—which is why this foundation matters.
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Applying This in Your Work</h3>
+            
+            <p>Before Course 2, start practicing:</p>
+            
+            <div class="practice-guide">
+                <div class="practice-section">
+                    <h4>When you encounter broken text:</h4>
+                    <ol>
+                        <li>Stop and diagnose before fixing</li>
+                        <li>Ask: Which pattern? Which culprit?</li>
+                        <li>Investigate systematically using your tools</li>
+                        <li>Document what you find</li>
+                    </ol>
+                </div>
+                
+                <div class="practice-section">
+                    <h4>When someone asks for help:</h4>
+                    <ol>
+                        <li>Teach them to recognize patterns</li>
+                        <li>Show them how to investigate</li>
+                        <li>Point them to resources</li>
+                        <li>Build their diagnostic skills, not just fix it for them</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="key-point">
+                <strong>This is the shift from "helper" to "consultant"</strong>—you're building capacity, not just solving immediate problems.
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Your Next Steps</h3>
+            
+            <div class="next-steps-checklist">
+                <h4>Immediate actions:</h4>
+                <ul class="checklist">
+                    <li>Bookmark the essential resources (SIL fonts, Unicode charts, etc.)</li>
+                    <li>Install a text editor that shows encoding (like Notepad++)</li>
+                    <li>Download at least one SIL font (Charis SIL recommended)</li>
+                    <li>Create your personal quick-reference guide</li>
+                </ul>
+                
+                <h4>Practice opportunities:</h4>
+                <ul class="checklist">
+                    <li>Look for broken text in your current work</li>
+                    <li>Practice diagnosing before fixing</li>
+                    <li>Help a colleague understand a font/encoding problem</li>
+                    <li>Build your pattern recognition with real examples</li>
+                </ul>
+                
+                <h4>Ready for more:</h4>
+                <ul class="checklist">
+                    <li>Complete Course 2: Troubleshooting & Conversion (when available)</li>
+                    <li>Explore SIL's other language technology tools</li>
+                    <li>Consider the "With Assistance" → "Independent" growth path</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Final Reflection</h3>
+            
+            <div class="reflection-box">
+                <p>Think about this question (you don't need to answer now):</p>
+                
+                <p><strong>"What font or encoding problem in your work context would you most like to be able to solve confidently?"</strong></p>
+                
+                <p>Keep that in mind as you move forward. Your diagnostic skills are the foundation—now it's time to build the fixing skills on top of them.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Completion -->
+    <section class="module-section">
+        <div class="final-thought">
+            <h3>Congratulations! 🎉</h3>
+            <p>You've completed Course 1: Recognition & Diagnosis</p>
+            <p>You now have the foundational skills to identify and understand font and encoding problems. You're ready to move forward to Course 2, where you'll learn to actually fix these issues.</p>
+        </div>
+    </section>
+
+    <!-- Module Footer -->
+    <footer class="module-footer">
+        <div class="module-navigation">
+            <a href="module-1b.html" class="nav-button">← Module 1B</a>
+            <a href="index.html" class="nav-button nav-button-next">Course Home →</a>
+        </div>
+    </footer>
+
+</main>
+
+</body>
+</html>

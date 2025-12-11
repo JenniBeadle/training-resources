@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1B: The Three Culprits - Fonts & Encoding Course</title>
+    <link rel="stylesheet" href="..\css\course-styles.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="course-nav">
+    <div class="nav-container">
+        <div class="course-title">LT-FONT-101: Fonts & Encoding</div>
+        <div class="module-progress">
+            <span class="module-indicator">1A</span>
+            <span class="module-indicator active">1B</span>
+            <span class="module-indicator">1C</span>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main class="module-content">
+
+    <!-- Module Header -->
+    <header class="module-header">
+        <h1 class="module-title">Module 1B: The Three Culprits</h1>
+        <div class="module-meta">
+            <span class="meta-item">⏱️ Duration: 45-60 minutes</span>
+            <span class="meta-item">📊 Level: Has Knowledge</span>
+            <span class="meta-item">🎯 Goal: Understand how encoding, fonts, and rendering work—and why they fail</span>
+        </div>
+    </header>
+
+    <!-- Connect Section -->
+    <section class="module-section">
+        <div class="section-header">
+            <h2 class="section-title">Connect</h2>
+            <span class="time-estimate">8-10 minutes</span>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">From Pattern to Problem</h3>
+            
+            <p>In Module 1A, you learned to recognize three patterns of broken text:</p>
+            <ul>
+                <li><strong>Boxes</strong> (font missing glyphs)</li>
+                <li><strong>Wrong marks</strong> (encoding/combining character issues)</li>
+                <li><strong>Mojibake</strong> (encoding mismatch)</li>
+            </ul>
+            
+            <p>You can now <em>see</em> the problem. But to fix it (or help someone else fix it), you need to understand <em>why</em> it happens.</p>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">The Detective's Question</h3>
+            
+            <div class="example-box">
+                <p>Imagine you're helping a colleague troubleshoot a file. They say: "I changed the font and the boxes went away, but now the tone marks are in the wrong place. Did I break something?"</p>
+            </div>
+            
+            <p>To answer that, you need to know:</p>
+            <ul>
+                <li>What did the font change actually do?</li>
+                <li>Why didn't it fix the tone marks?</li>
+                <li>Are these two separate problems, or related?</li>
+            </ul>
+            
+            <div class="key-point">
+                <strong>This module gives you the conceptual map</strong> to answer those questions.
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Your Experience</h3>
+            
+            <p>Before we dive in, take a moment:</p>
+            
+            <div class="reflection-box">
+                <h4>If you've ever tried to fix broken text:</h4>
+                <ul>
+                    <li>What did you try first?</li>
+                    <li>Did it work? Why or why not?</li>
+                    <li>What did you wish you'd understood at the time?</li>
+                </ul>
+                
+                <h4>If you haven't encountered this yet:</h4>
+                <ul>
+                    <li>What would you be most nervous about breaking?</li>
+                    <li>What would you want to know before you started changing things?</li>
+                </ul>
+                
+                <p><em>(2 minutes for reflection or discussion)</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="module-section">
+        <div class="section-header">
+            <h2 class="section-title">Content</h2>
+            <span class="time-estimate">30-35 minutes</span>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Culprit 1: Encoding (The Map)</h3>
+            
+            <h4>What Encoding Actually Is</h4>
+            
+            <p>When you type a letter, the computer doesn't store "the letter a"—it stores a number. <strong>Encoding is the map</strong> that tells the computer which number represents which character.</p>
+            
+            <div class="analogy-box">
+                <h4>Think of it like this:</h4>
+                <ul>
+                    <li>You type: <code>café</code></li>
+                    <li>The computer stores: <code>99 97 102 233</code></li>
+                    <li>The encoding says: "99 = c, 97 = a, 102 = f, 233 = é"</li>
+                </ul>
+            </div>
+            
+            <p>The problem? <strong>Different encodings use different maps.</strong></p>
+            
+            <div class="example-box">
+                <p>In Windows-1252 encoding, the number 233 means "é"<br>
+                In UTF-8 encoding, "é" is represented by <em>two</em> numbers: <code>195 169</code></p>
+            </div>
+            
+            <div class="key-point">
+                <strong>This is why mojibake happens.</strong> If a file saved in UTF-8 is opened with Windows-1252, the computer reads the wrong map. It sees 195 and 169 separately and displays whatever those numbers mean in Windows-1252—which gives you "Ã©" instead of "é".
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4>Legacy Encodings vs. Unicode</h4>
+            
+            <p>For decades, every language/region had its own encoding:</p>
+            <ul>
+                <li>Windows-1252 for Western European languages</li>
+                <li>Windows-1251 for Cyrillic</li>
+                <li>ISO-8859-6 for Arabic</li>
+                <li>Dozens more</li>
+            </ul>
+            
+            <p>This created chaos. You couldn't mix languages in one document. Files broke when moved between systems.</p>
+            
+            <div class="success-box">
+                <h4>Unicode solved this</h4>
+                <p>Unicode created one giant map that includes every character from every writing system. Instead of dozens of encodings, we now have one standard.</p>
+                <p><strong>UTF-8</strong> is the most common way to store Unicode text. It's what most modern systems use.</p>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4>But Legacy Encodings Still Exist</h4>
+            
+            <p>Many language communities collected data <em>before</em> Unicode became standard. Those files might be in:</p>
+            <ul>
+                <li>SIL's legacy ethnologue codes</li>
+                <li>Custom community encodings</li>
+                <li>Old versions of Windows encodings</li>
+            </ul>
+            
+            <div class="key-point">
+                <strong>When you encounter mojibake, you're usually seeing a legacy encoding read as UTF-8, or vice versa.</strong>
+            </div>
+            
+            <div class="info-box">
+                <h4>Regional Variations</h4>
+                <p>Windows-1252 is common for Western European languages, but other regions had their own code pages:</p>
+                <ul>
+                    <li>Windows-1251 for Cyrillic scripts</li>
+                    <li>Windows-1254 for Turkish</li>
+                    <li>Windows-1256 for Arabic</li>
+                    <li>Windows-1258 for Vietnamese</li>
+                    <li>And many others in the 125x range</li>
+                </ul>
+                <p>If you're working in a specific region and encounter mojibake, it's worth searching "Windows code page [your region]" to see which legacy encoding might have been used.</p>
+            </div>
+            
+            <div class="activity-box">
+                <div class="activity-header">
+                    <h4>Quick Activity</h4>
+                    <span class="activity-time">2 minutes</span>
+                </div>
+                <p>What region are you working in? Do a quick search for "Windows code page [your language/region]" and see what comes up. Bookmark any relevant results for future reference.</p>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4>Activity: Spot the Encoding Problem</h4>
+            
+            <div class="activity-box">
+                <div class="activity-header">
+                    <h4>Spot the Encoding Problem</h4>
+                    <span class="activity-time">5 minutes</span>
+                </div>
+                
+                <p>Look at these three examples. Which ones are encoding problems?</p>
+                
+                <div class="practice-examples">
+                    <div class="practice-item">
+                        <strong>Example A:</strong><br>
+                        File displays: <code>The naïve café owner</code><br>
+                        Should display: <code>The naïve café owner</code>
+                    </div>
+                    
+                    <div class="practice-item">
+                        <strong>Example B:</strong><br>
+                        File displays: <code>[ŋ] is a velar nasal</code> with a box instead of ŋ<br>
+                        Should display: <code>[ŋ] is a velar nasal</code>
+                    </div>
+                    
+                    <div class="practice-item">
+                        <strong>Example C:</strong><br>
+                        File displays: <code>Tá»ng</code> (Vietnamese)<br>
+                        Should display: <code>Tổng</code>
+                    </div>
+                </div>
+                
+                <div class="answer-reveal">
+                    <h4>Answers:</h4>
+                    <ul>
+                        <li><strong>A:</strong> Encoding problem (mojibake—UTF-8 read as Windows-1252)</li>
+                        <li><strong>B:</strong> NOT encoding—this is a font problem (the font doesn't have the ŋ glyph)</li>
+                        <li><strong>C:</strong> Encoding problem (Vietnamese tone marks stored incorrectly or misread)</li>
+                    </ul>
+                </div>
+                
+                <div class="key-point">
+                    <strong>Key insight:</strong> If you see <em>scrambled</em> characters (mojibake), it's encoding. If you see <em>missing</em> characters (boxes), it's usually font.
+                </div>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Culprit 2: Fonts (The Kitchen)</h3>
+            
+            <h4>What Fonts Actually Contain</h4>
+            
+            <p>A font is a collection of <strong>glyphs</strong>—the visual shapes that represent characters.</p>
+            
+            <p>When you install a font like Arial, you're installing a file that contains:</p>
+            <ul>
+                <li>The shape for "A"</li>
+                <li>The shape for "B"</li>
+                <li>The shape for "é"</li>
+                <li>...and so on for thousands of characters</li>
+            </ul>
+            
+            <div class="warning-box">
+                <strong>But not all fonts contain all characters.</strong>
+            </div>
+            
+            <p>Arial has basic Latin letters and common European accents. It does <em>not</em> have:</p>
+            <ul>
+                <li>IPA symbols like [ŋ] or [ʈ] or [ɲ]</li>
+                <li>Many non-European scripts</li>
+                <li>Specialized linguistic characters</li>
+            </ul>
+            
+            <div class="key-point">
+                <strong>This is why you see boxes.</strong> The computer knows which character to display (the encoding is fine), but the font says "I don't have a shape for that."
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4>Why SIL Fonts Matter</h4>
+            
+            <div class="info-box">
+                <p>SIL has developed fonts specifically for linguistic work:</p>
+                <ul>
+                    <li><strong>Charis SIL</strong> (serif font, similar to Charter)</li>
+                    <li><strong>Doulos SIL</strong> (serif font, similar to Times New Roman)</li>
+                    <li><strong>Andika</strong> (sans-serif, designed for literacy materials)</li>
+                    <li><strong>Gentium Plus</strong> (elegant serif with broad character support)</li>
+                </ul>
+                
+                <p>These fonts include:</p>
+                <ul>
+                    <li>Full IPA coverage</li>
+                    <li>Extended Latin characters</li>
+                    <li>Tone marks and diacritics</li>
+                    <li>Characters for minority and endangered languages</li>
+                </ul>
+            </div>
+            
+            <div class="success-box">
+                <strong>When you see boxes in linguistic data, switching to a SIL font often solves it immediately.</strong>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4>Activity: Font Coverage Check</h4>
+            
+            <div class="activity-box">
+                <div class="activity-header">
+                    <h4>Font Coverage Check</h4>
+                    <span class="activity-time">8 minutes</span>
+                </div>
+                
+                <p>Let's explore what fonts can actually do.</p>
+                
+                <p><strong>Step 1:</strong> Go to <a href="https://software.sil.org/charis/" target="_blank">https://software.sil.org/charis/</a></p>
+                
+                <p><strong>Step 2:</strong> Scroll down and look at the "Character Set Support" section</p>
+                
+                <p><strong>Step 3:</strong> Notice how they list which Unicode blocks are covered</p>
+                
+                <p><strong>Now compare:</strong></p>
+                <ul>
+                    <li>Open a text editor on your computer</li>
+                    <li>Type these characters (or copy-paste them): <code>[ŋ ʈ ɲ ɔ̃]</code></li>
+                    <li>Change the font to Arial, then Times New Roman, then (if you have it) Charis SIL</li>
+                </ul>
+                
+                <div class="tip-box">
+                    <h4>What do you see?</h4>
+                    <ul>
+                        <li>In Arial/Times: Probably boxes for most of these</li>
+                        <li>In Charis SIL: All characters display correctly</li>
+                    </ul>
+                </div>
+                
+                <div class="key-point">
+                    <strong>Key insight:</strong> The same text, the same encoding—but different fonts show different results. The <em>data</em> is fine. The font coverage is what changes.
+                </div>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4>But Wait—What About Combining Characters?</h4>
+            
+            <p>Sometimes you see the base letter correctly but the accent mark is floating or misplaced. <strong>This isn't usually a font problem</strong>—it's an encoding issue related to how diacritics are stored.</p>
+            
+            <p>Let's look at that next.</p>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Culprit 3: Combining Characters and Normalization</h3>
+            
+            <h4>Two Ways to Store "é"</h4>
+            
+            <p>Unicode allows two different ways to store the same visual character:</p>
+            
+            <div class="comparison-columns">
+                <div class="comparison-item">
+                    <h4>Method 1: Precomposed</h4>
+                    <ul>
+                        <li><code>é</code> is stored as a single character (Unicode U+00E9)</li>
+                        <li>Called <strong>NFC</strong> (Normalization Form Composed)</li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-item">
+                    <h4>Method 2: Decomposed</h4>
+                    <ul>
+                        <li><code>é</code> is stored as <code>e</code> (U+0065) + combining acute accent (U+0301)</li>
+                        <li>Called <strong>NFD</strong> (Normalization Form Decomposed)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p>Both are valid Unicode. Both should display the same way. But sometimes they don't.</p>
+        </div>
+
+        <div class="content-block">
+            <h4>When Combining Characters Go Wrong</h4>
+            
+            <p>Problems happen when:</p>
+            <ol>
+                <li><strong>The font doesn't handle combining characters well</strong> (poor rendering engine support)</li>
+                <li><strong>Software expects one form but receives another</strong> (NFC vs NFD mismatch)</li>
+                <li><strong>Characters are stored in the wrong order</strong> (combining marks applied to the wrong base)</li>
+            </ol>
+            
+            <div class="key-point">
+                <strong>This is why you see floating or misplaced diacritics.</strong>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4>Example: Tone Marks in Southeast Asian Languages</h4>
+            
+            <div class="example-box">
+                <p>Many tone languages use stacked diacritics:</p>
+                <div class="code-block">
+                    <pre>Intended: ṵ̂ (u with two marks: macron below + circumflex above)
+What happens: The marks appear separately or stack incorrectly</pre>
+                </div>
+                
+                <p>This happens when:</p>
+                <ul>
+                    <li>The font doesn't support complex mark positioning</li>
+                    <li>The combining characters are in the wrong order in the file</li>
+                    <li>The software doesn't normalize properly</li>
+                </ul>
+            </div>
+            
+            <div class="key-point">
+                <strong>Key insight:</strong> Even with the right font and right encoding, combining characters can still break if the rendering engine or normalization is wrong.
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4>Activity: Spotting Combining Character Issues</h4>
+            
+            <div class="activity-box">
+                <div class="activity-header">
+                    <h4>Spotting Combining Character Issues</h4>
+                    <span class="activity-time">5 minutes</span>
+                </div>
+                
+                <p>Which of these is likely a combining character problem?</p>
+                
+                <div class="practice-examples">
+                    <div class="practice-item">
+                        <strong>Example A:</strong> <code>café</code> displays as <code>caf▯</code>
+                    </div>
+                    <div class="practice-item">
+                        <strong>Example B:</strong> <code>café</code> displays with the accent floating above the space after the e
+                    </div>
+                    <div class="practice-item">
+                        <strong>Example C:</strong> <code>café</code> displays as <code>cafÃ©</code>
+                    </div>
+                </div>
+                
+                <div class="answer-reveal">
+                    <h4>Answers:</h4>
+                    <ul>
+                        <li><strong>A:</strong> Font problem (missing glyph for é)</li>
+                        <li><strong>B:</strong> Combining character problem (decomposed é with wrong attachment)</li>
+                        <li><strong>C:</strong> Encoding problem (mojibake)</li>
+                    </ul>
+                </div>
+                
+                <div class="info-box">
+                    <strong>Implementation Note:</strong> These examples may display correctly in modern browsers. For actual course delivery, you'll need screenshots captured from systems where the problems genuinely occur.
+                </div>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Culprit 4: Rendering Engines (The Chef)</h3>
+            
+            <h4>What Rendering Does</h4>
+            
+            <p>The <strong>rendering engine</strong> is the software that takes the encoded characters and the font glyphs and puts them together on screen.</p>
+            
+            <p>Different programs render text differently:</p>
+            <ul>
+                <li>Web browsers (Chrome, Firefox, Safari)</li>
+                <li>Word processors (Microsoft Word, LibreOffice)</li>
+                <li>PDF readers</li>
+                <li>Text editors</li>
+            </ul>
+            
+            <div class="warning-box">
+                Even with the same font and encoding, <strong>different programs might display text differently</strong> because their rendering engines handle complex scripts differently.
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4>When Rendering Fails</h4>
+            
+            <p>Rendering problems usually show up with:</p>
+            <ul>
+                <li>Complex scripts (Arabic, Devanagari, Thai)</li>
+                <li>Heavy use of combining characters</li>
+                <li>Right-to-left text mixed with left-to-right</li>
+                <li>Ligatures and contextual forms</li>
+            </ul>
+            
+            <div class="info-box">
+                <strong>For IPA and most Latin-based linguistic data, rendering problems are less common</strong> than font or encoding issues. But they can happen.
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4>Example: PDF vs. Word</h4>
+            
+            <div class="example-box">
+                <p>You might create a document in Word with perfect IPA display, then export to PDF and see problems. This isn't because the data changed—it's because the PDF rendering engine handles the font differently than Word did.</p>
+            </div>
+            
+            <div class="key-point">
+                <strong>Key insight:</strong> Same data, same font—but different rendering = different display.
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="module-section">
+        <div class="section-header">
+            <h2 class="section-title">Challenge</h2>
+            <span class="time-estimate">10-12 minutes</span>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">The Diagnostic Challenge</h3>
+            
+            <p>You're going to practice diagnosing problems by asking the right questions.</p>
+        </div>
+
+        <div class="content-block">
+            <h4>Scenario 1: The Disappearing Glottals</h4>
+            
+            <div class="challenge-box">
+                <p>A colleague sends you a file with these words from a language in Ethiopia:</p>
+                <div class="code-block">
+                    <pre>ʔəṭəna (should be: ʔəṭəna)
+ʃəṭəm (should be: ʃəṭəm)</pre>
+                </div>
+                
+                <p>The glottal stop (ʔ) and the pharyngeal fricative (ʃ) both display as boxes.</p>
+                
+                <h4>Your diagnostic questions:</h4>
+                <ol>
+                    <li>What pattern is this? (Box, wrong mark, mojibake?)</li>
+                    <li>Which culprit is most likely? (Encoding, font, rendering?)</li>
+                    <li>What would you check first?</li>
+                </ol>
+            </div>
+            
+            <div class="answer-reveal">
+                <h4>Answers:</h4>
+                <ol>
+                    <li>Box pattern</li>
+                    <li>Font problem (most likely the font doesn't have these IPA characters)</li>
+                    <li>Check if they're using a font with IPA coverage—suggest switching to Charis SIL or Doulos SIL</li>
+                </ol>
+            </div>
+            
+            <div class="info-box">
+                <strong>Implementation Note:</strong> Capture actual screenshots showing boxes, as these IPA characters may render correctly in learners' browsers depending on their system fonts.
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4>Scenario 2: The Wandering Tone Marks</h4>
+            
+            <div class="challenge-box">
+                <p>A lexicographer working with a tonal language shows you this:</p>
+                <div class="code-block">
+                    <pre>Typed: tɔ̃́ː (with nasalization and high tone)
+Displays: tɔ ́̃ː (with marks floating separately)</pre>
+                </div>
+                
+                <h4>Your diagnostic questions:</h4>
+                <ol>
+                    <li>What pattern is this?</li>
+                    <li>Which culprit is most likely?</li>
+                    <li>What would you investigate?</li>
+                </ol>
+            </div>
+            
+            <div class="answer-reveal">
+                <h4>Answers:</h4>
+                <ol>
+                    <li>Wrong mark pattern (marks in wrong place)</li>
+                    <li>Could be combining character issue (NFD vs NFC) OR font rendering problem</li>
+                    <li>Check: (a) Is the font designed for complex diacritics? (b) Are the combining marks in the right order? (c) Try a different font known for good mark positioning (like Charis SIL)</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h4>Scenario 3: The Email That Broke</h4>
+            
+            <div class="challenge-box">
+                <p>Someone forwards you an email. When they composed it, everything looked fine. When you receive it, you see:</p>
+                <div class="code-block">
+                    <pre>The linguistâ€™s data shows interesting patterns</pre>
+                </div>
+                
+                <p>Should show: <code>The linguist's data shows interesting patterns</code></p>
+                
+                <h4>Your diagnostic questions:</h4>
+                <ol>
+                    <li>What pattern is this?</li>
+                    <li>Which culprit is most likely?</li>
+                    <li>What happened?</li>
+                </ol>
+            </div>
+            
+            <div class="answer-reveal">
+                <h4>Answers:</h4>
+                <ol>
+                    <li>Mojibake pattern (scrambled characters)</li>
+                    <li>Encoding mismatch</li>
+                    <li>The email was composed in UTF-8 but read as Windows-1252 (or vice versa). The typographic apostrophe (') got mangled in transit.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Discussion: Multiple Culprits</h3>
+            
+            <p>Sometimes a file has <em>multiple</em> problems:</p>
+            <ul>
+                <li>Wrong encoding (mojibake) AND missing font glyphs (boxes)</li>
+                <li>Combining character issues AND rendering problems</li>
+            </ul>
+            
+            <div class="tip-box">
+                <h4>When you see multiple problems, fix them in order:</h4>
+                <ol>
+                    <li>Fix encoding first (mojibake)</li>
+                    <li>Then fix font issues (boxes)</li>
+                    <li>Then address combining character problems (wrong marks)</li>
+                </ol>
+                
+                <p><strong>Why this order?</strong> Because you can't diagnose font problems if the encoding is wrong. Get the data readable first, then make it display correctly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Change Section -->
+    <section class="module-section">
+        <div class="section-header">
+            <h2 class="section-title">Change</h2>
+            <span class="time-estimate">5 minutes</span>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Your Conceptual Map</h3>
+            
+            <p>You now understand the three culprits behind broken text:</p>
+            
+            <ol>
+                <li><strong>Encoding</strong> = the map from numbers to characters (mojibake when wrong)</li>
+                <li><strong>Fonts</strong> = the shapes to draw (boxes when glyphs missing)</li>
+                <li><strong>Rendering/Combining</strong> = putting it together (wrong marks when broken)</li>
+            </ol>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">What This Means for Your Work</h3>
+            
+            <p>Next time you encounter broken text, you won't just see the problem—you'll understand <em>why</em> it's happening.</p>
+            
+            <div class="key-point">
+                This understanding is what separates someone who can follow a recipe ("try this font") from someone who can <strong>diagnose and solve new problems</strong> they've never seen before.
+            </div>
+            
+            <p><strong>That's transfer.</strong> That's what makes you valuable as a language technologist.</p>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Before Module 1C</h3>
+            
+            <div class="next-steps">
+                <h4>Bookmark these resources:</h4>
+                <ul>
+                    <li><a href="https://software.sil.org/fonts/" target="_blank">https://software.sil.org/fonts/</a> (SIL fonts with linguistic character support)</li>
+                    <li><a href="https://unicode.org/charts/" target="_blank">https://unicode.org/charts/</a> (Unicode character charts—useful for identifying characters)</li>
+                </ul>
+                
+                <h4>Optional practice:</h4>
+                <ul>
+                    <li>Find a file with broken text (or create one by changing encoding)</li>
+                    <li>Try to diagnose: Which culprit is it?</li>
+                    <li>Don't fix it yet—just practice identifying the problem</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3 class="subsection-title">Looking Ahead</h3>
+            
+            <p>In <strong>Module 1C: Your Diagnostic Toolkit</strong>, we'll pull everything together. You'll learn:</p>
+            <ul>
+                <li>How to inspect files to see their actual encoding</li>
+                <li>How to check which characters a font supports</li>
+                <li>How to document problems clearly so others (or Course 2) can fix them</li>
+            </ul>
+            
+            <div class="success-box">
+                You're building toward <strong>diagnostic competence</strong>—the foundation for everything that comes next.
+            </div>
+        </div>
+    </section>
+
+    <!-- Module Footer -->
+    <footer class="module-footer">
+        <div class="module-navigation">
+            <a href="module-1a.html" class="nav-button">← Module 1A</a>
+            <a href="module-1c.html" class="nav-button nav-button-next">Module 1C →</a>
+        </div>
+    </footer>
+
+</main>
+
+</body>
+</html>
